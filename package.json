@@ -1,0 +1,29 @@
+{
+  "name": "proto-ng-breeze-edge",
+  "version": "0.0.1",
+  "description": "proto-ng-breeze-edge\r ====================",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-typescript": "~0.2.1"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/latticework/proto-ng-breeze-edge.git"
+  },
+  "keywords": [
+    "angular",
+    "breeze",
+    "edge",
+    "example"
+  ],
+  "author": "Latticework",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/latticework/proto-ng-breeze-edge/issues"
+  }
+}
