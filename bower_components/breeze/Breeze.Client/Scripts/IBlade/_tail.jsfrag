@@ -1,0 +1,21 @@
+
+// set defaults
+breeze.config.initializeAdapterInstances({
+    ajax: "jQuery",
+    dataService: "webApi"
+});
+
+// don't initialize with ko unless it exists.
+var ko = window.ko;
+if ((!ko) && window.require) {
+    ko = window.require("ko");
+}
+if (ko) {
+    breeze.config.initializeAdapterInstance("modelLibrary", "ko");
+} else {
+    breeze.config.initializeAdapterInstance("modelLibrary", "backingStore");
+}
+
+this.window.breeze = breeze;
+return breeze;
+});
