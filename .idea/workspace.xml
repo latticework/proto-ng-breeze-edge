@@ -2,133 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d3c4aea-f8c5-4d81-b15b-387c90e9bd96" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/main/about/about.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/main/home/home.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\.gitattributes" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\.bin\node-sass" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\.bin\node-sass.cmd" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\grunt-lib-contrib\.gitattributes" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\grunt-lib-contrib\.jshintrc" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\grunt-lib-contrib\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\grunt-lib-contrib\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\grunt-lib-contrib\AUTHORS" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\grunt-lib-contrib\CHANGELOG" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\grunt-lib-contrib\Gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\grunt-lib-contrib\LICENSE-MIT" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\grunt-lib-contrib\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\grunt-lib-contrib\lib\contrib.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\grunt-lib-contrib\node_modules\zlib-browserify\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\grunt-lib-contrib\node_modules\zlib-browserify\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\grunt-lib-contrib\node_modules\zlib-browserify\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\grunt-lib-contrib\node_modules\zlib-browserify\readme.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\grunt-lib-contrib\node_modules\zlib-browserify\test\zlib.test.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\grunt-lib-contrib\node_modules\zlib-browserify\zlib.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\grunt-lib-contrib\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\grunt-lib-contrib\test\lib_test.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\.gitmodules" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\bin\node-sass" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\binding.cpp" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\binding.gyp" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\examples\middleware.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\examples\public\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\examples\test.scss" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\lib\middleware.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\colors\MIT-LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\colors\ReadMe.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\colors\colors.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\colors\example.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\colors\example.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\colors\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\colors\test.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\mkdirp\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\mkdirp\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\mkdirp\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\mkdirp\examples\pow.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\mkdirp\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\mkdirp\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\mkdirp\readme.markdown" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\mkdirp\test\chmod.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\mkdirp\test\clobber.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\mkdirp\test\mkdirp.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\mkdirp\test\perm.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\mkdirp\test\perm_sync.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\mkdirp\test\race.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\mkdirp\test\rel.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\mkdirp\test\return.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\mkdirp\test\return_sync.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\mkdirp\test\root.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\mkdirp\test\sync.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\mkdirp\test\umask.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\mkdirp\test\umask_sync.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\example\bool.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\example\boolean_double.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\example\boolean_single.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\example\default_hash.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\example\default_singles.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\example\divide.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\example\line_count.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\example\line_count_options.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\example\line_count_wrap.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\example\nonopt.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\example\reflect.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\example\short.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\example\string.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\example\usage-options.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\example\xup.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\node_modules\wordwrap\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\node_modules\wordwrap\README.markdown" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\node_modules\wordwrap\example\center.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\node_modules\wordwrap\example\meat.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\node_modules\wordwrap\index.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\node_modules\wordwrap\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\node_modules\wordwrap\test\break.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\node_modules\wordwrap\test\idleness.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\node_modules\wordwrap\test\wrap.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\readme.markdown" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\test\_.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\test\_\argv.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\test\_\bin.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\test\parse.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\test\short.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\node_modules\optimist\test\usage.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\precompiled\darwin-x64\binding.node" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\precompiled\linux-arm\binding.node" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\precompiled\linux-ia32\binding.node" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\precompiled\linux-x64\binding.node" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\precompiled\sunos-x64\binding.node" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\precompiled\win32-ia32\binding.node" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\precompiled\win32-x64\binding.node" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\rebuild.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\sass.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\sass_context_wrapper.cpp" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\sass_context_wrapper.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\test.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\test\cli.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\test\large_test.scss" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\test\mem_test_render.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\test\mem_test_renderSync.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\test\sample.scss" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\test\source_comments_spec.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\node_modules\node-sass\test\test.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\readme.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\git\latticework\proto-ng-breeze-edge\node_modules\grunt-sass\tasks\sass.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/main/about/about.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/main/about/about.tpl.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/main/home/home.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/main/home/home.tpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/proto-ng-breeze-edge.iml" afterPath="$PROJECT_DIR$/.idea/proto-ng-breeze-edge.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="proto-ng-breeze-edge.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="3d3c4aea-f8c5-4d81-b15b-387c90e9bd96" time="1374356219593" ignored="false" />
+    <file path="/Dummy.txt" changelist="3d3c4aea-f8c5-4d81-b15b-387c90e9bd96" time="1374504093221" ignored="false" />
     <file path="/about.ts" changelist="3d3c4aea-f8c5-4d81-b15b-387c90e9bd96" time="1374356892619" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -161,7 +46,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -176,13 +61,49 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="about.ts" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="about.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/main/about/about.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="1" selection-start="261" selection-end="261" vertical-scroll-proportion="0.30846775">
+            <state line="15" column="1" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc;n#Main#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/main/about/about.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/main/home/home.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.tpl.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/main/home/home.tpl.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about.tpl.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/main/about/about.tpl.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -208,6 +129,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/app/main/about/about.ts" />
+        <option value="$PROJECT_DIR$/src/app/main/home/home.tpl.html" />
+        <option value="$PROJECT_DIR$/src/app/main/about/about.tpl.html" />
       </list>
     </option>
   </component>
@@ -243,7 +166,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -348,6 +270,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -356,8 +279,8 @@
     <property name="options.lastSelected" value="settings" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -584,10 +507,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/main/about/about.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="1" selection-start="261" selection-end="261" vertical-scroll-proportion="0.30846775">
+        <state line="15" column="1" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc;n#Main#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/main/about/about.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/main/home/home.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/main/home/home.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/main/about/about.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
