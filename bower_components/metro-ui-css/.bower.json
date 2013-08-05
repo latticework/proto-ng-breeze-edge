@@ -1,0 +1,13 @@
+{
+  "name": "metro-ui-css",
+  "homepage": "https://github.com/olton/Metro-UI-CSS",
+  "_release": "fe046910c8",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "fe046910c8fa0a1a44cf83ec49eeaf6c558173d8"
+  },
+  "_source": "git://github.com/olton/Metro-UI-CSS.git",
+  "_target": "*",
+  "_direct": true
+}
