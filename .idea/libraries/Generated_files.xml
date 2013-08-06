@@ -2,16 +2,13 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
-        <item url="file://$PROJECT_DIR$/src/app/main/about/about.js" />
-        <item url="file://$PROJECT_DIR$/bower_components/breeze/Breeze.Client/TypeScript/TypeScript/breeze-tests.js" />
+        <item url="file://$PROJECT_DIR$/build.config.js" />
+        <item url="file://$PROJECT_DIR$/build.config.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/src/app/main/about/about.js.js" />
-      <root url="file://$PROJECT_DIR$/src/app/main/about/about.js.js" />
-      <root url="file://$PROJECT_DIR$/src/app/main/home/home.js" />
-      <root url="file://$PROJECT_DIR$/src/app/main/about/about.js" />
-      <root url="file://$PROJECT_DIR$/bower_components/breeze/Breeze.Client/TypeScript/TypeScript/breeze-tests.js" />
+      <root url="file://$PROJECT_DIR$/build.config.js" />
+      <root url="file://$PROJECT_DIR$/build.config.js" />
     </CLASSES>
     <SOURCES />
   </library>
