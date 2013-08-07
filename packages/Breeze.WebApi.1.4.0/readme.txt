@@ -1,4 +1,4 @@
-s"Breeze for ASP.NET Web Api projects" ReadMe
+"Breeze for ASP.NET Web Api projects" ReadMe
 ------------------------------------------
 This Breeze NuGet Package adds essential Breeze script files 
 and .NET Web Api libraries to your project.

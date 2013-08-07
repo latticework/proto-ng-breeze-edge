@@ -3,7 +3,6 @@
   <metadata>
     <id>gruntjs.TypeScript.DefinitelyTyped</id>
     <version>0.0.3</version>
-    <title>gruntjs.TypeScript.DefinitelyTyped</title>
     <authors>Jason Jarrett</authors>
     <owners>Jason Jarrett</owners>
     <licenseUrl>https://github.com/DefinitelyTyped/NugetAutomation/blob/master/LICENSE.MIT</licenseUrl>
@@ -13,7 +12,6 @@
     <description>TypeScript Definitions (d.ts) for gruntjs. Generated based off the DefinitelyTyped repository [git commit: edc22399e2dfcba37c9fc95eceac41c9e4f7c4ab]. http://github.com/DefinitelyTyped</description>
     <releaseNotes />
     <copyright>Copyright 2013</copyright>
-    <language />
     <tags>TypeScript JavaScript</tags>
   </metadata>
 </package>

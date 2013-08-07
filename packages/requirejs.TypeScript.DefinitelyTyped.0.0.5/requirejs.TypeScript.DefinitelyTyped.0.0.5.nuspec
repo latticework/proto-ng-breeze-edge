@@ -3,7 +3,6 @@
   <metadata>
     <id>requirejs.TypeScript.DefinitelyTyped</id>
     <version>0.0.5</version>
-    <title>requirejs.TypeScript.DefinitelyTyped</title>
     <authors>Jason Jarrett</authors>
     <owners>Jason Jarrett</owners>
     <licenseUrl>https://github.com/DefinitelyTyped/NugetAutomation/blob/master/LICENSE.MIT</licenseUrl>
@@ -13,7 +12,6 @@
     <description>TypeScript Definitions (d.ts) for requirejs. Generated based off the DefinitelyTyped repository [git commit: 53dc0d5c2682ed71ac02268c89f28bc7b7e53005]. http://github.com/DefinitelyTyped</description>
     <releaseNotes />
     <copyright>Copyright 2013</copyright>
-    <language />
     <tags>TypeScript JavaScript</tags>
   </metadata>
 </package>

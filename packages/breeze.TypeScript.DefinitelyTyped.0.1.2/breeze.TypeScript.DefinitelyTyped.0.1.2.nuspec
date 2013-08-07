@@ -3,7 +3,6 @@
   <metadata>
     <id>breeze.TypeScript.DefinitelyTyped</id>
     <version>0.1.2</version>
-    <title>breeze.TypeScript.DefinitelyTyped</title>
     <authors>Jason Jarrett</authors>
     <owners>Jason Jarrett</owners>
     <licenseUrl>https://github.com/DefinitelyTyped/NugetAutomation/blob/master/LICENSE.MIT</licenseUrl>
@@ -13,7 +12,6 @@
     <description>TypeScript Definitions (d.ts) for breeze. Generated based off the DefinitelyTyped repository [git commit: f9be66399fd55902615e8bf312a6299b56a6a965]. http://github.com/DefinitelyTyped</description>
     <releaseNotes />
     <copyright>Copyright 2013</copyright>
-    <language />
     <tags>TypeScript JavaScript</tags>
   </metadata>
 </package>

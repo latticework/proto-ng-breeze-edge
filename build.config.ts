@@ -57,7 +57,8 @@ var userConfig = {
 //            'vendor/angular-ui-utils/modules/route/route.js'
         ],
         css: [
-        ]
+            'bower_components/metro-ui-css/css/*.css',
+        ],
     },
 };
 
