@@ -2,175 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d3c4aea-f8c5-4d81-b15b-387c90e9bd96" name="Default" comment="Added index.html and app.ts">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/gruntjs.TypeScript.DefinitelyTyped.0.0.3/gruntjs.TypeScript.DefinitelyTyped.0.0.3.nupkg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/node.TypeScript.DefinitelyTyped.0.1.4/node.TypeScript.DefinitelyTyped.0.1.4.nupkg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/estraverse/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/clone/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/commander/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/esprima/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/clone/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/commander/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/esprima/ChangeLog" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gruntfile.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/commander/History.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/LICENSE.BSD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/estraverse/LICENSE.BSD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/esprima/LICENSE.BSD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/LICENSE.source-map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/clone/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/node_modules/amdefine/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/json-stringify-safe/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/Makefile.dryice.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/commander/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral-angular-annotate/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral-angular-annotate/node_modules/astral-pass/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/clone/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/commander/node_modules/keypress/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/estraverse/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/node_modules/amdefine/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/esprima/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/json-stringify-safe/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/commander/Readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/node_modules/amdefine/amdefine.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral-angular-annotate/lib/annotate-ast.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral-angular-annotate/lib/annotate-injectable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral-angular-annotate/annotate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral-angular-annotate/passes/annotator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/lib/source-map/array-set.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral-angular-annotate/signatures/assign.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/lib/source-map/base64-vlq.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/lib/source-map/base64.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/lib/source-map/binary-search.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build.config.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build.config.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/test/chain.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/clone/clone.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/component.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/esprima/component.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral-angular-annotate/passes/ddo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral-angular-annotate/signatures/decl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral-angular-annotate/lib/deep-apply.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral-angular-annotate/node_modules/astral-pass/lib/deep-apply.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral-angular-annotate/lib/deep-compare.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral-angular-annotate/node_modules/astral-pass/lib/deep-compare.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/esprima/examples/detectnestedternary.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/test/directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/.bin/escodegen.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/escodegen.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/.bin/escodegen" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/.bin/esgenerate.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/.bin/esgenerate" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/.bin/esparse.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/.bin/esparse" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/esprima/esprima.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/estraverse/estraverse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/.bin/esvalidate.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/.bin/esvalidate" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/.bin/express.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/.bin/express" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/esprima/examples/findbooleantrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/test/grunt-ngmin-test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/gruntjs.TypeScript.DefinitelyTyped.0.0.3/gruntjs.TypeScript.DefinitelyTyped.0.0.3.nuspec" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Scripts/typings/gruntjs/gruntjs.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/gruntjs.TypeScript.DefinitelyTyped.0.0.3/Content/Scripts/typings/gruntjs/gruntjs.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/esprima/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/esprima/doc/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/commander/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/commander/node_modules/keypress/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/test/loader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral-angular-annotate/lib/mark-ast-modules.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral-angular-annotate/passes/mark.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral-angular-annotate/signatures/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/.bin/ngmin.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/tasks/ngmin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/.bin/ngmin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Scripts/typings/node/node-0.8.8.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/node.TypeScript.DefinitelyTyped.0.1.4/Content/Scripts/typings/node/node-0.8.8.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/node.TypeScript.DefinitelyTyped.0.1.4/node.TypeScript.DefinitelyTyped.0.1.4.nuspec" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Scripts/typings/node/node.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/node.TypeScript.DefinitelyTyped.0.1.4/Content/Scripts/typings/node/node.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/test/src/controllers/one.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/test/src/directives/one.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral-angular-annotate/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral-angular-annotate/node_modules/astral-pass/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/clone/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/commander/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/commander/node_modules/keypress/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/estraverse/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/node_modules/amdefine/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/esprima/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/json-stringify-safe/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral-angular-annotate/node_modules/astral-pass/pass.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral-angular-annotate/passes/pdo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral-angular-annotate/passes/ref.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/test/reference.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral-angular-annotate/passes/route.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/test/run-tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/astral-angular-annotate/signatures/simple.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/test/simple.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/lib/source-map/source-map-consumer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/lib/source-map/source-map-generator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/lib/source-map.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/lib/source-map/source-node.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/json-stringify-safe/stringify.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/test/source-map/test-api.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/test/source-map/test-array-set.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/test/source-map/test-base64-vlq.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/test/source-map/test-base64.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/test/source-map/test-binary-search.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/test/source-map/test-dog-fooding.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/test/source-map/test-source-map-consumer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/test/source-map/test-source-map-generator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/test/source-map/test-source-node.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/clone/test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/commander/node_modules/keypress/test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/json-stringify-safe/test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/esprima/examples/tokendist.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/lib/source-map/util.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/node_modules/escodegen/node_modules/source-map/test/source-map/util.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/grunt-ngmin/node_modules/ngmin/test/util.js" />
-      <change type="MOVED" beforePath="C:\git\latticework\proto-ng-breeze-edge\build.config.js" afterPath="$PROJECT_DIR$/UserConfig.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js.map" afterPath="$PROJECT_DIR$/Gruntfile.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.config.js" afterPath="$PROJECT_DIR$/build.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proto-ng-breeze-edge.csproj" afterPath="$PROJECT_DIR$/proto-ng-breeze-edge.csproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="proto-ng-breeze-edge.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="3d3c4aea-f8c5-4d81-b15b-387c90e9bd96" time="1375837794382" ignored="false" />
-    <file path="/about.ts" changelist="3d3c4aea-f8c5-4d81-b15b-387c90e9bd96" time="1374356892619" ignored="false" />
-    <file path="/index.html" changelist="3d3c4aea-f8c5-4d81-b15b-387c90e9bd96" time="1375553245706" ignored="false" />
-    <file path="/a.html" changelist="3d3c4aea-f8c5-4d81-b15b-387c90e9bd96" time="1374593447950" ignored="false" />
-    <file path="/a.js" changelist="3d3c4aea-f8c5-4d81-b15b-387c90e9bd96" time="1375482784639" ignored="false" />
-    <file path="/package.json" changelist="3d3c4aea-f8c5-4d81-b15b-387c90e9bd96" time="1375482842005" ignored="false" />
-    <file path="/.gitignore" changelist="3d3c4aea-f8c5-4d81-b15b-387c90e9bd96" time="1375547747611" ignored="false" />
-    <file path="/build.config.js" changelist="3d3c4aea-f8c5-4d81-b15b-387c90e9bd96" time="1375560713896" ignored="false" />
-    <file path="/Gruntfile.js" changelist="3d3c4aea-f8c5-4d81-b15b-387c90e9bd96" time="1375805542803" ignored="false" />
-    <file path="/Gruntfile.ts" changelist="3d3c4aea-f8c5-4d81-b15b-387c90e9bd96" time="1375820387194" ignored="false" />
-    <file path="/build.config.ts" changelist="3d3c4aea-f8c5-4d81-b15b-387c90e9bd96" time="1375820241684" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +33,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="10" selection-start="1938" selection-end="1938" vertical-scroll-proportion="0.0">
+            <state line="37" column="10" selection-start="1938" selection-end="1938" vertical-scroll-proportion="-0.65384614" vertical-offset="612" max-vertical-offset="833">
               <folding />
             </state>
           </provider>
@@ -202,7 +42,7 @@
       <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="21" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
+            <state line="8" column="21" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="901">
               <folding />
             </state>
           </provider>
@@ -211,25 +51,16 @@
       <file leaf-file-name="Gruntfile.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="7" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0">
+            <state line="2" column="7" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="9112">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gruntfile.ts" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Gruntfile.ts" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gruntfile.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="43" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="node.d.ts" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Scripts/typings/node/node.d.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="30" selection-start="624" selection-end="624" vertical-scroll-proportion="0.033864543">
+            <state line="465" column="26" selection-start="15703" selection-end="15703" vertical-scroll-proportion="0.4144893" vertical-offset="7556" max-vertical-offset="10166">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -237,10 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserConfig.ts" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UserConfig.ts">
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="24" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0">
+            <state line="14" column="0" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0" vertical-offset="43" max-vertical-offset="2958">
               <folding />
             </state>
           </provider>
@@ -249,7 +80,7 @@
       <file leaf-file-name="build.config.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.config.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="0" selection-start="2341" selection-end="2341" vertical-scroll-proportion="0.0">
+            <state line="62" column="0" selection-start="2394" selection-end="2394" vertical-scroll-proportion="0.0" vertical-offset="1037" max-vertical-offset="1224">
               <folding />
             </state>
           </provider>
@@ -258,7 +89,7 @@
       <file leaf-file-name="build.config.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="5" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
+            <state line="19" column="5" selection-start="740" selection-end="740" vertical-scroll-proportion="0.0" vertical-offset="280" max-vertical-offset="1122">
               <folding />
             </state>
           </provider>
@@ -293,6 +124,7 @@
         <option value="$PROJECT_DIR$/build.config.js" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/build.config.ts" />
+        <option value="$PROJECT_DIR$/Scripts/typings/node/node.d.ts" />
         <option value="$PROJECT_DIR$/Gruntfile.ts" />
       </list>
     </option>
@@ -300,8 +132,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="699" />
+    <option name="width" value="1696" />
+    <option name="height" value="1026" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -410,6 +242,11 @@
             <id>XSLT</id>
           </State>
         </expanded-state>
+        <selected-state>
+          <State>
+            <id>CoffeeScript</id>
+          </State>
+        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -457,154 +294,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto-ng-breeze-edge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto-ng-breeze-edge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto-ng-breeze-edge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto-ng-breeze-edge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scss" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto-ng-breeze-edge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto-ng-breeze-edge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto-ng-breeze-edge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto-ng-breeze-edge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto-ng-breeze-edge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto-ng-breeze-edge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto-ng-breeze-edge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto-ng-breeze-edge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="typings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto-ng-breeze-edge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto-ng-breeze-edge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="typings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto-ng-breeze-edge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto-ng-breeze-edge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="typings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gruntjs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -613,7 +302,7 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="Errors" />
+    <property name="options.lastSelected" value="settings" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="options.searchVisible" value="true" />
@@ -634,13 +323,6 @@
       <option name="filePath" />
       <option name="scope" value="ALL" />
       <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <list size="0" />
@@ -697,22 +379,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="699" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884616" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884616" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884616" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24025458" sideWeight="0.671659" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18225709" sideWeight="0.6720554" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280142" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32794458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884616" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884616" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -781,100 +463,104 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/main/about/about.scss">
+    <entry file="file://$PROJECT_DIR$/build.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/main/home/home.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/main/about/about.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/main/home/home.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="248" selection-end="248" vertical-scroll-proportion="0.48670757">
+        <state line="19" column="5" selection-start="740" selection-end="740" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/main/about/about.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/main/home/home.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/main/about/about.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/main/home/home.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="248" selection-end="248" vertical-scroll-proportion="0.48670757" vertical-offset="0" max-vertical-offset="0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/packages.config">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="21" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
+        <state line="8" column="21" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="10" selection-start="1938" selection-end="1938" vertical-scroll-proportion="0.0">
+        <state line="37" column="10" selection-start="1938" selection-end="1938" vertical-scroll-proportion="-0.65384614" vertical-offset="612" max-vertical-offset="833">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="7" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/typings/gruntjs/gruntjs.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="5" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
+        <state line="2" column="7" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="9112">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.config.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="0" selection-start="2341" selection-end="2341" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UserConfig.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="24" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gruntfile.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="43" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
+        <state line="62" column="0" selection-start="2394" selection-end="2394" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/typings/node/node.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="30" selection-start="624" selection-end="624" vertical-scroll-proportion="0.033864543">
+        <state line="1055" column="23" selection-start="44705" selection-end="44705" vertical-scroll-proportion="0.6163896" vertical-offset="17416" max-vertical-offset="18258">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/typings/gruntjs/gruntjs.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.17339668" vertical-offset="146" max-vertical-offset="2873">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0" vertical-offset="43" max-vertical-offset="2958">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="5" selection-start="740" selection-end="740" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="465" column="26" selection-start="15703" selection-end="15703" vertical-scroll-proportion="0.4144893" vertical-offset="7556" max-vertical-offset="10166">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

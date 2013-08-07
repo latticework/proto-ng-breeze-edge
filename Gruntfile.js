@@ -2,7 +2,7 @@
 /// <reference path="./Scripts/typings/node/node.d.ts" />
 "use strict";
 // https://raw.github.com/joshdmiller/ng-boilerplate/v0.3.0-release/gruntfile.js
-exports = function (grunt) {
+module.exports = function (grunt) {
     /**
     * load required grunt tasks. these are installed based on the versions listed
     * in `package.json` when you do `npm install` in this directory.
