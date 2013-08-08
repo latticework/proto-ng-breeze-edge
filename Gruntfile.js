@@ -291,7 +291,11 @@ var toExport = function (grunt) {
 
     grunt.registerMultiTask('index', 'Process index.html template', indexTaskFunction);
 };
+<<<<<<< HEAD
 
 
 module.exports = toExport;
 
+=======
+//# sourceMappingURL=Gruntfile.js.map
+>>>>>>> 5174208e087d35ae3c0da6f9ca49365b8984b168
