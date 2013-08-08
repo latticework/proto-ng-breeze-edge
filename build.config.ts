@@ -9,8 +9,8 @@ var userConfig = {
      * development and the `compile_dir` folder is where our app resides once it's
      * completely built.
      */
-    build_dir: 'build',
-    compile_dir: 'bin',
+    build_dir: 'debug',
+    compile_dir: 'release',
 
     /**
      * This is a collection of file patterns that refer to our app code (the

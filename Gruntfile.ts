@@ -4,7 +4,7 @@
 "use strict";
 
 // https://raw.github.com/joshdmiller/ng-boilerplate/v0.3.0-release/gruntfile.js
-module.exports = function(grunt) {
+module.exports = function(grunt: IGrunt) {
     /**
      * load required grunt tasks. these are installed based on the versions listed
      * in `package.json` when you do `npm install` in this directory.
@@ -523,19 +523,15 @@ module.exports = function(grunt) {
     /**
      * a utility function to get all app javascript sources.
      */
-    function filterforjs ( files ) {
-        return files.filter( function ( file ) {
-            return file.match( /\.js$/ );
-        });
+    function filterForJS(files: string[]) {
+        return files.filter((file, index, array) => <boolean>file.match(/\.js$/));
     }
 
     /**
      * a utility function to get all app css sources.
      */
-    function filterforcss ( files ) {
-        return files.filter( function ( file ) {
-            return file.match( /\.css$/ );
-        });
+    function filterForCss(files: string[]) {
+        return files.filter((file, index, array) => <boolean>file.match(/\.css$/));
     }
 
     /**
@@ -545,18 +541,23 @@ module.exports = function(grunt) {
      * compilation.
      */
     var indexTaskFunction = function () {
-        var pattern = '^(' + grunt.config('build_dir') + '|' + grunt.config('compile_dir') + ')\/';
-        var dirre = new RegExp(pattern, 'g');
+        var task = <IGruntRunningMultiTask>this;
 
         var dirre = new RegExp('^(' + grunt.config('build_dir') + '|' + grunt.config('compile_dir') + ')\/', 'g');
-        var jsfiles = filterforjs( this.filessrc ).map( function ( file ) {
-            return file.replace( dirre, '' );
-        });
-        var cssfiles = filterforcss( this.filessrc ).map( function ( file ) {
+
+        //for (var foo in this) {
+        //    grunt.log.writeln(foo);
+        //}
+
+        var jsfiles = filterForJS(task.filesSrc ).map( function ( file ) {
             return file.replace( dirre, '' );
         });
 
-        grunt.file.copy('src/index.html', this.data.dir + '/index.html', {
+        var cssfiles = filterForCss(task.filesSrc ).map( function ( file ) {
+            return file.replace( dirre, '' );
+        });
+
+        grunt.file.copy('src/index.html', task.data.dir + '/index.html', {
             process: function ( contents, path ) {
                 return grunt.template.process( contents, {
                     data: {

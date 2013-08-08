@@ -463,8 +463,8 @@ module.exports = function (grunt) {
     /**
     * a utility function to get all app javascript sources.
     */
-    function filterforjs(files) {
-        return files.filter(function (file) {
+    function filterForJS(files) {
+        return files.filter(function (file, index, array) {
             return file.match(/\.js$/);
         });
     }
@@ -472,8 +472,8 @@ module.exports = function (grunt) {
     /**
     * a utility function to get all app css sources.
     */
-    function filterforcss(files) {
-        return files.filter(function (file) {
+    function filterForCss(files) {
+        return files.filter(function (file, index, array) {
             return file.match(/\.css$/);
         });
     }
@@ -485,18 +485,22 @@ module.exports = function (grunt) {
     * compilation.
     */
     var indexTaskFunction = function () {
-        var pattern = '^(' + grunt.config('build_dir') + '|' + grunt.config('compile_dir') + ')\/';
-        var dirre = new RegExp(pattern, 'g');
+        var task = this;
 
         var dirre = new RegExp('^(' + grunt.config('build_dir') + '|' + grunt.config('compile_dir') + ')\/', 'g');
-        var jsfiles = filterforjs(this.filessrc).map(function (file) {
-            return file.replace(dirre, '');
-        });
-        var cssfiles = filterforcss(this.filessrc).map(function (file) {
+
+        //for (var foo in this) {
+        //    grunt.log.writeln(foo);
+        //}
+        var jsfiles = filterForJS(task.filesSrc).map(function (file) {
             return file.replace(dirre, '');
         });
 
-        grunt.file.copy('src/index.html', this.data.dir + '/index.html', {
+        var cssfiles = filterForCss(task.filesSrc).map(function (file) {
+            return file.replace(dirre, '');
+        });
+
+        grunt.file.copy('src/index.html', task.data.dir + '/index.html', {
             process: function (contents, path) {
                 return grunt.template.process(contents, {
                     data: {
@@ -528,4 +532,3 @@ module.exports = function (grunt) {
     //    });
     //});
 };
-//# sourceMappingURL=Gruntfile.js.map

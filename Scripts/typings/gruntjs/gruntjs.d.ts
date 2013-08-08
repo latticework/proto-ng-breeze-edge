@@ -42,13 +42,61 @@ interface IGruntConfig {
 }
 
 
+////////////////
+// Grunt task object 
+// http://gruntjs.com/api/grunt.task
+////////////////
+interface IGruntTaskBase {
+    loadNpmTasks(pluginName: string);
+    loadTasks(tasksPath: string);
+    registerTask(taskName: string, taskList: string[]);
+    registerTask(taskName: string, description: string, taskFunction: () => boolean);
+    registerTask(taskName: string, description: string, taskFunction: () => void);
+    registerMultiTask(taskName: string, description: string, taskFunction: () => boolean);
+    registerMultiTask(taskName: string, description: string, taskFunction: () => void);
+    renameTask(oldName: string, newName: string);
+}
 
+interface IGruntTask extends IGruntTaskBase {
+    clearQueue();
+    normalizeMultiTaskFiles(data: any, targetname?: string);
+    run(...taskList: IGruntTask[]);
+}
+
+////////////////
+// task members available in a task function.
+// http://gruntjs.com/inside-tasks
+////////////////
+interface IGruntRunningTask extends IGruntTask {
+    async(): (boolean) => void;
+    options(defaultObj?: any);
+    name: string;
+    requires(...taskList: string[]);
+    requiresConfig(...props: string[]);
+
+    args: string[];
+    errorCount: number;
+    flags: any;
+    nameArgs: string;
+}
+
+interface IGruntTaskFileObject {
+    src: string[];
+    dest: string;
+}
+
+interface IGruntRunningMultiTask extends IGruntTask {
+    data: any;
+    files: IGruntTaskFileObject[];
+    filesSrc: string[];
+    target: string;
+}
 
 ////////////////
 // Main Grunt object 
 // http://gruntjs.com/api/grunt
 ////////////////
-interface IGrunt {
+interface IGrunt extends IGruntTaskBase {
     // Config
     config: IGruntConfigObject;
     initConfig(config?: IGruntConfig);
@@ -56,13 +104,6 @@ interface IGrunt {
 
     // Tasks
     task: any;
-    // Creating
-    registerTask: Function;
-    registerMultiTask: Function;
-    renameTask: Function;
-    // Loading
-    loadTasks: Function;
-    loadNpmTasks: Function;
 
     // Errors
     warn: Function;
