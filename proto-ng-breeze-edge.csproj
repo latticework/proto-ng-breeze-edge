@@ -135,10 +135,8 @@
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-sanitize.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-scenario.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\breeze\breeze-1.0.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\breeze\breeze.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\gruntjs\gruntjs.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\node\node-0.8.8.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
   </ItemGroup>
   <PropertyGroup>
