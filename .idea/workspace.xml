@@ -2,21 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d3c4aea-f8c5-4d81-b15b-387c90e9bd96" name="Default" comment="Added index.html and app.ts">
-      <change type="DELETED" beforePath="E:\Workspaces\kbrubak\git\latticework\proto-ng-breeze-edge\Gruntfile.js.map" afterPath="" />
-      <change type="DELETED" beforePath="E:\Workspaces\kbrubak\git\latticework\proto-ng-breeze-edge\build.config.js.map" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/Breeze.WebApi.1.4.0/content/App_Start/BreezeWebApiConfig.cs.pp" afterPath="$PROJECT_DIR$/packages/Breeze.WebApi.1.4.0/content/App_Start/BreezeWebApiConfig.cs.pp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.ts" afterPath="$PROJECT_DIR$/Gruntfile.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/angularjs.TypeScript.DefinitelyTyped.0.2.7/Content/Scripts/typings/angularjs/angular-resource.d.ts" afterPath="$PROJECT_DIR$/packages/angularjs.TypeScript.DefinitelyTyped.0.2.7/Content/Scripts/typings/angularjs/angular-resource.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/angularjs.TypeScript.DefinitelyTyped.0.2.7/Content/Scripts/typings/angularjs/angular-scenario.d.ts" afterPath="$PROJECT_DIR$/packages/angularjs.TypeScript.DefinitelyTyped.0.2.7/Content/Scripts/typings/angularjs/angular-scenario.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/angularjs.TypeScript.DefinitelyTyped.0.2.7/Content/Scripts/typings/angularjs/angular.d.ts" afterPath="$PROJECT_DIR$/packages/angularjs.TypeScript.DefinitelyTyped.0.2.7/Content/Scripts/typings/angularjs/angular.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/Breeze.WebApi.1.4.0/content/Scripts/breeze.min.js" afterPath="$PROJECT_DIR$/packages/Breeze.WebApi.1.4.0/content/Scripts/breeze.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.config.js" afterPath="$PROJECT_DIR$/build.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/typings/gruntjs/gruntjs.d.ts" afterPath="$PROJECT_DIR$/Scripts/typings/gruntjs/gruntjs.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/gruntjs.TypeScript.DefinitelyTyped.0.0.3/Content/Scripts/typings/gruntjs/gruntjs.d.ts" afterPath="$PROJECT_DIR$/packages/gruntjs.TypeScript.DefinitelyTyped.0.0.3/Content/Scripts/typings/gruntjs/gruntjs.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/jquery.TypeScript.DefinitelyTyped.0.2.1/Content/Scripts/typings/jquery/jquery.d.ts" afterPath="$PROJECT_DIR$/packages/jquery.TypeScript.DefinitelyTyped.0.2.1/Content/Scripts/typings/jquery/jquery.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/node.TypeScript.DefinitelyTyped.0.1.5/Content/Scripts/typings/node/node-0.8.8.d.ts" afterPath="$PROJECT_DIR$/packages/node.TypeScript.DefinitelyTyped.0.1.5/Content/Scripts/typings/node/node-0.8.8.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/requirejs.TypeScript.DefinitelyTyped.0.0.5/Content/Scripts/typings/requirejs/require.d.ts" afterPath="$PROJECT_DIR$/packages/requirejs.TypeScript.DefinitelyTyped.0.0.5/Content/Scripts/typings/requirejs/require.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/express" afterPath="$PROJECT_DIR$/node_modules/.bin/express" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/net45/proto-edge-cs-net45/packages.config" afterPath="$PROJECT_DIR$/net45/proto-edge-cs-net45/packages.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/net45/proto-edge-cs-net45/proto_edge_cs_net45.csproj" afterPath="$PROJECT_DIR$/net45/proto-edge-cs-net45/proto_edge_cs_net45.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/repositories.config" afterPath="$PROJECT_DIR$/packages/repositories.config" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="proto-ng-breeze-edge.iws" />
@@ -43,18 +35,16 @@
       <file leaf-file-name="Gruntfile.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gruntfile.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="580" column="27" selection-start="19449" selection-end="19449" vertical-scroll-proportion="0.48" vertical-offset="9872" max-vertical-offset="10506">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="285" column="38" selection-start="9539" selection-end="9539" vertical-scroll-proportion="0.0" vertical-offset="4411" max-vertical-offset="10506">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/release/index.html">
+      <file leaf-file-name="build.config.ts" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.config.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="10.307693" vertical-offset="268" max-vertical-offset="799">
+            <state line="12" column="27" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0" vertical-offset="25" max-vertical-offset="1224">
               <folding />
             </state>
           </provider>
@@ -63,33 +53,44 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/debug/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="1910" selection-end="1910" vertical-scroll-proportion="-5.8846154" vertical-offset="408" max-vertical-offset="1156">
+            <state line="33" column="0" selection-start="1910" selection-end="1910" vertical-scroll-proportion="-9.5" vertical-offset="314" max-vertical-offset="1156">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gruntjs.d.ts" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Scripts/typings/gruntjs/gruntjs.d.ts">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/release/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="0" selection-start="2521" selection-end="2521" vertical-scroll-proportion="-0.63539195" vertical-offset="2082" max-vertical-offset="3757">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="29" column="0" selection-start="1600" selection-end="1908" vertical-scroll-proportion="0.6041667" vertical-offset="0" max-vertical-offset="816">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gruntfile.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <file leaf-file-name="routes.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Scripts/edge/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="165" column="13" selection-start="5155" selection-end="5155" vertical-scroll-proportion="-6.92" vertical-offset="2632" max-vertical-offset="5151">
-              <folding>
-                <marker date="1375976688789" expanded="true" signature="485:6823" placeholder="{...}" />
-                <marker date="1375976688789" expanded="true" signature="5162:5837" placeholder="{...}" />
-                <marker date="1375976688789" expanded="true" signature="5485:5823" placeholder="{...}" />
-                <marker date="1375976688789" expanded="true" signature="5498:5599" placeholder="[...]" />
-              </folding>
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="10" selection-start="2134" selection-end="2134" vertical-scroll-proportion="-24.538462" vertical-offset="42" max-vertical-offset="884">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Scripts/edge/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -126,6 +127,8 @@
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/Gruntfile.ts" />
         <option value="$PROJECT_DIR$/Scripts/typings/gruntjs/gruntjs.d.ts" />
+        <option value="$PROJECT_DIR$/node_modules/.gitignore" />
+        <option value="$PROJECT_DIR$/debug/index.html" />
       </list>
     </option>
   </component>
@@ -276,7 +279,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -327,22 +329,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto-ng-breeze-edge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto-ng-breeze-edge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="debug" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -351,8 +340,8 @@
     <property name="options.lastSelected" value="settings" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -426,14 +415,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="1" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328341" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328341" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884616" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18225709" sideWeight="0.671659" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23114061" sideWeight="0.671659" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328341" sideWeight="0.5003018" order="9" side_tool="true" content_ui="tabs" />
@@ -442,7 +431,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884616" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -462,9 +451,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18225709" sideWeight="0.671659" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32794458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -529,47 +518,14 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/main/home/home.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="248" selection-end="248" vertical-scroll-proportion="0.48670757" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages.config">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="21" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="10" selection-start="2134" selection-end="2134" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="884">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="84" selection-end="84" vertical-scroll-proportion="0.23159145" vertical-offset="43" max-vertical-offset="2958">
-          <folding />
-        </state>
+        <state line="8" column="21" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="5" selection-start="2091" selection-end="2091" vertical-scroll-proportion="0.7173397" vertical-offset="280" max-vertical-offset="1122">
-          <folding />
-        </state>
+        <state line="52" column="5" selection-start="2091" selection-end="2091" vertical-scroll-proportion="0.7173397" vertical-offset="280" max-vertical-offset="1122" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/typings/node/node.d.ts">
@@ -579,68 +535,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.config.ts">
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="0" selection-start="2398" selection-end="2398" vertical-scroll-proportion="0.79809976" vertical-offset="382" max-vertical-offset="1224">
+        <state line="165" column="13" selection-start="5155" selection-end="5155" vertical-scroll-proportion="0.020506635" vertical-offset="2788" max-vertical-offset="5219">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+    <entry file="file://$PROJECT_DIR$/debug/templates-app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="165" column="13" selection-start="5155" selection-end="5155" vertical-scroll-proportion="-6.92" vertical-offset="2632" max-vertical-offset="5151">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/typings/gruntjs/gruntjs.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="0" selection-start="2521" selection-end="2521" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="3757">
           <folding>
-            <marker date="1375976688789" expanded="true" signature="485:6823" placeholder="{...}" />
-            <marker date="1375976688789" expanded="true" signature="5162:5837" placeholder="{...}" />
-            <marker date="1375976688789" expanded="true" signature="5485:5823" placeholder="{...}" />
-            <marker date="1375976688789" expanded="true" signature="5498:5599" placeholder="[...]" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/release/assets/proto-ng-breeze-edge.js">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+        <state line="14" column="0" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2958">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="842">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/edge/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="842">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="10" selection-start="2134" selection-end="2134" vertical-scroll-proportion="-24.538462" vertical-offset="42" max-vertical-offset="884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/edge/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="580" column="27" selection-start="19449" selection-end="19449" vertical-scroll-proportion="0.48" vertical-offset="9872" max-vertical-offset="10506">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/debug/templates-app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+        <state line="285" column="38" selection-start="9539" selection-end="9539" vertical-scroll-proportion="0.0" vertical-offset="4411" max-vertical-offset="10506">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/release/index.html">
+    <entry file="file://$PROJECT_DIR$/build.config.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="10.307693" vertical-offset="268" max-vertical-offset="799">
+        <state line="12" column="27" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0" vertical-offset="25" max-vertical-offset="1224">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/debug/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="1910" selection-end="1910" vertical-scroll-proportion="-5.8846154" vertical-offset="408" max-vertical-offset="1156">
+        <state line="33" column="0" selection-start="1910" selection-end="1910" vertical-scroll-proportion="-9.5" vertical-offset="314" max-vertical-offset="1156">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/typings/gruntjs/gruntjs.d.ts">
+    <entry file="file://$PROJECT_DIR$/release/assets/proto-ng-breeze-edge.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="0" selection-start="2521" selection-end="2521" vertical-scroll-proportion="-0.63539195" vertical-offset="2082" max-vertical-offset="3757">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="829">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="1600" selection-end="1908" vertical-scroll-proportion="0.6041667" vertical-offset="0" max-vertical-offset="816">
+          <folding />
         </state>
       </provider>
     </entry>
