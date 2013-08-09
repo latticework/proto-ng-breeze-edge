@@ -2,7 +2,7 @@
     stringify = require('json-stringify-safe');
 
 var assemblypath = __dirname + '../../../bin/proto_edge_cs_net45.dll',
-    todoContexttype = 'proto_edge_cs_net45.TodoContext';
+    todoContexttype = 'proto_edge_cs_net45.TodoService';
 
 var getallTodoes = edge.func({
     assemblyFile: assemblypath,
@@ -16,11 +16,17 @@ var getTodoById = edge.func({
     methodName: 'GetTodo'
 });
 
-var gettodoByCriteria = edge.func({
+var saveChanges = edge.func({
     assemblyFile: assemblypath,
     typeName: todoContexttype,
-    methodName: 'GettodoByCriteria'
+    methodName: 'SaveChanges'
 });
+
+//var gettodoByCriteria = edge.func({
+//    assemblyFile: assemblypath,
+//    typeName: todoContexttype,
+//    methodName: 'GettodoByCriteria'
+//});
 
 exports.getallTodoes = function (req, res, next) {
     //getallTodoes(req.query, function (error, result) {
@@ -37,17 +43,27 @@ exports.getTodoById = function (req, res, next) {
     });
 };
 
-var todoObject = {
+//var todoObject = {
 
-    //title: 'todo title',
-    completed: 'true',
-    //todoId: 1    
-};
-var todoCriteria = stringify(todoObject, null, 2);
+//    //title: 'todo title',
+//    completed: 'true',
+//    //todoId: 1    
+//};
+//var todoCriteria = stringify(todoObject, null, 2);
 
-exports.gettodoByCriteria = function (req, res, next) {
-    gettodoByCriteria(todoCriteria, function (error, result) {
+//exports.gettodoByCriteria = function (req, res, next) {
+//    gettodoByCriteria(todoCriteria, function (error, result) {
+//        if (error) throw error;
+//        res.send(result)
+//    });
+//};
+
+exports.saveChanges = function (req, res, next) {
+   
+    //res.send(req.body);    
+    saveChanges(stringify(req.body, null, 2), function (error, result) {
         if (error) throw error;
         res.send(result)
     });
+   
 };
