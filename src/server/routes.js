@@ -41,7 +41,7 @@ exports.getTodoById = function (req, res, next) {
         if (error) throw error;
         res.send(result)
     });
-};
+}; 
 
 //var todoObject = {
 

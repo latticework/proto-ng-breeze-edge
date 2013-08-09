@@ -102,6 +102,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
     <Content Include="bower.json" />
     <Content Include="Gruntfile.js" />
     <Content Include="package.json" />
@@ -111,13 +113,19 @@
     <None Include="Scripts\breeze.intellisense.js" />
     <Content Include="Scripts\breeze.debug.js" />
     <Content Include="Scripts\breeze.min.js" />
-    <Content Include="Scripts\edge\routes.js" />
-    <Content Include="Scripts\edge\server.js" />
     <Content Include="Scripts\q.js" />
     <Content Include="Scripts\q.min.js" />
     <Content Include="Scripts\typings\angularjs\angular-resource.d.ts" />
     <Content Include="Scripts\typings\angularjs\angular.d.ts" />
     <Content Include="Scripts\typings\requirejs\require.d.ts" />
+    <Content Include="src\client\app\app.js" />
+    <Content Include="src\client\app\main\about\about.js" />
+    <Content Include="src\client\app\main\about\about.tpl.html" />
+    <Content Include="src\client\app\main\home\home.js" />
+    <Content Include="src\client\app\main\home\home.tpl.html" />
+    <Content Include="src\index.html" />
+    <Content Include="src\server\routes.js" />
+    <Content Include="src\server\server.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -125,6 +133,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="src\client\app\app.js.map" />
+    <Content Include="src\client\app\main\about\about.js.map" />
+    <Content Include="src\client\app\main\about\about.scss" />
+    <Content Include="src\client\app\main\home\home.js.map" />
+    <Content Include="src\client\app\main\home\home.scss" />
+    <Content Include="src\client\scss\main.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -143,6 +157,10 @@
     <TypeScriptCompile Include="Scripts\typings\gruntjs\gruntjs.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
+    <TypeScriptCompile Include="src\client\app\app.ts" />
+    <TypeScriptCompile Include="src\client\app\main\about\about.d.ts" />
+    <TypeScriptCompile Include="src\client\app\main\about\about.ts" />
+    <TypeScriptCompile Include="src\client\app\main\home\home.ts" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="net45\proto-edge-cs-net45\proto_edge_cs_net45.csproj">
