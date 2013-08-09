@@ -1,7 +1,8 @@
-/*global module:false*/ /// <reference path="./Scripts/typings/gruntjs/gruntjs.d.ts" />
+/*global module:false*/
+/// <reference path="./Scripts/typings/gruntjs/gruntjs.d.ts" />
 /// <reference path="./Scripts/typings/node/node.d.ts" />
 // https://raw.github.com/joshdmiller/ng-boilerplate/v0.3.0-release/gruntfile.js
-module.exports = function (grunt) {
+var toExport = function (grunt) {
     "use strict";
 
     /**
@@ -26,6 +27,7 @@ module.exports = function (grunt) {
     /**
     * load in our build configuration file.
     */
+    //    import userconfig = module('build.config');
     var userconfig = require('./build.config.js');
 
     /**
@@ -139,7 +141,9 @@ module.exports = function (grunt) {
             * code and all specified vendor source code into a single file.
             */
             compile_js: {
-                options: {},
+                //                options: {
+                //                    banner: '<%= meta.banner %>'
+                //                },
                 src: [
                     '<%= vendor_files.js %>',
                     'module.prefix',
@@ -173,11 +177,10 @@ module.exports = function (grunt) {
         */
         uglify: {
             compile: {
-                //options: {
-                //    banner: '<%= meta.banner %>'
-                //},
+                //                options: {
+                //                    banner: '<%= meta.banner %>'
+                //                },
                 files: {
-                    //                    'release/assets/proto-ng-breeze-edge.js': 'release/assets/proto-ng-breeze-edge.js',
                     '<%= concat.compile_js.dest %>': '<%= concat.compile_js.dest %>'
                 }
             }
@@ -224,9 +227,7 @@ module.exports = function (grunt) {
             src: [
                 '<%= app_files.js %>'
             ],
-            //test: [
-            //    '<%= app_files.jsunit %>'
-            //],
+            test: [],
             gruntfile: [
                 'gruntfile.js'
             ],
@@ -333,20 +334,34 @@ module.exports = function (grunt) {
         //                ]
         //            }
         //        },
-        //            // typescript configuration for grunt.
-        //            typescript: {
-        //                base: {
-        //                    src: ['*.ts'],
-        //                    dest: 'js',
-        //                    options: {
-        //                        module: 'amd', //or commonjs
-        //                        target: 'es5', //or es3
-        //                        base_path: '',
-        //                        sourcemap: true,
-        //                        fullsourcemappath: true,
-        //                        declaration: true
-        //                    }
-        //            },
+        // typescript configuration for grunt.
+        typescript: {
+            src: {
+                src: ['src/**/*.ts'],
+                //                    dest: 'js',
+                options: {
+                    module: 'amd',
+                    target: 'es5',
+                    base_path: '',
+                    sourcemap: true,
+                    fullsourcemappath: true
+                }
+            },
+            gruntmodules: {
+                src: [
+                    'build.config.ts',
+                    'Gruntfile.ts'
+                ],
+                //                    dest: 'js',
+                options: {
+                    //                        nolib: true,
+                    module: 'commonjs',
+                    target: 'es5',
+                    base_path: '',
+                    sourcemap: false
+                }
+            }
+        },
         /**
         * and for rapid development, we have a watch set up that checks to see if
         * any of the files listed below change, and then to execute the listed
@@ -514,7 +529,7 @@ module.exports = function (grunt) {
         });
     };
 
-    grunt.registerMultiTask('index', 'process index.html template', indexTaskFunction);
+    grunt.registerMultiTask('index', 'Process index.html template', indexTaskFunction);
     ///**
     // * in order to avoid having to specify manually the files needed for karma to
     // * run, we use grunt to manage the list for us. the `karma/*` files are
@@ -533,4 +548,7 @@ module.exports = function (grunt) {
     //    });
     //});
 };
-//# sourceMappingURL=Gruntfile.js.map
+
+
+module.exports = toExport;
+

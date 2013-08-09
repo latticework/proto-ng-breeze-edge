@@ -103,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bower.json" />
+    <Content Include="Gruntfile.js" />
     <Content Include="package.json" />
     <Content Include="packages.config" />
     <Content Include="module.prefix" />
@@ -110,6 +111,8 @@
     <None Include="Scripts\breeze.intellisense.js" />
     <Content Include="Scripts\breeze.debug.js" />
     <Content Include="Scripts\breeze.min.js" />
+    <Content Include="Scripts\edge\routes.js" />
+    <Content Include="Scripts\edge\server.js" />
     <Content Include="Scripts\q.js" />
     <Content Include="Scripts\q.min.js" />
     <Content Include="Scripts\typings\angularjs\angular-resource.d.ts" />
@@ -137,11 +140,15 @@
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-sanitize.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-scenario.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\breeze\breeze-1.0.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\breeze\breeze.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\gruntjs\gruntjs.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\node\node-0.8.8.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="net45\proto-edge-cs-net45\proto_edge_cs_net45.csproj">
+      <Project>{4c7a877e-798c-4204-8db9-a660b6e7e3e4}</Project>
+      <Name>proto_edge_cs_net45</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

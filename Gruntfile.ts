@@ -1,4 +1,4 @@
-/*global module:false*/ 
+/*global module:false*/
 /// <reference path="./Scripts/typings/gruntjs/gruntjs.d.ts" />
 /// <reference path="./Scripts/typings/node/node.d.ts" />
 
@@ -27,6 +27,7 @@ module.exports = function(grunt: IGrunt) {
     /**
      * load in our build configuration file.
      */
+//    import userconfig = module('build.config');
     var userconfig = require( './build.config.js' );
 
 
@@ -152,9 +153,9 @@ module.exports = function(grunt: IGrunt) {
              * code and all specified vendor source code into a single file.
              */
             compile_js: {
-                options: {
-                    //banner: '<%= meta.banner %>'
-                },
+//                options: {
+//                    banner: '<%= meta.banner %>'
+//                },
                 src: [
                     '<%= vendor_files.js %>',
                     'module.prefix',
@@ -164,7 +165,7 @@ module.exports = function(grunt: IGrunt) {
                     '<%= vendor_files.js %>',
                     'module.suffix',
                 ],
-                dest: '<%= compile_dir %>/assets/<%= pkg.name %>.js'
+                dest: '<%= compile_dir %>/assets/<%= pkg.name %>.js',
             }
         },
 
@@ -190,11 +191,10 @@ module.exports = function(grunt: IGrunt) {
          */
         uglify: {
             compile: {
-                //options: {
-                //    banner: '<%= meta.banner %>'
-                //},
+//                options: {
+//                    banner: '<%= meta.banner %>'
+//                },
                 files: {
-//                    'release/assets/proto-ng-breeze-edge.js': 'release/assets/proto-ng-breeze-edge.js',
                     '<%= concat.compile_js.dest %>': '<%= concat.compile_js.dest %>'
                 }
             }
@@ -243,9 +243,9 @@ module.exports = function(grunt: IGrunt) {
             src: [
                 '<%= app_files.js %>'
             ],
-            //test: [
-            //    '<%= app_files.jsunit %>'
-            //],
+            test: [
+//                '<%= app_files.jsunit %>'
+            ],
             gruntfile: [
                 'gruntfile.js'
             ],
@@ -362,20 +362,37 @@ module.exports = function(grunt: IGrunt) {
 //            }
 //        },
 
-//            // typescript configuration for grunt.
-//            typescript: {
-//                base: {
-//                    src: ['*.ts'],
+            // typescript configuration for grunt.
+            typescript: {
+                src: {
+                    src: ['src/**/*.ts'],
 //                    dest: 'js',
-//                    options: {
-//                        module: 'amd', //or commonjs
-//                        target: 'es5', //or es3
-//                        base_path: '',
-//                        sourcemap: true,
+                    options: {
+                        module: 'amd',
+                        target: 'es5',
+                        base_path: '',
+                        sourcemap: true,
+                        fullsourcemappath: true,
+//                        declaration: true,
+                    },
+                },
+                gruntmodules: {
+                    src: [
+                        'build.config.ts',
+                        'Gruntfile.ts',
+                    ],
+//                    dest: 'js',
+                    options: {
+//                        nolib: true,
+                        module: 'commonjs',
+                        target: 'es5', //or es3
+                        base_path: '',
+                        sourcemap: false,
 //                        fullsourcemappath: true,
-//                        declaration: true
-//                    }
-//            },
+//                        declaration: true,
+                    },
+                },
+            },
 
         /**
          * and for rapid development, we have a watch set up that checks to see if
@@ -527,14 +544,14 @@ module.exports = function(grunt: IGrunt) {
      * a utility function to get all app javascript sources.
      */
     function filterForJS(files: string[]) {
-        return files.filter((file, index, array) => <boolean>file.match(/\.js$/));
+        return files.filter((file, index, array) => <boolean><any>file.match(/\.js$/));
     }
 
     /**
      * a utility function to get all app css sources.
      */
     function filterForCss(files: string[]) {
-        return files.filter((file, index, array) => <boolean>file.match(/\.css$/));
+        return files.filter((file, index, array) => <boolean><any>file.match(/\.css$/));
     }
 
     /**
@@ -573,7 +590,7 @@ module.exports = function(grunt: IGrunt) {
         });
     }
 
-    grunt.registerMultiTask('index', 'process index.html template', indexTaskFunction);
+    grunt.registerMultiTask('index', 'Process index.html template', indexTaskFunction);
 
     ///**
     // * in order to avoid having to specify manually the files needed for karma to
@@ -594,3 +611,5 @@ module.exports = function(grunt: IGrunt) {
     //    });
     //});
 };
+
+export = toExport;
