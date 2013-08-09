@@ -103,8 +103,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bower.json" />
+    <Content Include="Gruntfile.js" />
     <Content Include="package.json" />
     <Content Include="packages.config" />
+    <Content Include="module.prefix" />
+    <Content Include="module.suffix" />
     <None Include="Scripts\breeze.intellisense.js" />
     <Content Include="Scripts\breeze.debug.js" />
     <Content Include="Scripts\breeze.min.js" />

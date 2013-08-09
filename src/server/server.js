@@ -6,7 +6,7 @@ var app = express();
 
 app.use(express.bodyParser());
 
-app.configure(function () {  
+app.configure(function () {
 
     app.get('/todo', routes.getallTodoes);
     app.get('/todo/:todoid', routes.getTodoById);

@@ -70,13 +70,13 @@ interface IGruntTask extends IGruntTaskBase {
 interface IGruntRunningTask extends IGruntTask {
     async(): (boolean) => void;
     options(defaultObj?: any);
-    name: string;
     requires(...taskList: string[]);
     requiresConfig(...props: string[]);
 
     args: string[];
     errorCount: number;
     flags: any;
+    name: string;
     nameArgs: string;
 }
 
@@ -127,7 +127,7 @@ interface IGrunt extends IGruntTaskBase {
     // Template
     template: any;
     // Util
-    util: any;
+    util: IGruntUtilObject;
 }
 
 ////////////////
@@ -200,9 +200,17 @@ interface IGruntFileObject {
     findup: any;
 }
 
+interface ILoDash {
+    extend : Function;
+}
+
+interface IGruntUtilObject {
+    _: ILoDash;
+}
+
 
 ////////////////
 /// Globally called export function module.exports
 ////////////////
 
-declare var exports: (grunt: IGrunt) => void;
+//declare var exports: (grunt: IGrunt) => void;
