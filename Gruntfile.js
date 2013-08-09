@@ -336,11 +336,22 @@ var toExport = function (grunt) {
         //        },
         // typescript configuration for grunt.
         typescript: {
-            src: {
-                src: ['src/**/*.ts'],
+            client: {
+                src: ['src/client/**/*.ts'],
                 //                    dest: 'js',
                 options: {
                     module: 'amd',
+                    target: 'es5',
+                    base_path: '',
+                    sourcemap: true,
+                    fullsourcemappath: true
+                }
+            },
+            server: {
+                src: ['src/server/**/*.ts'],
+                //                    dest: 'js',
+                options: {
+                    module: 'commonjs',
                     target: 'es5',
                     base_path: '',
                     sourcemap: true,

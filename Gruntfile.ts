@@ -3,7 +3,7 @@
 /// <reference path="./Scripts/typings/node/node.d.ts" />
 
 // https://raw.github.com/joshdmiller/ng-boilerplate/v0.3.0-release/gruntfile.js
-module.exports = function(grunt: IGrunt) {
+var toExport = function(grunt: IGrunt) {
     "use strict";
 
     /**
@@ -364,11 +364,23 @@ module.exports = function(grunt: IGrunt) {
 
             // typescript configuration for grunt.
             typescript: {
-                src: {
-                    src: ['src/**/*.ts'],
+                client: {
+                    src: ['src/client/**/*.ts'],
 //                    dest: 'js',
                     options: {
                         module: 'amd',
+                        target: 'es5',
+                        base_path: '',
+                        sourcemap: true,
+                        fullsourcemappath: true,
+//                        declaration: true,
+                    },
+                },
+                server: {
+                    src: ['src/server/**/*.ts'],
+//                    dest: 'js',
+                    options: {
+                        module: 'commonjs',
                         target: 'es5',
                         base_path: '',
                         sourcemap: true,
