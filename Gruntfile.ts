@@ -1,10 +1,11 @@
+/*global module:false*/ 
 /// <reference path="./Scripts/typings/gruntjs/gruntjs.d.ts" />
 /// <reference path="./Scripts/typings/node/node.d.ts" />
 
-"use strict";
-
 // https://raw.github.com/joshdmiller/ng-boilerplate/v0.3.0-release/gruntfile.js
 module.exports = function(grunt: IGrunt) {
+    "use strict";
+
     /**
      * load required grunt tasks. these are installed based on the versions listed
      * in `package.json` when you do `npm install` in this directory.
@@ -17,7 +18,7 @@ module.exports = function(grunt: IGrunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
 //    grunt.loadNpmTasks('grunt-conventional-changelog');
-//    grunt.loadNpmTasks('grunt-html2js');
+    grunt.loadNpmTasks('grunt-html2js');
 //    grunt.loadNpmTasks('grunt-karma');
     grunt.loadNpmTasks('grunt-ngmin');
     grunt.loadNpmTasks('grunt-typescript');
@@ -152,7 +153,7 @@ module.exports = function(grunt: IGrunt) {
              */
             compile_js: {
                 options: {
-                    banner: '<%= meta.banner %>'
+                    //banner: '<%= meta.banner %>'
                 },
                 src: [
                     '<%= vendor_files.js %>',
@@ -161,7 +162,7 @@ module.exports = function(grunt: IGrunt) {
                     '<%= html2js.app.dest %>',
                     '<%= html2js.common.dest %>',
                     '<%= vendor_files.js %>',
-                    'module.suffix'
+                    'module.suffix',
                 ],
                 dest: '<%= compile_dir %>/assets/<%= pkg.name %>.js'
             }
@@ -189,10 +190,11 @@ module.exports = function(grunt: IGrunt) {
          */
         uglify: {
             compile: {
-                options: {
-                    banner: '<%= meta.banner %>'
-                },
+                //options: {
+                //    banner: '<%= meta.banner %>'
+                //},
                 files: {
+//                    'release/assets/proto-ng-breeze-edge.js': 'release/assets/proto-ng-breeze-edge.js',
                     '<%= concat.compile_js.dest %>': '<%= concat.compile_js.dest %>'
                 }
             }
@@ -241,9 +243,9 @@ module.exports = function(grunt: IGrunt) {
             src: [
                 '<%= app_files.js %>'
             ],
-            test: [
-                '<%= app_files.jsunit %>'
-            ],
+            //test: [
+            //    '<%= app_files.jsunit %>'
+            //],
             gruntfile: [
                 'gruntfile.js'
             ],
@@ -504,6 +506,7 @@ module.exports = function(grunt: IGrunt) {
         'copy:build_appjs',
         'copy:build_vendorjs',
         'index:build',
+//        'karmaconfig',
 //        'karma:continuous',
     ]);
 
