@@ -28,14 +28,13 @@ var toExport = function(grunt: IGrunt) {
      * load in our build configuration file.
      */
 //    import userconfig = module('build.config');
-    var userconfig = require( './build.config.js' );
-
+    var userconfig = require('./build.config.js');
 
     /**
      * this is the configuration object grunt uses to give each plugin its
      * instructions.
      */
-    var taskconfig = {
+    var taskconfig : IGruntConfig = {
         /**
          * we read in our `package.json` file so we can access the package name and
          * version. it's already there, so we don't repeat ourselves here.
