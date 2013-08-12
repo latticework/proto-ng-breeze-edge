@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="3bbb12823b7945aa843bfb2f124508b1" Name="Diagram1">
-        <EntityTypeShape EntityType="SCM_DEVModel.Todo" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SCM_DEVModel.Todo" Width="1.5" PointX="1.0635643047576604" PointY="11.294695784940709" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

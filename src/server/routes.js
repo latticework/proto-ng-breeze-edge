@@ -22,6 +22,12 @@ var saveChanges = edge.func({
     methodName: 'SaveChanges'
 });
 
+var getMetadata = edge.func({
+    assemblyFile: assemblypath,
+    typeName: todoContexttype,
+    methodName: 'GetMetaData'
+});
+
 //var gettodoByCriteria = edge.func({
 //    assemblyFile: assemblypath,
 //    typeName: todoContexttype,
@@ -30,6 +36,11 @@ var saveChanges = edge.func({
 
 exports.getallTodoes = function (req, res, next) {
     //getallTodoes(req.query, function (error, result) {
+
+    
+    console.log(process.env.NODE_ENV);
+    console.log(process.env);
+
     getallTodoes(req.url, function (error, result) {
         if (error) throw error;
         res.send(result)
@@ -62,6 +73,15 @@ exports.saveChanges = function (req, res, next) {
 
     //res.send(req.body);    
     saveChanges(stringify(req.body, null, 2), function (error, result) {
+        if (error) throw error;
+        res.send(result)
+    });
+
+};
+exports.getMetadata = function (req, res, next) {
+
+    //res.send(req.body);    
+    getMetadata(null, function (error, result) {
         if (error) throw error;
         res.send(result)
     });

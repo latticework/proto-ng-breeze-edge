@@ -14,7 +14,7 @@ namespace proto_edge_cs_net45
     
     public partial class Todo
     {
-        public decimal TodoId { get; set; }
+        public int TodoId { get; set; }
         public string Title { get; set; }
         public Nullable<bool> Completed { get; set; }
         public string Description { get; set; }

@@ -13,7 +13,6 @@ namespace proto_edge_cs_net45
 {
     public class TodoService
     {
-        
         //IList<Todo> _todoes = new List<Todo>();
         public TodoService()
         {
@@ -56,8 +55,9 @@ namespace proto_edge_cs_net45
         
         public async Task<object> GetTodo(object todoId)
         {
-            TodoEFContext todoDbContext = new TodoEFContext();
-            return todoDbContext.Todoes.FirstOrDefault(t => t.TodoId == int.Parse(todoId.ToString()));
+            TodoEFContext todoDbContext = new TodoEFContext();       
+            var id = int.Parse(todoId.ToString());
+            return todoDbContext.Todoes.FirstOrDefault(t => t.TodoId == id);
             //return _todoes.FirstOrDefault(t => t.TodoId == int.Parse(todoId.ToString()));
            
         }
@@ -74,7 +74,6 @@ namespace proto_edge_cs_net45
             //return _todoes.Where(t => t.Completed == todoCriteria.Completed);          
             return todoDbContext.Todoes.Where(t => t.Completed == todoCriteria.Completed);          
         }
-
         public async Task<object> SaveChanges(object input)
         {
             TodoEFContext todoDbContext = new TodoEFContext();
@@ -83,9 +82,20 @@ namespace proto_edge_cs_net45
             //_todoes.Add(entity);
             //return _todoes.AsQueryable();
             todoDbContext.Todoes.Add(entity);
+            todoDbContext.Entry(entity).State = System.Data.EntityState.Added;
             todoDbContext.SaveChanges();
             return todoDbContext.Todoes;
         }
+
+        public async Task<object> GetMetaData(object input)
+        {
+            TodoEFContext todoDbContext = new TodoEFContext();
+            return todoDbContext.GetMetadataFromDbContext();
+        }
+        
+        
+        
+        
         private IQueryable  GettodoByQuery(object queryString)
         {
             TodoEFContext todoDbContext = new TodoEFContext();
@@ -119,6 +129,7 @@ namespace proto_edge_cs_net45
 
             return buffer.ToString();
         }
+
 
     }
 }
