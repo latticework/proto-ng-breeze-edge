@@ -106,10 +106,11 @@
     <Content Include=".gitignore" />
     <Content Include="bower.json" />
     <Content Include="Gruntfile.js" />
-    <Content Include="package.json" />
     <Content Include="packages.config" />
     <Content Include="module.prefix" />
     <Content Include="module.suffix" />
+    <Content Include="package.json" />
+    <Content Include="init.ps1" />
     <None Include="Scripts\breeze.intellisense.js" />
     <Content Include="Scripts\breeze.debug.js" />
     <Content Include="Scripts\breeze.min.js" />
@@ -149,14 +150,18 @@
   <ItemGroup>
     <TypeScriptCompile Include="build.config.ts" />
     <TypeScriptCompile Include="Gruntfile.ts" />
+    <TypeScriptCompile Include="package.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-sanitize.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-scenario.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\breeze\breeze-1.0.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\gruntjs\grunt-contrib-clean_MultiTask.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\gruntjs\grunt-contrib-clean_Task.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\gruntjs\gruntjs.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\npm\npm.d.ts" />
     <TypeScriptCompile Include="src\client\app\app.ts" />
     <TypeScriptCompile Include="src\client\app\main\about\about.d.ts" />
     <TypeScriptCompile Include="src\client\app\main\about\about.ts" />

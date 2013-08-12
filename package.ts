@@ -1,4 +1,5 @@
-{
+/// <reference path="./Scripts/typings/npm/npm.d.ts" />
+<INpmPackageJson>{
     "author": { "name": "Latticework" },
     "name": "proto-ng-breeze-edge",
     "version": "0.0.1",
@@ -6,7 +7,7 @@
     "homepage": "https://github.com/latticework/proto-ng-breeze-edge",
     "license": "MIT",
     "main": "release/server/server.js",
-    "dependencies": {},
+    "dependencies": { },
     "devDependencies": {
         "edge": "~0.7.12",
         "grunt": "~0.4.1",

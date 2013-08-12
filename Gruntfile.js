@@ -1,5 +1,6 @@
 /*global module:false*/
 /// <reference path="./Scripts/typings/gruntjs/gruntjs.d.ts" />
+/// <reference path="./Scripts/typings/gruntjs/grunt-contrib-clean.d.ts" />
 /// <reference path="./Scripts/typings/node/node.d.ts" />
 // https://raw.github.com/joshdmiller/ng-boilerplate/v0.3.0-release/gruntfile.js
 var toExport = function (grunt) {
@@ -81,10 +82,12 @@ var toExport = function (grunt) {
         //            }
         //        },
         // the directories to delete when `grunt clean` is executed.
-        clean: [
-            '<%= build_dir %>',
-            '<%= compile_dir %>'
-        ],
+        clean: {
+            src: [
+                '<%= build_dir %>',
+                '<%= compile_dir %>'
+            ]
+        },
         /**
         * the `copy` task just copies files from a to b. we use it here to copy
         * our project assets (images, fonts, etc.) and javascripts into
@@ -177,11 +180,11 @@ var toExport = function (grunt) {
         */
         uglify: {
             compile: {
-                //                options: {
-                //                    banner: '<%= meta.banner %>'
-                //                },
+                options: {
+                    banner: '<%= meta.banner %>'
+                },
                 files: {
-                    '<%= concat.compile_js.dest %>': '<%= concat.compile_js.dest %>'
+                    '<%= concat.compile_js.dest %>': ['<%= concat.compile_js.dest %>']
                 }
             }
         },

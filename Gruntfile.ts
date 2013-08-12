@@ -1,5 +1,6 @@
 /*global module:false*/
 /// <reference path="./Scripts/typings/gruntjs/gruntjs.d.ts" />
+/// <reference path="./Scripts/typings/gruntjs/grunt-contrib-clean.d.ts" />
 /// <reference path="./Scripts/typings/node/node.d.ts" />
 
 // https://raw.github.com/joshdmiller/ng-boilerplate/v0.3.0-release/gruntfile.js
@@ -34,7 +35,7 @@ var toExport = function(grunt: IGrunt) {
      * this is the configuration object grunt uses to give each plugin its
      * instructions.
      */
-    var taskconfig : IGruntConfig = {
+    var taskconfig: IGruntConfig = {
         /**
          * we read in our `package.json` file so we can access the package name and
          * version. it's already there, so we don't repeat ourselves here.
@@ -48,52 +49,55 @@ var toExport = function(grunt: IGrunt) {
          */
         meta: {
             banner: '/**\n' +
-                ' * <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
-                ' * <%= pkg.homepage %>\n' +
-                ' *\n' +
-                ' * copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-                ' * licensed <%= pkg.licenses.type %> <<%= pkg.licenses.url %>>\n' +
-                ' */\n'
+            ' * <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
+            ' * <%= pkg.homepage %>\n' +
+            ' *\n' +
+            ' * copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+            ' * licensed <%= pkg.licenses.type %> <<%= pkg.licenses.url %>>\n' +
+            ' */\n'
         },
 
-//        /**
-//         * creates a changelog on a new version.
-//         */
-//        changelog: {
-//            options: {
-//                dest: 'changelog.md',
-//                template: 'changelog.tpl'
-//            }
-//        },
-//
-//        /**
-//         * increments the version number, etc.
-//         */
-//        bump: {
-//            options: {
-//                files: [
-//                    "package.json",
-//                    "bower.json"
-//                ],
-//                commit: false,
-//                commitmessage: 'chore(release): v%version%',
-//                commitfiles: [
-//                    "package.json",
-//                    "client/bower.json"
-//                ],
-//                createtag: false,
-//                tagname: 'v%version%',
-//                tagmessage: 'version %version%',
-//                push: false,
-//                pushto: 'origin'
-//            }
-//        },
+        //        /**
+        //         * creates a changelog on a new version.
+        //         */
+        //        changelog: {
+        //            options: {
+        //                dest: 'changelog.md',
+        //                template: 'changelog.tpl'
+        //            }
+        //        },
+        //
+        //        /**
+        //         * increments the version number, etc.
+        //         */
+        //        bump: {
+        //            options: {
+        //                files: [
+        //                    "package.json",
+        //                    "bower.json"
+        //                ],
+        //                commit: false,
+        //                commitmessage: 'chore(release): v%version%',
+        //                commitfiles: [
+        //                    "package.json",
+        //                    "client/bower.json"
+        //                ],
+        //                createtag: false,
+        //                tagname: 'v%version%',
+        //                tagmessage: 'version %version%',
+        //                push: false,
+        //                pushto: 'origin'
+        //            }
+        //        },
 
         // the directories to delete when `grunt clean` is executed.
-        clean: [
-            '<%= build_dir %>',
-            '<%= compile_dir %>',
-        ],
+        clean: <IGruntContribCleanConfig> {
+            
+            //src: [
+            //    '<%= build_dir %>',
+            //    '<%= compile_dir %>',
+            //]
+        },
 
         /**
          * the `copy` task just copies files from a to b. we use it here to copy
@@ -104,7 +108,7 @@ var toExport = function(grunt: IGrunt) {
             build_assets: {
                 files: [
                     {
-                        src: [ '**' ],
+                        src: ['**'],
                         dest: '<%= build_dir %>/assets/',
                         cwd: 'src/client/assets',
                         expand: true,
@@ -114,7 +118,7 @@ var toExport = function(grunt: IGrunt) {
             build_appjs: {
                 files: [
                     {
-                        src: [ '<%= app_files.js %>' ],
+                        src: ['<%= app_files.js %>'],
                         dest: '<%= build_dir %>/client/',
                         cwd: '.',
                         expand: true
@@ -124,7 +128,7 @@ var toExport = function(grunt: IGrunt) {
             build_vendorjs: {
                 files: [
                     {
-                        src: [ '<%= client_vendor_files.js %>' ],
+                        src: ['<%= client_vendor_files.js %>'],
                         dest: '<%= build_dir %>/client/',
                         cwd: '.',
                         expand: true
@@ -134,7 +138,7 @@ var toExport = function(grunt: IGrunt) {
             compile_assets: {
                 files: [
                     {
-                        src: [ '**' ],
+                        src: ['**'],
                         dest: '<%= compile_dir %>/client/assets',
                         cwd: '<%= build_dir %>/client/assets',
                         expand: true
@@ -152,9 +156,9 @@ var toExport = function(grunt: IGrunt) {
              * code and all specified vendor source code into a single file.
              */
             compile_js: {
-//                options: {
-//                    banner: '<%= meta.banner %>'
-//                },
+                //                options: {
+                //                    banner: '<%= meta.banner %>'
+                //                },
                 src: [
                     '<%= client_vendor_files.js %>',
                     'module.prefix',
@@ -176,7 +180,7 @@ var toExport = function(grunt: IGrunt) {
             compile: {
                 files: [
                     {
-                        src: [ '<%= app_files.js %>' ],
+                        src: ['<%= app_files.js %>'],
                         cwd: '<%= build_dir %>',
                         dest: '<%= build_dir %>',
                         expand: true
@@ -189,14 +193,14 @@ var toExport = function(grunt: IGrunt) {
          * minify the sources!
          */
         uglify: {
-            compile: {
-//                options: {
-//                    banner: '<%= meta.banner %>'
-//                },
+            compile: <ITaskGruntContribUglifyFilesConfig>{
+                options: {
+                    banner: '<%= meta.banner %>',
+                },
                 files: {
-                    '<%= concat.compile_js.dest %>': '<%= concat.compile_js.dest %>'
-                }
-            }
+                    '<%= concat.compile_js.dest %>': ['<%= concat.compile_js.dest %>'],
+                },
+            },
         },
 
 //        keep until we figure out scss builds.
