@@ -5,6 +5,8 @@ interface IGruntContribCleanConfigOptions {
     "no-write"?: boolean;
 }
 
-interface IGruntConfig {
-    clean?: IGruntContribCleanConfig;
-}
+interface IGruntContribCleanConfig extends ITaskCompactConfig<IGruntContribCleanConfigOptions> { }
+
+//interface IGruntConfig {
+//    clean?: IGruntContribCleanConfig;
+//}

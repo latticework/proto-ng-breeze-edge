@@ -32,10 +32,6 @@ interface ITaskFilesArrayConfig<TOptions, TTaskFilesObject extends ITaskFilesObj
     files: TTaskFilesObject[];
 }
 
-interface IMultiTaskConfig {
-    [task: string]: any;
-}
-
 interface IMultiTaskConfig<TOptions> {
     options?: TOptions;
     [task: string]: any;

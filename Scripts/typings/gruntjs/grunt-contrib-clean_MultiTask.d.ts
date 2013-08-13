@@ -7,9 +7,9 @@ interface IGruntContribCleanConfigOptions {
 
 interface IGruntContribCleanLongConfig extends ITaskCompactConfig<IGruntContribCleanConfigOptions> { }
 
-interface IGruntContribClean extends IMultiTaskConfig<IGruntContribCleanConfigOptions> {
+interface IGruntContribCleanMultiTaskConfig extends IMultiTaskConfig<IGruntContribCleanConfigOptions> {
 }
 
-interface IGruntConfig {
-    clean?: IGruntContribClean;
-}
+//interface IGruntConfig {
+//    clean?: IGruntContribClean;
+//}
