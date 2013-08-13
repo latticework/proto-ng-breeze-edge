@@ -26,10 +26,10 @@ var userConfig = {
 //        jsunit: [ 'src/**/*.spec.js' ],
         js: [ 'src/**/*.js' ],
 
-        atpl: [ 'src/app/**/*.tpl.html' ],
-        ctpl: [ 'src/common/**/*.tpl.html' ],
+        atpl: [ 'src/client/app/**/*.tpl.html' ],
+        ctpl: [ 'src/client/common/**/*.tpl.html' ],
 
-        html: [ 'src/index.html' ],
+        html: [ 'src/client/index.html' ],
         scss: 'src/scss/main.scss',
     },
 
@@ -39,19 +39,20 @@ var userConfig = {
      * process somewhere. While the `app_files` property ensures all
      * standardized files are collected for compilation, it is the user's job
      * to ensure non-standardized (i.e. vendor-related) files are handled
-     * appropriately in `vendor_files.js`.
+     * appropriately in `client_vendor_files.js`.
      *
-     * The `vendor_files.js` property holds files to be automatically
+     * The `client_vendor_files.js` property holds files to be automatically
      * concatenated and minified with our project source files.
      *
-     * The `vendor_files.css` property holds any CSS files to be automatically
+     * The `client_vendor_files.css` property holds any CSS files to be automatically
      * included in our app.
      */
-    vendor_files: {
+    client_vendor_files: {
         js: [
             'bower_components/angular/angular.js',
             'bower_components/metro-ui-css/javascript/*.js',
-            'packages/Breeze.WebApi.1.4.0/content/Scripts/breeze.debug.js',
+            'Scripts/breeze.debug.js',
+            'Scripts/q.js',
 //            'vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js',
 //            'vendor/angular-ui-router/release/angular-ui-router.js',
 //            'vendor/angular-ui-utils/modules/route/route.js'
@@ -60,6 +61,12 @@ var userConfig = {
             'bower_components/metro-ui-css/css/*.css',
         ],
     },
+
+    server_vendor_files: {
+        js: [
+            'node_modules/edge/',
+        ],
+    }
 };
 
 export = userConfig;

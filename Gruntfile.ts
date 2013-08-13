@@ -28,14 +28,13 @@ var toExport = function(grunt: IGrunt) {
      * load in our build configuration file.
      */
 //    import userconfig = module('build.config');
-    var userconfig = require( './build.config.js' );
-
+    var userconfig = require('./build.config.js');
 
     /**
      * this is the configuration object grunt uses to give each plugin its
      * instructions.
      */
-    var taskconfig = {
+    var taskconfig : IGruntConfig = {
         /**
          * we read in our `package.json` file so we can access the package name and
          * version. it's already there, so we don't repeat ourselves here.
@@ -107,7 +106,7 @@ var toExport = function(grunt: IGrunt) {
                     {
                         src: [ '**' ],
                         dest: '<%= build_dir %>/assets/',
-                        cwd: 'src/assets',
+                        cwd: 'src/client/assets',
                         expand: true,
                     }
                 ]
@@ -116,7 +115,7 @@ var toExport = function(grunt: IGrunt) {
                 files: [
                     {
                         src: [ '<%= app_files.js %>' ],
-                        dest: '<%= build_dir %>/',
+                        dest: '<%= build_dir %>/client/',
                         cwd: '.',
                         expand: true
                     }
@@ -125,8 +124,8 @@ var toExport = function(grunt: IGrunt) {
             build_vendorjs: {
                 files: [
                     {
-                        src: [ '<%= vendor_files.js %>' ],
-                        dest: '<%= build_dir %>/',
+                        src: [ '<%= client_vendor_files.js %>' ],
+                        dest: '<%= build_dir %>/client/',
                         cwd: '.',
                         expand: true
                     }
@@ -136,8 +135,8 @@ var toExport = function(grunt: IGrunt) {
                 files: [
                     {
                         src: [ '**' ],
-                        dest: '<%= compile_dir %>/assets',
-                        cwd: '<%= build_dir %>/assets',
+                        dest: '<%= compile_dir %>/client/assets',
+                        cwd: '<%= build_dir %>/client/assets',
                         expand: true
                     }
                 ]
@@ -157,15 +156,15 @@ var toExport = function(grunt: IGrunt) {
 //                    banner: '<%= meta.banner %>'
 //                },
                 src: [
-                    '<%= vendor_files.js %>',
+                    '<%= client_vendor_files.js %>',
                     'module.prefix',
-                    '<%= build_dir %>/src/**/*.js',
+                    '<%= build_dir %>/src/client/**/*.js',
                     '<%= html2js.app.dest %>',
                     '<%= html2js.common.dest %>',
-                    '<%= vendor_files.js %>',
+                    '<%= client_vendor_files.js %>',
                     'module.suffix',
                 ],
-                dest: '<%= compile_dir %>/assets/<%= pkg.name %>.js',
+                dest: '<%= compile_dir %>/client/assets/<%= pkg.name %>.js',
             }
         },
 
@@ -322,11 +321,11 @@ var toExport = function(grunt: IGrunt) {
             build: {
                 dir: '<%= build_dir %>',
                 src: [
-                    '<%= vendor_files.js %>',
+                    '<%= client_vendor_files.js %>',
                     '<%= build_dir %>/src/**/*.js',
                     '<%= html2js.common.dest %>',
                     '<%= html2js.app.dest %>',
-                    '<%= vendor_files.css %>',
+                    '<%= client_vendor_files.css %>',
 //                    '<%= recess.build.dest %>'
                 ]
             },
@@ -340,7 +339,7 @@ var toExport = function(grunt: IGrunt) {
                 dir: '<%= compile_dir %>',
                 src: [
                     '<%= concat.compile_js.dest %>',
-                    '<%= vendor_files.css %>',
+                    '<%= client_vendor_files.css %>',
 //                    '<%= recess.compile.dest %>'
                 ]
             }
@@ -354,7 +353,7 @@ var toExport = function(grunt: IGrunt) {
 //            unit: {
 //                dir: '<%= build_dir %>',
 //                src: [
-//                    '<%= vendor_files.js %>',
+//                    '<%= client_vendor_files.js %>',
 //                    '<%= html2js.app.dest %>',
 //                    '<%= html2js.common.dest %>',
 //                    'vendor/angular-mocks/angular-mocks.js'

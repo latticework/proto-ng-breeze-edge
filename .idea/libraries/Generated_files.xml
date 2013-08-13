@@ -4,11 +4,17 @@
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/Gruntfile.js" />
         <item url="file://$PROJECT_DIR$/build.config.js" />
+        <item url="file://$PROJECT_DIR$/src/client/app/main/about/about.js" />
+        <item url="file://$PROJECT_DIR$/src/client/app/app.js" />
+        <item url="file://$PROJECT_DIR$/src/client/app/main/home/home.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/Gruntfile.js" />
+      <root url="file://$PROJECT_DIR$/src/client/app/main/about/about.js" />
       <root url="file://$PROJECT_DIR$/build.config.js" />
+      <root url="file://$PROJECT_DIR$/src/client/app/app.js" />
+      <root url="file://$PROJECT_DIR$/src/client/app/main/home/home.js" />
     </CLASSES>
     <SOURCES />
   </library>
