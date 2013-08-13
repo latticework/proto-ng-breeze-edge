@@ -82,12 +82,7 @@ var toExport = function (grunt) {
         //            }
         //        },
         // the directories to delete when `grunt clean` is executed.
-        clean: {
-            src: [
-                '<%= build_dir %>',
-                '<%= compile_dir %>'
-            ]
-        },
+        clean: {},
         /**
         * the `copy` task just copies files from a to b. we use it here to copy
         * our project assets (images, fonts, etc.) and javascripts into
