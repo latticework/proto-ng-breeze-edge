@@ -14,6 +14,5 @@ app.configure(function () {
     app.post('/todo', routes.saveChanges);
 
 });
-
-console.log('listing on port::' + 8080);
-app.listen(8080); 
+console.log('listing on port::' + process.env.PORT);
+app.listen(process.env.PORT || 8080);
