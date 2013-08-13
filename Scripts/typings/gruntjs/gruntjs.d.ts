@@ -7,19 +7,35 @@
 ////////////////
 /// Grunt task config object:
 /// "config-name" : http://gruntjs.com/configuring-tasks
-//interface ITaskConfig<TOptions> {
-//    options?: TOptions;
-//}
+////////////////
+interface ITaskConfig<TOptions> {
+    options?: TOptions;
+}
 
-//interface ITaskWithFilesConfig<TOptions> extends ITaskConfig<TOptions> {
-//    src: string[];
-//    dest?: string;
-//}
+interface ITaskCompactConfig<TOptions> extends ITaskConfig<TOptions> {
+    src: string[];
+    dest?: string;
+}
 
-//interface IMultiTaskConfig<TOptions, TTaskWithFilesConfig extends ITaskWithFilesConfig<TOptions>> {
-//    options?: TOptions;
-//    [task: string]: TTaskWithFilesConfig;
-//}
+interface ITaskFilesConfig<TOptions> extends ITaskConfig<TOptions> {
+    files: {
+        [dest: string]: string[];
+    };
+}
+
+interface ITaskFilesObject {
+    src: string[];
+    dest?: string;
+}
+
+interface ITaskFilesArrayConfig<TOptions, TTaskFilesObject extends ITaskFilesObject> extends ITaskConfig<TOptions> {
+    files: TTaskFilesObject[];
+}
+
+interface IMultiTaskConfig<TOptions> {
+    options?: TOptions;
+    [task: string]: any;
+}
 
 ////////////////
 /// NPM Package config object:
@@ -123,7 +139,7 @@ interface IGruntConfig {
 /// Sample grunt plugin definition: 
 /// uglify : https://github.com/gruntjs/grunt-contrib-uglify
 ////////////////
-interface IGruntUglifyConfig {
+interface IGruntContribUglifyConfigOptions {
     mangle?: boolean;
     compress?: boolean;
     beautify?: boolean;
@@ -138,15 +154,19 @@ interface IGruntUglifyConfig {
     preserveComments?: any; // boolean / string / function 
     banner?: string;
 }
-interface IGruntConfig {
-    uglify?: {
-        options?: IGruntUglifyConfig;
-        build?: {
-            src: string;
-            dest: string;
-        };
 
-    };
+// Backwards compatability.
+interface IGruntUglifyConfig extends IGruntContribUglifyConfigOptions { }
+
+interface ITaskGruntContribUglifyCompactConfig extends ITaskCompactConfig<IGruntContribUglifyConfigOptions> { }
+interface ITaskGruntContribUglifyFilesConfig extends ITaskFilesConfig<IGruntContribUglifyConfigOptions> { }
+interface ITaskGruntContribUglifyFilesArrayConfig extends ITaskFilesArrayConfig<IGruntContribUglifyConfigOptions, ITaskFilesObject> { }
+
+interface IGruntContribUglifyConfig extends IMultiTaskConfig<IGruntContribUglifyConfigOptions> { }
+
+
+interface IGruntConfig {
+    uglify?: IGruntContribUglifyConfig;
 }
 
 
