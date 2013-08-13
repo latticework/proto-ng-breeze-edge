@@ -4,7 +4,6 @@
     var edge = require('edge');
     var stringify = require('json-stringify-safe');
 
-
     var assemblypath = __dirname + '../../../bin/proto_edge_cs_net45.dll';
     var todoContexttype = 'proto_edge_cs_net45.TodoService';
 
@@ -33,12 +32,6 @@
         methodName: 'GetMetaData'
     });
 
-//var gettodoByCriteria = edge.func({
-//    assemblyFile: assemblypath,
-//    typeName: todoContexttype,
-//    methodName: 'GettodoByCriteria'
-//});
-
     module.exports.getallTodoes = function (req, res, next) {
         //getallTodoes(req.query, function (error, result) {
         getallTodoes(req.url, function (error, result) {
@@ -55,21 +48,6 @@
             res.send(result);
         });
     };
-
-//var todoObject = {
-
-//    //title: 'todo title',
-//    completed: 'true',
-//    //todoId: 1
-//};
-//var todoCriteria = stringify(todoObject, null, 2);
-
-//exports.gettodoByCriteria = function (req, res, next) {
-//    gettodoByCriteria(todoCriteria, function (error, result) {
-//        if (error) throw error;
-//        res.send(result)
-//    });
-//};
 
     module.exports.saveChanges = function (req, res, next) {
 

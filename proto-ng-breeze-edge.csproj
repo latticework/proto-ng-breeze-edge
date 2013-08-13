@@ -126,7 +126,7 @@
     <Content Include="src\client\app\main\home\home.tpl.html" />
     <Content Include="src\index.html" />
     <Content Include="src\server\routes.js" />
-    <Content Include="src\server\server.js" />
+    <TypeScriptCompile Include="src\server\server.ts" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
