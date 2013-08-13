@@ -8,11 +8,49 @@
 /// Grunt task config object:
 /// "config-name" : http://gruntjs.com/configuring-tasks
 ////////////////
+
 interface ITaskConfig<TOptions> {
     options?: TOptions;
 }
 
-interface ITaskCompactConfig<TOptions> extends ITaskConfig<TOptions> {
+interface IGruntTaskFileMappingProperties {
+    /** 
+     * Either a valid fs.Stats method name or a function that is passed the matched src filepath and returns true or 
+     * false. 
+     */
+    filter?: any;
+    /** 
+     * When a match is not found, return a list containing the pattern itself. Otherwise, an empty list is returned if 
+     * there are no matches. Combined with grunt's --verbose flag, this option can help debug file path issues. 
+     */
+    nonnull?: boolean;
+    /** 
+     * Allow patterns to match filenames starting with a period, even if the pattern does not explicitly have a period 
+     * in that spot. 
+    */
+    dot?: boolean;
+    /**
+     * If set, patterns without slashes will be matched against the basename of the path if it contains slashes. For 
+     * example, a?b would match the path / xyz / 123 / acb, but not / xyz / acb / 123.
+     */
+    matchBase?: boolean;
+    /** Process a dynamic src - dest file mapping. Set to true to enable the following options. */
+    expand?: boolean;
+    /** All src matches are relative to (but don't include) this path. */
+    cwd?: boolean;
+    /** place any existing extension with this value in generated dest paths. */
+    ext?: string;
+    /** Remove all path parts from generated dest paths. */
+    flatten?: boolean;
+    /**
+     * This function is called for each matched src file, (after extension renaming and flattening). The dest and 
+     * matched src path are passed in, and this function must return a new dest value. If the same dest is returned 
+     * more than once, each src which used it will be added to an array of sources for it.
+     */
+    rename?: (src: string, dest: string) => string;
+}
+
+interface ITaskCompactConfig<TOptions> extends ITaskConfig<TOptions>, IGruntTaskFileMappingProperties {
     src: string[];
     dest?: string;
 }
@@ -28,7 +66,12 @@ interface ITaskFilesObject {
     dest?: string;
 }
 
-interface ITaskFilesArrayConfig<TOptions, TTaskFilesObject extends ITaskFilesObject> extends ITaskConfig<TOptions> {
+/**
+ * This form supports multiple src-dest file mappings per-target, while also allowing additional properties per mapping.
+ */
+interface ITaskFilesArrayConfig<TOptions, TTaskFilesObject extends ITaskFilesObject>
+    extends ITaskConfig<TOptions>, IGruntTaskFileMappingProperties {
+    /** An array of ITaskFilesObject or subtype that supports additional properties */
     files: TTaskFilesObject[];
 }
 
@@ -133,6 +176,11 @@ interface INpmPackageConfig {
 ////////////////
 interface IGruntConfig {
     pkg?: INpmPackageConfig;
+    /** Defines properties to be used by other Grunt tasks. banner is already defined. */
+    meta?: {
+        /** Comment that goes at the top of concatenated or minified project files. Usually contains tempalte tags. */
+        banner: string;
+    }
 }
 
 ////////////////

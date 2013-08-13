@@ -1,6 +1,6 @@
 /*global module:false*/
 /// <reference path="./Scripts/typings/gruntjs/gruntjs.d.ts" />
-/// <reference path="./Scripts/typings/gruntjs/grunt-contrib-clean_Task.d.ts" />
+/// <reference path="./Scripts/typings/gruntjs/grunt-contrib-clean.d.ts" />
 /// <reference path="./Scripts/typings/node/node.d.ts" />
 define(["require", "exports"], function(require, exports) {
     // https://raw.github.com/joshdmiller/ng-boilerplate/v0.3.0-release/gruntfile.js
@@ -84,12 +84,10 @@ define(["require", "exports"], function(require, exports) {
             //        },
             // the directories to delete when `grunt clean` is executed.
             clean: {
-                build: {
-                    src: [
-                        '<%= build_dir %>',
-                        '<%= compile_dir %>'
-                    ]
-                }
+                src: [
+                    '<%= build_dir %>',
+                    '<%= compile_dir %>'
+                ]
             },
             /**
             * the `copy` task just copies files from a to b. we use it here to copy

@@ -1,10 +1,11 @@
 /*global module:false*/
 /// <reference path="./Scripts/typings/gruntjs/gruntjs.d.ts" />
-/// <reference path="./Scripts/typings/gruntjs/grunt-contrib-clean_Task.d.ts" />
+/// <reference path="./Scripts/typings/gruntjs/grunt-contrib-clean.d.ts" />
 /// <reference path="./Scripts/typings/node/node.d.ts" />
 
+
 interface IGruntConfig {
-    clean?: IGruntContribClean;
+    clean?: IGruntContribCleanTaskConfig;
 }
 
 // https://raw.github.com/joshdmiller/ng-boilerplate/v0.3.0-release/gruntfile.js
@@ -96,12 +97,10 @@ var toExport = function(grunt: IGrunt) {
 
         // the directories to delete when `grunt clean` is executed.
         clean: {
-            build: {
-                src: [
-                    '<%= build_dir %>',
-                    '<%= compile_dir %>',
-                ]
-            }
+            src: [
+                '<%= build_dir %>',
+                '<%= compile_dir %>',
+            ],
         },
 
         /**
