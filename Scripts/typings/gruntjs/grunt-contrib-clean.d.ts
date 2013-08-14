@@ -38,7 +38,7 @@ interface IGruntContribCleanMultiTaskConfig extends IMultiTaskConfig<IGruntContr
 //    /**
 //     * grunt-contrib-clean. Clean files and folders. Set src to list of paths to delete.
 //     */
-//    clean?: IGruntContribCleanConfig;
+//    clean?: IGruntContribCleanTaskConfig;
 //    // or
 //    /**
 //     * grunt-contrib-clean. Clean files and folders. Cast MultiTask objects to IGruntContribCleanLongConfig.

@@ -1,10 +1,14 @@
 /*global module:false*/
 /// <reference path="./Scripts/typings/gruntjs/gruntjs.d.ts" />
 /// <reference path="./Scripts/typings/gruntjs/grunt-contrib-clean.d.ts" />
+/// <reference path="./Scripts/typings/gruntjs/grunt-contrib-copy.d.ts" />
 /// <reference path="./Scripts/typings/node/node.d.ts" />
 
 
 interface IGruntConfig {
+    /**
+     * grunt-contrib-clean. Clean files and folders. Set src to list of paths to delete.
+     */
     clean?: IGruntContribCleanTaskConfig;
 }
 
@@ -108,44 +112,44 @@ var toExport = function(grunt: IGrunt) {
          * our project assets (images, fonts, etc.) and javascripts into
          * `build_dir`, and then to copy the assets to `compile_dir`.
          */
-        copy: {
-            build_assets: {
+        copy: <IGruntContribCopyConfig>{
+            build_assets: <IGruntContribCopyFilesArrayhConfig>{
                 files: [
                     {
                         src: ['**'],
                         dest: '<%= build_dir %>/assets/',
-                        cwd: 'src/client/assets',
                         expand: true,
+                        cwd: 'src/client/assets',
                     }
                 ]
             },
-            build_appjs: {
+            build_appjs: <IGruntContribCopyFilesArrayhConfig>{
                 files: [
                     {
                         src: ['<%= app_files.js %>'],
                         dest: '<%= build_dir %>/client/',
+                        expand: true,
                         cwd: '.',
-                        expand: true
                     }
                 ]
             },
-            build_vendorjs: {
+            build_vendorjs: <IGruntContribCopyFilesArrayhConfig>{
                 files: [
                     {
                         src: ['<%= client_vendor_files.js %>'],
                         dest: '<%= build_dir %>/client/',
+                        expand: true,
                         cwd: '.',
-                        expand: true
                     }
                 ]
             },
-            compile_assets: {
+            compile_assets: <IGruntContribCopyFilesArrayhConfig>{
                 files: [
                     {
                         src: ['**'],
                         dest: '<%= compile_dir %>/client/assets',
+                        expand: true,
                         cwd: '<%= build_dir %>/client/assets',
-                        expand: true
                     }
                 ]
             }

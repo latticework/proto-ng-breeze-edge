@@ -37,7 +37,7 @@ interface IGruntTaskFileMappingProperties {
     /** Process a dynamic src - dest file mapping. Set to true to enable the following options. */
     expand?: boolean;
     /** All src matches are relative to (but don't include) this path. */
-    cwd?: boolean;
+    cwd?: string;
     /** place any existing extension with this value in generated dest paths. */
     ext?: string;
     /** Remove all path parts from generated dest paths. */
@@ -61,7 +61,7 @@ interface ITaskFilesConfig<TOptions> extends ITaskConfig<TOptions> {
     };
 }
 
-interface ITaskFilesObject {
+interface ITaskFilesObject extends IGruntTaskFileMappingProperties  {
     src: string[];
     dest?: string;
 }
@@ -70,7 +70,7 @@ interface ITaskFilesObject {
  * This form supports multiple src-dest file mappings per-target, while also allowing additional properties per mapping.
  */
 interface ITaskFilesArrayConfig<TOptions, TTaskFilesObject extends ITaskFilesObject>
-    extends ITaskConfig<TOptions>, IGruntTaskFileMappingProperties {
+    extends ITaskConfig<TOptions> {
     /** An array of ITaskFilesObject or subtype that supports additional properties */
     files: TTaskFilesObject[];
 }
