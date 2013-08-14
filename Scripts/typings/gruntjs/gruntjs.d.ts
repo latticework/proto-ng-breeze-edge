@@ -269,6 +269,62 @@ interface IGruntRunningMultiTask extends IGruntTask {
 }
 
 ////////////////
+// Grunt template object 
+// http://gruntjs.com/api/grunt.template
+////////////////
+/** Options object for the IGruntTemplate.process function. */
+interface IGruntTemplateProcessOptions {
+    /** Object used as data object. Default is the entire config object. */
+    data?: any;
+    /** Name of the delimiter set to use as specified by IGruntTemplate.addDelimiters. Default is 'config'. */
+    delimiters?: string;
+}
+
+/** 
+ * Template strings can be processed manually using the provided template functions. In addition, the config.get 
+ * method (used by many tasks) automatically expands <% %> style template strings specified as config data inside the 
+ * Gruntfile.
+ */
+interface IGruntTemplate {
+    /** 
+     * Process a Lo-Dash template string. The template argument will be processed recursively until there are no more 
+     * templates to process.
+     * @param template The template to process
+     * @param options An IGruntTemplateProcessOptions object
+     */
+    process: (template: string, options?: IGruntTemplateProcessOptions) => string;
+    /** 
+     * Set the Lo-Dash template delimiters to a predefined set in case grunt.util._.template needs to be called 
+     * manually. The config delimiters <% %> are included by default. You probably won't need to use this method, 
+     * because you'll be using grunt.template.process which uses this method internally.
+     * @param name Name of the delimiter set to use as specified by IGruntTemplate.addDelimiters. Default is 'config'.
+     */
+    setDelimiters: (name: string) => void;
+    /**
+     * Add a named set of Lo-Dash template delimiters. You probably won't need to use this method, because the built-
+     * in delimiters should be sufficient, but you could always add {% %} or [% %] style delimiters.
+     * @param name Name of the delimiter set to add.
+     * @param opener Text of the open template delimiter. e.g.: '<%'
+     * @param closer Text of the close template delimiter. e.g.: '%>'
+     */
+    addDelimiters: (name: string, opener: string, closer: string) => void;
+
+    /**
+     * Format a date using the node dateformat library.
+     * @param date: The date to format
+     * @param format: The dateformat format string
+     */
+    date: (date: number, format: string) => string;
+
+    /**
+     * Format today's date using the node dateformat library.
+     * @param format: The dateformat format string
+     */
+    today: (format: string) => string;
+}
+
+
+////////////////
 // Main Grunt object 
 // http://gruntjs.com/api/grunt
 ////////////////
@@ -301,7 +357,7 @@ interface IGrunt extends IGruntTaskBase {
     // Options
     option: any;
     // Template
-    template: any;
+    template: IGruntTemplate;
     // Util
     util: IGruntUtilObject;
 }

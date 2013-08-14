@@ -63,8 +63,9 @@
 
         //res.send(req.body);
         getMetadata(null, function (error, result) {
-            if (error) throw error;
-            res.send(result)
+            if (error) { throw error; }
+
+            res.send(result);
         });
 
     };

@@ -5,9 +5,14 @@
     "version": "0.0.1",
     "description": "proto-ng-breeze-edge\r ====================",
     "homepage": "https://github.com/latticework/proto-ng-breeze-edge",
-    "license": "MIT",
+    "licenses": [{
+        "type": "MIT",
+        "url": "http://opensource.org/licenses/MIT",
+    }],
     "main": "release/server/server.js",
-    "dependencies": { },
+    "dependencies": {
+        "time-grunt": "~0.1.1"
+    },
     "devDependencies": {
         "edge": "~0.7.12",
         "grunt": "~0.4.1",

@@ -23,11 +23,14 @@ var userConfig = {
     app_files: {
         //        js: [ 'src/**/*.js', '!src/**/*.spec.js' ],
         //        jsunit: [ 'src/**/*.spec.js' ],
-        js: ['src/**/*.js'],
+        clientjs: ['client/**/*.js'],
+        clientjs_cwd: 'src',
+        serverjs: ['server/**/*.js'],
+        serverjs_cwd: 'src',
         atpl: ['src/client/app/**/*.tpl.html'],
         ctpl: ['src/client/common/**/*.tpl.html'],
         html: ['src/client/index.html'],
-        scss: 'src/scss/main.scss'
+        scss: 'src/client/scss/main.scss'
     },
     /**
     * This is the same as `app_files`, except it contains patterns that
@@ -56,7 +59,9 @@ var userConfig = {
     },
     server_vendor_files: {
         js: [
-            'node_modules/edge/'
+            'node_modules/edge/**/*',
+            'node_modules/express/**/*',
+            'node_modules/json-stringify-safe/**/*'
         ]
     }
 };

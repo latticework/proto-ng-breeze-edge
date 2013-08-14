@@ -2,10 +2,15 @@
 /// <reference path="./Scripts/typings/gruntjs/gruntjs.d.ts" />
 /// <reference path="./Scripts/typings/gruntjs/grunt-contrib-clean.d.ts" />
 /// <reference path="./Scripts/typings/gruntjs/grunt-contrib-copy.d.ts" />
+/// <reference path="./Scripts/typings/gruntjs/grunt-contrib-concat.d.ts" />
+/// <reference path="./IGruntConfig.d.ts" />
 /// <reference path="./Scripts/typings/node/node.d.ts" />
 // https://raw.github.com/joshdmiller/ng-boilerplate/v0.3.0-release/gruntfile.js
 var toExport = function (grunt) {
     "use strict";
+
+    // require time-grunt at the top and pass in the grunt instance
+    require('time-grunt')(grunt);
 
     /**
     * load required grunt tasks. these are installed based on the versions listed
@@ -83,12 +88,7 @@ var toExport = function (grunt) {
         //            }
         //        },
         // the directories to delete when `grunt clean` is executed.
-        clean: {
-            src: [
-                '<%= build_dir %>',
-                '<%= compile_dir %>'
-            ]
-        },
+        clean: ['<%= build_dir %>', '<%= compile_dir %>'],
         /**
         * the `copy` task just copies files from a to b. we use it here to copy
         * our project assets (images, fonts, etc.) and javascripts into
@@ -99,29 +99,49 @@ var toExport = function (grunt) {
                 files: [
                     {
                         src: ['**'],
-                        dest: '<%= build_dir %>/assets/',
+                        dest: '<%= build_dir %>/client/assets/',
                         expand: true,
                         cwd: 'src/client/assets'
                     }
                 ]
             },
-            build_appjs: {
+            build_clientjs: {
                 files: [
                     {
-                        src: ['<%= app_files.js %>'],
-                        dest: '<%= build_dir %>/client/',
+                        src: ['<%= app_files.clientjs %>'],
+                        dest: '<%= build_dir %>',
                         expand: true,
-                        cwd: '.'
+                        cwd: '<%= app_files.clientjs_cwd %>'
                     }
                 ]
             },
-            build_vendorjs: {
+            build_clientvendorjs: {
                 files: [
                     {
                         src: ['<%= client_vendor_files.js %>'],
                         dest: '<%= build_dir %>/client/',
                         expand: true,
                         cwd: '.'
+                    }
+                ]
+            },
+            build_servervendorjs: {
+                files: [
+                    {
+                        src: ['<%= server_vendor_files.js %>'],
+                        dest: '<%= build_dir %>/server/',
+                        expand: true,
+                        cwd: '.'
+                    }
+                ]
+            },
+            build_serverjs: {
+                files: [
+                    {
+                        src: ['<%= app_files.serverjs %>'],
+                        dest: '<%= build_dir %>',
+                        expand: true,
+                        cwd: '<%= app_files.serverjs_cwd %>'
                     }
                 ]
             },
@@ -145,9 +165,9 @@ var toExport = function (grunt) {
             * code and all specified vendor source code into a single file.
             */
             compile_js: {
-                //                options: {
-                //                    banner: '<%= meta.banner %>'
-                //                },
+                options: {
+                    banner: '<%= meta.banner %>'
+                },
                 src: [
                     '<%= client_vendor_files.js %>',
                     'module.prefix',
@@ -168,10 +188,10 @@ var toExport = function (grunt) {
             compile: {
                 files: [
                     {
-                        src: ['<%= app_files.js %>'],
-                        cwd: '<%= build_dir %>',
+                        src: ['<%= app_files.clientjs %>'],
                         dest: '<%= build_dir %>',
-                        expand: true
+                        expand: true,
+                        cwd: '<%= build_dir %>'
                     }
                 ]
             }
@@ -229,7 +249,8 @@ var toExport = function (grunt) {
         */
         jshint: {
             src: [
-                '<%= app_files.js %>'
+                '<%= app_files.clientjs %>',
+                '<%= app_files.serverjs %>'
             ],
             test: [],
             gruntfile: [
@@ -415,9 +436,10 @@ var toExport = function (grunt) {
             */
             jssrc: {
                 files: [
-                    '<%= app_files.js %>'
+                    '<%= app_files.clientjs %>',
+                    '<%= app_files.serverjs %>'
                 ],
-                tasks: ['jshint:src', 'copy:build_appjs']
+                tasks: ['jshint:src', 'copy:build_clientjs', 'copy:build_serverjs']
             },
             /**
             * when assets are changed, copy them. note that this will *not* copy new
@@ -474,8 +496,10 @@ var toExport = function (grunt) {
         'html2js',
         'jshint',
         'copy:build_assets',
-        'copy:build_appjs',
-        'copy:build_vendorjs',
+        'copy:build_clientjs',
+        'copy:build_serverjs',
+        'copy:build_clientvendorjs',
+        'copy:build_servervendorjs',
         'index:build'
     ]);
 
@@ -531,7 +555,7 @@ var toExport = function (grunt) {
             return file.replace(dirre, '');
         });
 
-        grunt.file.copy('src/index.html', task.data.dir + '/index.html', {
+        grunt.file.copy('src/client/index.html', task.data.dir + '/client/index.html', {
             process: function (contents, path) {
                 return grunt.template.process(contents, {
                     data: {

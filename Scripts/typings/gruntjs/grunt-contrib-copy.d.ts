@@ -1,5 +1,6 @@
 /// <reference path="gruntjs.d.ts" />
 
+/** Configuration options object of the grunt-contrib-copy task */
 interface IGruntContribCopyConfigOptions {
     /** 
      * Returns the processed contents of the specified file. 
@@ -13,10 +14,17 @@ interface IGruntContribCopyConfigOptions {
     processContentExclude?: string[];
 }
 
+/** Compact version of the grunt-contrib-copy target configuration object. */
 interface IGruntContribCopyCompactConfig extends ITaskCompactConfig<IGruntContribCopyConfigOptions> { }
+/** Files version of the grunt-contrib-copy target configuration object. */
 interface IGruntContribCopyFilesConfig extends ITaskFilesConfig<IGruntContribCopyConfigOptions> { }
-interface IGruntContribCopyFilesArrayhConfig extends ITaskFilesArrayConfig<IGruntContribCopyConfigOptions, ITaskFilesObject> { }
+/** Files Array version of the grunt-contrib-copy target configuration object. */
+interface IGruntContribCopyFilesArrayConfig extends ITaskFilesArrayConfig<IGruntContribCopyConfigOptions, ITaskFilesObject> { }
 
+/** 
+ * Configuration object of the grunt-contrib-copy task. Cast target object to one of IGruntContribCopyCompactConfig
+ * IGruntContribCopyFilesConfig, or IGruntContribCopyFilesArrayConfig.
+ */
 interface IGruntContribCopyConfig extends IMultiTaskConfig<IGruntContribCopyConfigOptions> { }
 
 interface IGruntConfig {
