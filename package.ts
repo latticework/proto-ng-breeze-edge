@@ -11,10 +11,13 @@
     }],
     "main": "release/server/server.js",
     "dependencies": {
-        "time-grunt": "~0.1.1"
+        "edge": "~0.7.12",
+        "express": "~3.3.4",
+        "json-stringify-safe": "~5.0.0",
+        "require": "~0.5.0",
+        "time-grunt": "~0.1.1",
     },
     "devDependencies": {
-        "edge": "~0.7.12",
         "grunt": "~0.4.1",
         "grunt-contrib-clean": "~0.5.0",
         "grunt-contrib-concat": "~0.3.0",
@@ -25,11 +28,8 @@
         "grunt-contrib-watch": "~0.5.0",
         "grunt-contrib-sass": "~0.4.1",
         "grunt-html2js": "~0.1.6",
+        "grunt-ngmin": "0.0.3",
         "grunt-typescript": "~0.2.1",
-        "require": "~0.5.0",
-        "express": "~3.3.4",
-        "json-stringify-safe": "~5.0.0",
-        "grunt-ngmin": "0.0.3"
     },
     "scripts": {
         "test": "test"
