@@ -22,17 +22,19 @@ var userConfig = {
      * app's unit tests.
      */
     app_files: {
-//        js: [ 'src/**/*.js', '!src/**/*.spec.js' ],
-//        jsunit: [ 'src/**/*.spec.js' ],
+        //        js: [ 'src/**/*.js', '!src/**/*.spec.js' ],
+        //        jsunit: [ 'src/**/*.spec.js' ],
         clientjs: ['client/**/*.js'],
         clientjs_cwd: 'src',
         serverjs: ['server/**/*.js'],
         serverjs_cwd: 'src',
+        servercs: ['**'],
+        servercs_cwd: 'net45/proto-edge-cs-net45/bin/Debug',
 
-        atpl: [ 'src/client/app/**/*.tpl.html' ],
-        ctpl: [ 'src/client/common/**/*.tpl.html' ],
+        atpl: ['src/client/app/**/*.tpl.html'],
+        ctpl: ['src/client/common/**/*.tpl.html'],
 
-        html: [ 'src/client/index.html' ],
+        html: ['src/client/index.html'],
         scss: 'src/client/scss/main.scss',
     },
 
@@ -56,9 +58,9 @@ var userConfig = {
             'bower_components/metro-ui-css/javascript/*.js',
             'Scripts/breeze.debug.js',
             'Scripts/q.js',
-//            'vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js',
-//            'vendor/angular-ui-router/release/angular-ui-router.js',
-//            'vendor/angular-ui-utils/modules/route/route.js'
+            //            'vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js',
+            //            'vendor/angular-ui-router/release/angular-ui-router.js',
+            //            'vendor/angular-ui-utils/modules/route/route.js'
         ],
         css: [
             'bower_components/metro-ui-css/css/*.css',
@@ -67,9 +69,9 @@ var userConfig = {
 
     server_vendor_files: {
         js: [
-            'node_modules/edge/**/*',
-            'node_modules/express/**/*',
-            'node_modules/json-stringify-safe/**/*',
+            'node_modules/edge/lib/**/*',
+            'node_modules/express/lib/**/*',
+            'node_modules/json-stringify-safe/stringify.js',
         ],
     }
 };

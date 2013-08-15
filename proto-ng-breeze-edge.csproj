@@ -110,7 +110,7 @@
     <Content Include="module.prefix" />
     <Content Include="module.suffix" />
     <Content Include="package.json" />
-    <Content Include="init.ps1" />
+    <Content Include="gruntBootstrap.ps1" />
     <None Include="Scripts\breeze.intellisense.js" />
     <Content Include="Scripts\breeze.debug.js" />
     <Content Include="Scripts\breeze.min.js" />

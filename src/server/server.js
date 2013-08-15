@@ -1,5 +1,3 @@
-﻿/*global module:false*/
-/// <reference path="../../Scripts/typings/node/node.d.ts" />
 (function () {
     "use strict";
     var express = require('express');
@@ -19,3 +17,4 @@
     console.log('listing on port::' + process.env.PORT);
     app.listen(process.env.PORT || 9000);
 })();
+//@ sourceMappingURL=server.js.map

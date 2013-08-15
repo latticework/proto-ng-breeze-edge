@@ -27,6 +27,8 @@ var userConfig = {
         clientjs_cwd: 'src',
         serverjs: ['server/**/*.js'],
         serverjs_cwd: 'src',
+        servercs: ['**'],
+        servercs_cwd: 'net45/proto-edge-cs-net45/bin/Debug',
         atpl: ['src/client/app/**/*.tpl.html'],
         ctpl: ['src/client/common/**/*.tpl.html'],
         html: ['src/client/index.html'],
@@ -59,9 +61,9 @@ var userConfig = {
     },
     server_vendor_files: {
         js: [
-            'node_modules/edge/**/*',
-            'node_modules/express/**/*',
-            'node_modules/json-stringify-safe/**/*'
+            'node_modules/edge/lib/**/*',
+            'node_modules/express/lib/**/*',
+            'node_modules/json-stringify-safe/stringify.js'
         ]
     }
 };
