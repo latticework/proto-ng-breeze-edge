@@ -8,11 +8,49 @@
 /// Grunt task config object:
 /// "config-name" : http://gruntjs.com/configuring-tasks
 ////////////////
+
 interface ITaskConfig<TOptions> {
     options?: TOptions;
 }
 
-interface ITaskCompactConfig<TOptions> extends ITaskConfig<TOptions> {
+interface IGruntTaskFileMappingProperties {
+    /** 
+     * Either a valid fs.Stats method name or a function that is passed the matched src filepath and returns true or 
+     * false. 
+     */
+    filter?: any;
+    /** 
+     * When a match is not found, return a list containing the pattern itself. Otherwise, an empty list is returned if 
+     * there are no matches. Combined with grunt's --verbose flag, this option can help debug file path issues. 
+     */
+    nonnull?: boolean;
+    /** 
+     * Allow patterns to match filenames starting with a period, even if the pattern does not explicitly have a period 
+     * in that spot. 
+    */
+    dot?: boolean;
+    /**
+     * If set, patterns without slashes will be matched against the basename of the path if it contains slashes. For 
+     * example, a?b would match the path / xyz / 123 / acb, but not / xyz / acb / 123.
+     */
+    matchBase?: boolean;
+    /** Process a dynamic src - dest file mapping. Set to true to enable the following options. */
+    expand?: boolean;
+    /** All src matches are relative to (but don't include) this path. */
+    cwd?: string;
+    /** place any existing extension with this value in generated dest paths. */
+    ext?: string;
+    /** Remove all path parts from generated dest paths. */
+    flatten?: boolean;
+    /**
+     * This function is called for each matched src file, (after extension renaming and flattening). The dest and 
+     * matched src path are passed in, and this function must return a new dest value. If the same dest is returned 
+     * more than once, each src which used it will be added to an array of sources for it.
+     */
+    rename?: (src: string, dest: string) => string;
+}
+
+interface ITaskCompactConfig<TOptions> extends ITaskConfig<TOptions>, IGruntTaskFileMappingProperties {
     src: string[];
     dest?: string;
 }
@@ -23,12 +61,17 @@ interface ITaskFilesConfig<TOptions> extends ITaskConfig<TOptions> {
     };
 }
 
-interface ITaskFilesObject {
+interface ITaskFilesObject extends IGruntTaskFileMappingProperties  {
     src: string[];
     dest?: string;
 }
 
-interface ITaskFilesArrayConfig<TOptions, TTaskFilesObject extends ITaskFilesObject> extends ITaskConfig<TOptions> {
+/**
+ * This form supports multiple src-dest file mappings per-target, while also allowing additional properties per mapping.
+ */
+interface ITaskFilesArrayConfig<TOptions, TTaskFilesObject extends ITaskFilesObject>
+    extends ITaskConfig<TOptions> {
+    /** An array of ITaskFilesObject or subtype that supports additional properties */
     files: TTaskFilesObject[];
 }
 
@@ -133,6 +176,11 @@ interface INpmPackageConfig {
 ////////////////
 interface IGruntConfig {
     pkg?: INpmPackageConfig;
+    /** Defines properties to be used by other Grunt tasks. banner is already defined. */
+    meta?: {
+        /** Comment that goes at the top of concatenated or minified project files. Usually contains tempalte tags. */
+        banner: string;
+    }
 }
 
 ////////////////
@@ -221,6 +269,62 @@ interface IGruntRunningMultiTask extends IGruntTask {
 }
 
 ////////////////
+// Grunt template object 
+// http://gruntjs.com/api/grunt.template
+////////////////
+/** Options object for the IGruntTemplate.process function. */
+interface IGruntTemplateProcessOptions {
+    /** Object used as data object. Default is the entire config object. */
+    data?: any;
+    /** Name of the delimiter set to use as specified by IGruntTemplate.addDelimiters. Default is 'config'. */
+    delimiters?: string;
+}
+
+/** 
+ * Template strings can be processed manually using the provided template functions. In addition, the config.get 
+ * method (used by many tasks) automatically expands <% %> style template strings specified as config data inside the 
+ * Gruntfile.
+ */
+interface IGruntTemplate {
+    /** 
+     * Process a Lo-Dash template string. The template argument will be processed recursively until there are no more 
+     * templates to process.
+     * @param template The template to process
+     * @param options An IGruntTemplateProcessOptions object
+     */
+    process: (template: string, options?: IGruntTemplateProcessOptions) => string;
+    /** 
+     * Set the Lo-Dash template delimiters to a predefined set in case grunt.util._.template needs to be called 
+     * manually. The config delimiters <% %> are included by default. You probably won't need to use this method, 
+     * because you'll be using grunt.template.process which uses this method internally.
+     * @param name Name of the delimiter set to use as specified by IGruntTemplate.addDelimiters. Default is 'config'.
+     */
+    setDelimiters: (name: string) => void;
+    /**
+     * Add a named set of Lo-Dash template delimiters. You probably won't need to use this method, because the built-
+     * in delimiters should be sufficient, but you could always add {% %} or [% %] style delimiters.
+     * @param name Name of the delimiter set to add.
+     * @param opener Text of the open template delimiter. e.g.: '<%'
+     * @param closer Text of the close template delimiter. e.g.: '%>'
+     */
+    addDelimiters: (name: string, opener: string, closer: string) => void;
+
+    /**
+     * Format a date using the node dateformat library.
+     * @param date: The date to format
+     * @param format: The dateformat format string
+     */
+    date: (date: number, format: string) => string;
+
+    /**
+     * Format today's date using the node dateformat library.
+     * @param format: The dateformat format string
+     */
+    today: (format: string) => string;
+}
+
+
+////////////////
 // Main Grunt object 
 // http://gruntjs.com/api/grunt
 ////////////////
@@ -253,7 +357,7 @@ interface IGrunt extends IGruntTaskBase {
     // Options
     option: any;
     // Template
-    template: any;
+    template: IGruntTemplate;
     // Util
     util: IGruntUtilObject;
 }

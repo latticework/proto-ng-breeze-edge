@@ -1,15 +1,18 @@
 /*global module:false*/
 /// <reference path="./Scripts/typings/gruntjs/gruntjs.d.ts" />
-/// <reference path="./Scripts/typings/gruntjs/grunt-contrib-clean_Task.d.ts" />
+/// <reference path="./Scripts/typings/gruntjs/grunt-contrib-clean.d.ts" />
+/// <reference path="./Scripts/typings/gruntjs/grunt-contrib-copy.d.ts" />
+/// <reference path="./Scripts/typings/gruntjs/grunt-contrib-concat.d.ts" />
+/// <reference path="./IGruntConfig.d.ts" />
 /// <reference path="./Scripts/typings/node/node.d.ts" />
 
-interface IGruntConfig {
-    clean?: IGruntContribClean;
-}
 
 // https://raw.github.com/joshdmiller/ng-boilerplate/v0.3.0-release/gruntfile.js
 var toExport = function(grunt: IGrunt) {
     "use strict";
+
+    // require time-grunt at the top and pass in the grunt instance
+    require('time-grunt')(grunt);
 
     /**
      * load required grunt tasks. these are installed based on the versions listed
@@ -95,58 +98,71 @@ var toExport = function(grunt: IGrunt) {
         //        },
 
         // the directories to delete when `grunt clean` is executed.
-        clean: {
-            build: {
-                src: [
-                    '<%= build_dir %>',
-                    '<%= compile_dir %>',
-                ]
-            }
-        },
+        clean: ['<%= build_dir %>', '<%= compile_dir %>'],
 
         /**
          * the `copy` task just copies files from a to b. we use it here to copy
          * our project assets (images, fonts, etc.) and javascripts into
          * `build_dir`, and then to copy the assets to `compile_dir`.
          */
-        copy: {
-            build_assets: {
+        copy: <IGruntContribCopyConfig>{
+            build_assets: <IGruntContribCopyFilesArrayConfig>{
                 files: [
                     {
                         src: ['**'],
-                        dest: '<%= build_dir %>/assets/',
-                        cwd: 'src/client/assets',
+                        dest: '<%= build_dir %>/client/assets/',
                         expand: true,
+                        cwd: 'src/client/assets',
                     }
                 ]
             },
-            build_appjs: {
+            build_clientjs: <IGruntContribCopyFilesArrayConfig>{
                 files: [
                     {
-                        src: ['<%= app_files.js %>'],
-                        dest: '<%= build_dir %>/client/',
-                        cwd: '.',
-                        expand: true
+                        src: ['<%= app_files.clientjs %>'],
+                        dest: '<%= build_dir %>',
+                        expand: true,
+                        cwd: '<%= app_files.clientjs_cwd %>',
                     }
                 ]
             },
-            build_vendorjs: {
+            build_clientvendorjs: <IGruntContribCopyFilesArrayConfig>{
                 files: [
                     {
                         src: ['<%= client_vendor_files.js %>'],
                         dest: '<%= build_dir %>/client/',
+                        expand: true,
                         cwd: '.',
-                        expand: true
                     }
                 ]
             },
-            compile_assets: {
+            build_servervendorjs: <IGruntContribCopyFilesArrayConfig>{
+                files: [
+                    {
+                        src: ['<%= server_vendor_files.js %>'],
+                        dest: '<%= build_dir %>/server/',
+                        expand: true,
+                        cwd: '.',
+                    }
+                ]
+            },
+            build_serverjs: <IGruntContribCopyFilesArrayConfig>{
+                files: [
+                    {
+                        src: ['<%= app_files.serverjs %>'],
+                        dest: '<%= build_dir %>',
+                        expand: true,
+                        cwd: '<%= app_files.serverjs_cwd %>',
+                    }
+                ]
+            },
+            compile_assets: <IGruntContribCopyFilesArrayConfig>{
                 files: [
                     {
                         src: ['**'],
                         dest: '<%= compile_dir %>/client/assets',
+                        expand: true,
                         cwd: '<%= build_dir %>/client/assets',
-                        expand: true
                     }
                 ]
             }
@@ -160,10 +176,10 @@ var toExport = function(grunt: IGrunt) {
              * the `compile_js` target is the concatenation of our application source
              * code and all specified vendor source code into a single file.
              */
-            compile_js: {
-                //                options: {
-                //                    banner: '<%= meta.banner %>'
-                //                },
+            compile_js: <IGruntContribConcatCompactConfig> {
+                options: {
+                    banner: '<%= meta.banner %>'
+                },
                 src: [
                     '<%= client_vendor_files.js %>',
                     'module.prefix',
@@ -185,10 +201,10 @@ var toExport = function(grunt: IGrunt) {
             compile: {
                 files: [
                     {
-                        src: ['<%= app_files.js %>'],
-                        cwd: '<%= build_dir %>',
+                        src: ['<%= app_files.clientjs %>'],
                         dest: '<%= build_dir %>',
-                        expand: true
+                        expand: true,
+                        cwd: '<%= build_dir %>',
                     }
                 ]
             }
@@ -249,7 +265,8 @@ var toExport = function(grunt: IGrunt) {
          */
         jshint: {
             src: [
-                '<%= app_files.js %>'
+                '<%= app_files.clientjs %>',
+                '<%= app_files.serverjs %>',
             ],
             test: [
 //                '<%= app_files.jsunit %>'
@@ -454,9 +471,10 @@ var toExport = function(grunt: IGrunt) {
              */
             jssrc: {
                 files: [
-                    '<%= app_files.js %>'
+                    '<%= app_files.clientjs %>',
+                    '<%= app_files.serverjs %>',
                 ],
-                tasks: [ 'jshint:src',/* 'karma:unit:run',*/ 'copy:build_appjs' ]
+                tasks: ['jshint:src',/* 'karma:unit:run',*/ 'copy:build_clientjs', 'copy:build_serverjs' ]
             },
 
             /**
@@ -540,8 +558,10 @@ var toExport = function(grunt: IGrunt) {
         'jshint',
 //        'recess:build',
         'copy:build_assets',
-        'copy:build_appjs',
-        'copy:build_vendorjs',
+        'copy:build_clientjs',
+        'copy:build_serverjs',
+        'copy:build_clientvendorjs',
+        'copy:build_servervendorjs',
         'index:build',
 //        'karmaconfig',
 //        'karma:continuous',
@@ -597,7 +617,7 @@ var toExport = function(grunt: IGrunt) {
             return file.replace( dirre, '' );
         });
 
-        grunt.file.copy('src/index.html', task.data.dir + '/index.html', {
+        grunt.file.copy('src/client/index.html', task.data.dir + '/client/index.html', {
             process: function ( contents, path ) {
                 return grunt.template.process( contents, {
                     data: {

@@ -124,9 +124,13 @@
     <Content Include="src\client\app\main\about\about.tpl.html" />
     <Content Include="src\client\app\main\home\home.js" />
     <Content Include="src\client\app\main\home\home.tpl.html" />
-    <Content Include="src\index.html" />
+    <Content Include="src\client\assets\latticework-logo.jpg" />
+    <Content Include="src\client\index.html" />
     <Content Include="src\server\routes.js" />
+    <TypeScriptCompile Include="IGruntConfig.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\gruntjs\grunt-contrib-concat.d.ts" />
     <TypeScriptCompile Include="src\server\server.ts" />
+    <Content Include="src\server\server.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -156,8 +160,8 @@
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-sanitize.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-scenario.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\breeze\breeze-1.0.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\gruntjs\grunt-contrib-clean_MultiTask.d.ts" />
-    <TypeScriptCompile Include="Scripts\typings\gruntjs\grunt-contrib-clean_Task.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\gruntjs\grunt-contrib-clean.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\gruntjs\grunt-contrib-copy.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\gruntjs\gruntjs.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
