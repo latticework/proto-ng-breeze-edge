@@ -11,10 +11,10 @@
         app.use(express.bodyParser());
         app.use(express.static(__dirname + '/../client'));
 
-        app.get('/todo', routes.getallTodoes);
-        app.get('/todo/MetaData', routes.getMetadata);
-        app.get('/todo/:todoid', routes.getTodoById);
-        app.post('/todo', routes.saveChanges);
+        app.get('/api/todo', routes.getallTodoes);
+        app.get('/api/todo/MetaData', routes.getMetadata);
+        app.get('/api/todo/:todoid', routes.getTodoById);
+        app.post('/api/todo', routes.saveChanges);
     });
     console.log('listing on port::' + process.env.PORT);
     app.listen(process.env.PORT || 9000);

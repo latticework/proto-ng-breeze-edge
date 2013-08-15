@@ -9,3 +9,7 @@ Write-Host -ForegroundColor DarkGreen "Complied 'build.config.ts' to 'build.conf
 
 tsc --module commonjs .\Gruntfile.ts 
 Write-Host -ForegroundColor DarkGreen "Complied 'Gruntfile.ts' to 'Gruntfile.js'"
+
+tsc --module commonjs .\src\server\Server.ts 
+Write-Host -ForegroundColor DarkGreen "Complied 'Server.ts' to 'Server.js'"
+
