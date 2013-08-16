@@ -4,8 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3bbb12823b7945aa843bfb2f124508b1" Name="Diagram1">
-        <EntityTypeShape EntityType="SCM_DEVModel.Todo" Width="1.5" PointX="1.0635643047576604" PointY="11.294695784940709" />
+      <Diagram DiagramId="3bbb12823b7945aa843bfb2f124508b1" Name="Diagram1" ZoomLevel="71">
+        <EntityTypeShape EntityType="SCM_DEVModel.Todo" Width="1.5" PointX="3.0192700806163577" PointY="27.280126837678313" />
+        <EntityTypeShape EntityType="SCM_DEVModel.TodoDetail" Width="1.5" PointX="2.6099377435678326" PointY="18.418100097411358" />
+        <AssociationConnector Association="SCM_DEVModel.FK__TodoDetai__TodoI__5F891AA4" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
