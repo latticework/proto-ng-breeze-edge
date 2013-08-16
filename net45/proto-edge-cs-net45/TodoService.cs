@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Web.Http.OData;
 using System.Web.Http.OData.Builder;
 using System.Web.Http.OData.Query;
+using System.Data.Entity;
 
 namespace proto_edge_cs_net45
 {
@@ -16,12 +17,18 @@ namespace proto_edge_cs_net45
         //IList<Todo> _todoes = new List<Todo>();
         public TodoService()
         {
+            //TodoDetail tddtails = new TodoDetail();
+            //tddtails.TodoId = 1;
+            //tddtails.TodoDetailId = 1;
+            //tddtails.Details = "details from sample";
             //_todoes.Add(new Todo
             //{
             //    TodoId = 1,
             //    Title = "Title 1",
             //    Completed = true,
-            //    Description = "Sample Title 1"
+            //    Description = "Sample Title 1",
+            //    TodoDetails = { tddtails }
+
             //});
             //_todoes.Add(new Todo
             //{
@@ -52,18 +59,18 @@ namespace proto_edge_cs_net45
             //    Description = "Todo from critetia"
             //});
         }
-        
+
         public async Task<object> GetTodo(object todoId)
         {
-            TodoEFContext todoDbContext = new TodoEFContext();       
+            TodoEFContext todoDbContext = new TodoEFContext();
             var id = int.Parse(todoId.ToString());
             return todoDbContext.Todoes.FirstOrDefault(t => t.TodoId == id);
             //return _todoes.FirstOrDefault(t => t.TodoId == int.Parse(todoId.ToString()));
-           
+
         }
         public async Task<object> GetAllTodoes(object queryString)
-        {           
-            return GettodoByQuery(queryString);            
+        {                      
+            return GettodoByQuery(queryString);           
         }
         public async Task<object> GettodoByCriteria(object input)
         {
@@ -84,7 +91,7 @@ namespace proto_edge_cs_net45
             todoDbContext.Todoes.Add(entity);
             todoDbContext.Entry(entity).State = System.Data.EntityState.Added;
             todoDbContext.SaveChanges();
-            return todoDbContext.Todoes;
+            return GettodoByQuery("");            
         }
 
         public async Task<object> GetMetaData(object input)
@@ -92,21 +99,23 @@ namespace proto_edge_cs_net45
             TodoEFContext todoDbContext = new TodoEFContext();
             return todoDbContext.GetMetadataFromDbContext();
         }
-        
-        
-        
-        
-        private IQueryable  GettodoByQuery(object queryString)
+
+        private object GettodoByQuery(object queryString)
         {
             TodoEFContext todoDbContext = new TodoEFContext();
-            var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:8080" + queryString);
+            var request = new HttpRequestMessage(HttpMethod.Get, "http://server/" + queryString);
             ODataModelBuilder modelBuilder = new ODataConventionModelBuilder();
             modelBuilder.EntitySet<Todo>("Todoes");
+            modelBuilder.EntitySet<TodoDetail>("TodoDetails");
             var odataQuery = new ODataQueryOptions<Todo>(new ODataQueryContext(modelBuilder.GetEdmModel(), typeof(Todo)), request);
-            //var results = odataQuery.ApplyTo(_todoes.AsQueryable());
-            var results = odataQuery.ApplyTo(todoDbContext.Todoes);
-            return results.AsQueryable();
+            var result = odataQuery.ApplyTo(todoDbContext.Todoes.Include(t => t.TodoDetails));
+            return JsonConvert.SerializeObject(odataQuery.ApplyTo(todoDbContext.Todoes.Include(t => t.TodoDetails)), new JsonSerializerSettings()
+            {
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
+                Formatting = Formatting.Indented             
+            });
         }
+
         private string ToQueryString(IDictionary<string, object> dict)
         {
             if (dict == null || dict.Count == 0) return string.Empty;

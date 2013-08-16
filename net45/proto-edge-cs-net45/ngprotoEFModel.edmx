@@ -14,8 +14,35 @@
           <Property Name="Completed" Type="bit" />
           <Property Name="Description" Type="nvarchar(max)" />
         </EntityType>
+        <EntityType Name="TodoDetails">
+          <Key>
+            <PropertyRef Name="TodoDetailId" />
+          </Key>
+          <Property Name="TodoDetailId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TodoId" Type="int" Nullable="false" />
+          <Property Name="Details" Type="nchar" MaxLength="10" />
+          <Property Name="CompletedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="CompletedDate" Type="date" />
+        </EntityType>
+        <Association Name="FK__TodoDetai__TodoI__5F891AA4">
+          <End Role="Todo" Type="Self.Todo" Multiplicity="1" />
+          <End Role="TodoDetails" Type="Self.TodoDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Todo">
+              <PropertyRef Name="TodoId" />
+            </Principal>
+            <Dependent Role="TodoDetails">
+              <PropertyRef Name="TodoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="SCM_DEVModelStoreContainer">
           <EntitySet Name="Todo" EntityType="Self.Todo" Schema="dbo" p3:Type="Tables" xmlns:p3="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="TodoDetails" EntityType="Self.TodoDetails" Schema="dbo" p3:Type="Tables" xmlns:p3="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <AssociationSet Name="FK__TodoDetai__TodoI__5F891AA4" Association="Self.FK__TodoDetai__TodoI__5F891AA4">
+            <End Role="Todo" EntitySet="Todo" />
+            <End Role="TodoDetails" EntitySet="TodoDetails" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -23,6 +50,11 @@
       <Schema Namespace="SCM_DEVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="TodoEFContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Todoes" EntityType="SCM_DEVModel.Todo" />
+          <EntitySet Name="TodoDetails" EntityType="SCM_DEVModel.TodoDetail" />
+          <AssociationSet Name="FK__TodoDetai__TodoI__5F891AA4" Association="SCM_DEVModel.FK__TodoDetai__TodoI__5F891AA4">
+            <End Role="Todo" EntitySet="Todoes" />
+            <End Role="TodoDetail" EntitySet="TodoDetails" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Todo">
           <Key>
@@ -32,7 +64,31 @@
           <Property Type="String" Name="Title" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="Boolean" Name="Completed" />
           <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TodoDetails" Relationship="SCM_DEVModel.FK__TodoDetai__TodoI__5F891AA4" FromRole="Todo" ToRole="TodoDetail" />
         </EntityType>
+        <EntityType Name="TodoDetail">
+          <Key>
+            <PropertyRef Name="TodoDetailId" />
+          </Key>
+          <Property Type="Int32" Name="TodoDetailId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="TodoId" Nullable="false" />
+          <Property Type="String" Name="Details" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="CompletedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CompletedDate" Precision="0" />
+          <NavigationProperty Name="Todo" Relationship="SCM_DEVModel.FK__TodoDetai__TodoI__5F891AA4" FromRole="TodoDetail" ToRole="Todo" />
+        </EntityType>
+        <Association Name="FK__TodoDetai__TodoI__5F891AA4">
+          <End Type="SCM_DEVModel.Todo" Role="Todo" Multiplicity="1" />
+          <End Type="SCM_DEVModel.TodoDetail" Role="TodoDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Todo">
+              <PropertyRef Name="TodoId" />
+            </Principal>
+            <Dependent Role="TodoDetail">
+              <PropertyRef Name="TodoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -46,6 +102,17 @@
                 <ScalarProperty Name="Completed" ColumnName="Completed" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="TodoId" ColumnName="TodoId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TodoDetails">
+            <EntityTypeMapping TypeName="SCM_DEVModel.TodoDetail">
+              <MappingFragment StoreEntitySet="TodoDetails">
+                <ScalarProperty Name="CompletedDate" ColumnName="CompletedDate" />
+                <ScalarProperty Name="CompletedBy" ColumnName="CompletedBy" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="TodoId" ColumnName="TodoId" />
+                <ScalarProperty Name="TodoDetailId" ColumnName="TodoDetailId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

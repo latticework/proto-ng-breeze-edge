@@ -37,17 +37,7 @@ namespace proto_edge_cs_net45
 
                 // Build the SqlConnection connection string.
                 string providerString = sqlBuilder.ToString();
-
-                SqlConnection conn = new SqlConnection(providerString);
-                Console.WriteLine("#########################################################################3");
-                Console.WriteLine("#########################################################################3");
-                Console.WriteLine("#########################################################################3");
-                conn.Open();
-                Console.WriteLine("*****************************");
-                Console.WriteLine("*****************************");
-                Console.WriteLine("*****************************");
-                Console.WriteLine("*****************************");
-
+               
                 // Initialize the EntityConnectionStringBuilder.
                 EntityConnectionStringBuilder entityBuilder = new EntityConnectionStringBuilder();
 

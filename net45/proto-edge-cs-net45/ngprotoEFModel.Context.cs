@@ -18,6 +18,7 @@ namespace proto_edge_cs_net45
         public TodoEFContext()
             : base(connection,true)
         {
+            Configuration.ProxyCreationEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -26,5 +27,6 @@ namespace proto_edge_cs_net45
         }
     
         public DbSet<Todo> Todoes { get; set; }
+        public DbSet<TodoDetail> TodoDetails { get; set; }
     }
 }

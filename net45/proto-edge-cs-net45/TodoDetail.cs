@@ -12,18 +12,14 @@ namespace proto_edge_cs_net45
     using System;
     using System.Collections.Generic;
     
-    public partial class Todo
+    public partial class TodoDetail
     {
-        public Todo()
-        {
-            this.TodoDetails = new HashSet<TodoDetail>();
-        }
-    
+        public int TodoDetailId { get; set; }
         public int TodoId { get; set; }
-        public string Title { get; set; }
-        public Nullable<bool> Completed { get; set; }
-        public string Description { get; set; }
+        public string Details { get; set; }
+        public string CompletedBy { get; set; }
+        public Nullable<System.DateTime> CompletedDate { get; set; }
     
-        public virtual ICollection<TodoDetail> TodoDetails { get; set; }
+        public virtual Todo Todo { get; set; }
     }
 }
