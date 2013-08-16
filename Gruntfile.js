@@ -95,7 +95,7 @@ var toExport = function (grunt) {
         * `build_dir`, and then to copy the assets to `compile_dir`.
         */
         copy: {
-            build_assets: {
+            buildClientAssets: {
                 files: [
                     {
                         src: ['**'],
@@ -105,7 +105,7 @@ var toExport = function (grunt) {
                     }
                 ]
             },
-            build_clientjs: {
+            buildClientSrcJS: {
                 files: [
                     {
                         src: ['<%= app_files.clientjs %>'],
@@ -115,7 +115,7 @@ var toExport = function (grunt) {
                     }
                 ]
             },
-            build_clientvendorjs: {
+            buildClientVendorJS: {
                 files: [
                     {
                         src: ['<%= client_vendor_files.js %>'],
@@ -125,7 +125,7 @@ var toExport = function (grunt) {
                     }
                 ]
             },
-            build_servervendorjs: {
+            buildServerVendorJS: {
                 files: [
                     {
                         src: ['<%= server_vendor_files.js %>'],
@@ -135,7 +135,7 @@ var toExport = function (grunt) {
                     }
                 ]
             },
-            build_serverjs: {
+            buildServerSrcJS: {
                 files: [
                     {
                         src: ['<%= app_files.serverjs %>'],
@@ -145,7 +145,7 @@ var toExport = function (grunt) {
                     }
                 ]
             },
-            build_servercs: {
+            buildServerSrcCS: {
                 files: [
                     {
                         src: ['<%= app_files.servercs %>'],
@@ -155,7 +155,7 @@ var toExport = function (grunt) {
                     }
                 ]
             },
-            compile_assets: {
+            compileClientAssets: {
                 files: [
                     {
                         src: ['**'],
@@ -171,10 +171,10 @@ var toExport = function (grunt) {
         */
         concat: {
             /**
-            * the `compile_js` target is the concatenation of our application source
+            * the `compileClientJS` target is the concatenation of our application source
             * code and all specified vendor source code into a single file.
             */
-            compile_js: {
+            compileClientJS: {
                 options: {
                     banner: '<%= meta.banner %>'
                 },
@@ -215,7 +215,7 @@ var toExport = function (grunt) {
                     banner: '<%= meta.banner %>'
                 },
                 files: {
-                    '<%= concat.compile_js.dest %>': ['<%= concat.compile_js.dest %>']
+                    '<%= concat.compileClientJS.dest %>': ['<%= concat.compileClientJS.dest %>']
                 }
             }
         },
@@ -258,12 +258,17 @@ var toExport = function (grunt) {
         * nonetheless inside `src/`.
         */
         jshint: {
-            src: [
+            buildClientSrcJS: [
+                '<%= app_files.clientjs %>',
+                '<%= app_files.serverjs %>'
+            ],
+            buildServerSrcJS: [
                 '<%= app_files.clientjs %>',
                 '<%= app_files.serverjs %>'
             ],
             test: [],
             gruntfile: [
+                'build.config.js',
                 'gruntfile.js'
             ],
             options: {
@@ -349,7 +354,7 @@ var toExport = function (grunt) {
             compile: {
                 dir: '<%= compile_dir %>',
                 src: [
-                    '<%= concat.compile_js.dest %>',
+                    '<%= concat.compileClientJS.dest %>',
                     '<%= client_vendor_files.css %>'
                 ]
             }
@@ -391,24 +396,6 @@ var toExport = function (grunt) {
                     base_path: '',
                     sourcemap: false
                 }
-            },
-            gruntmodules: {
-                files: [
-                    {
-                        src: [
-                            'build.config.ts',
-                            'Gruntfile.ts'
-                        ],
-                        //dest: 'js',
-                        options: {
-                            //nolib: true,
-                            module: 'commonjs',
-                            target: 'es5',
-                            base_path: '',
-                            sourcemap: false
-                        }
-                    }
-                ]
             }
         },
         /**
@@ -452,7 +439,7 @@ var toExport = function (grunt) {
                     '<%= app_files.clientjs %>',
                     '<%= app_files.serverjs %>'
                 ],
-                tasks: ['jshint:src', 'copy:build_clientjs', 'copy:build_serverjs']
+                tasks: ['jshint:src', 'copy:buildClientSrcJS', 'copy:buildServerSrcJS']
             },
             /**
             * when assets are changed, copy them. note that this will *not* copy new
@@ -462,7 +449,7 @@ var toExport = function (grunt) {
                 files: [
                     'src/assets/**/*'
                 ],
-                tasks: ['copy:build_assets']
+                tasks: ['copy:buildClientAssets']
             },
             /**
             * when index.html changes, we need to compile it.
@@ -510,16 +497,45 @@ var toExport = function (grunt) {
     /**
     * the `build` task gets your app ready to run for development and testing.
     */
+    grunt.registerTask('client', [
+        'clean',
+        'typescript:client',
+        'html2js',
+        'jshint:gruntfile',
+        'jshint:buildClientSrcJS',
+        'copy:buildClientVendorJS',
+        'copy:buildClientAssets',
+        'copy:buildClientSrcJS',
+        'index:build'
+    ]);
+
+    /**
+    * the `build` task gets your app ready to run for development and testing.
+    */
+    grunt.registerTask('server', [
+        'clean',
+        'typescript:server',
+        'jshint:gruntfile',
+        'jshint:buildServerSrcJS',
+        'copy:buildServerVendorJS',
+        'copy:buildServerSrcJS',
+        'copy:buildServerSrcCS'
+    ]);
+
+    /**
+    * the `build` task gets your app ready to run for development and testing.
+    */
     grunt.registerTask('build', [
         'clean',
+        'typescript',
         'html2js',
         'jshint',
-        'copy:build_clientvendorjs',
-        'copy:build_assets',
-        'copy:build_clientjs',
-        'copy:build_servervendorjs',
-        'copy:build_serverjs',
-        'copy:build_servercs',
+        'copy:buildClientVendorJS',
+        'copy:buildClientAssets',
+        'copy:buildClientSrcJS',
+        'copy:buildServerVendorJS',
+        'copy:buildServerSrcJS',
+        'copy:buildServerSrcCS',
         'index:build'
     ]);
 
@@ -528,7 +544,7 @@ var toExport = function (grunt) {
     * minifying your code.
     */
     grunt.registerTask('compile', [
-        'copy:compile_assets',
+        'copy:compileClientAssets',
         'ngmin',
         'concat',
         'uglify',

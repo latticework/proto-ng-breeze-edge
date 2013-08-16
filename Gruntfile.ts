@@ -106,7 +106,7 @@ var toExport = function(grunt: IGrunt) {
          * `build_dir`, and then to copy the assets to `compile_dir`.
          */
         copy: <IGruntContribCopyConfig>{
-            build_assets: <IGruntContribCopyFilesArrayConfig>{
+            buildClientAssets: <IGruntContribCopyFilesArrayConfig>{
                 files: [
                     {
                         src: ['**'],
@@ -116,7 +116,7 @@ var toExport = function(grunt: IGrunt) {
                     }
                 ]
             },
-            build_clientjs: <IGruntContribCopyFilesArrayConfig>{
+            buildClientSrcJS: <IGruntContribCopyFilesArrayConfig>{
                 files: [
                     {
                         src: ['<%= app_files.clientjs %>'],
@@ -126,7 +126,7 @@ var toExport = function(grunt: IGrunt) {
                     }
                 ]
             },
-            build_clientvendorjs: <IGruntContribCopyFilesArrayConfig>{
+            buildClientVendorJS: <IGruntContribCopyFilesArrayConfig>{
                 files: [
                     {
                         src: ['<%= client_vendor_files.js %>'],
@@ -136,7 +136,7 @@ var toExport = function(grunt: IGrunt) {
                     }
                 ]
             },
-            build_servervendorjs: <IGruntContribCopyFilesArrayConfig>{
+            buildServerVendorJS: <IGruntContribCopyFilesArrayConfig>{
                 files: [
                     {
                         src: ['<%= server_vendor_files.js %>'],
@@ -146,7 +146,7 @@ var toExport = function(grunt: IGrunt) {
                     }
                 ]
             },
-            build_serverjs: <IGruntContribCopyFilesArrayConfig>{
+            buildServerSrcJS: <IGruntContribCopyFilesArrayConfig>{
                 files: [
                     {
                         src: ['<%= app_files.serverjs %>'],
@@ -156,7 +156,7 @@ var toExport = function(grunt: IGrunt) {
                     }
                 ]
             },
-            build_servercs: <IGruntContribCopyFilesArrayConfig>{
+            buildServerSrcCS: <IGruntContribCopyFilesArrayConfig>{
                 files: [
                     {
                         src: ['<%= app_files.servercs %>'],
@@ -166,7 +166,7 @@ var toExport = function(grunt: IGrunt) {
                     }
                 ]
             },
-            compile_assets: <IGruntContribCopyFilesArrayConfig>{
+            compileClientAssets: <IGruntContribCopyFilesArrayConfig>{
                 files: [
                     {
                         src: ['**'],
@@ -183,10 +183,10 @@ var toExport = function(grunt: IGrunt) {
          */
         concat: {
             /**
-             * the `compile_js` target is the concatenation of our application source
+             * the `compileClientJS` target is the concatenation of our application source
              * code and all specified vendor source code into a single file.
              */
-            compile_js: <IGruntContribConcatCompactConfig> {
+            compileClientJS: <IGruntContribConcatCompactConfig> {
                 options: {
                     banner: '<%= meta.banner %>'
                 },
@@ -229,7 +229,7 @@ var toExport = function(grunt: IGrunt) {
                     banner: '<%= meta.banner %>',
                 },
                 files: {
-                    '<%= concat.compile_js.dest %>': ['<%= concat.compile_js.dest %>'],
+                    '<%= concat.compileClientJS.dest %>': ['<%= concat.compileClientJS.dest %>'],
                 },
             },
         },
@@ -274,7 +274,11 @@ var toExport = function(grunt: IGrunt) {
          * nonetheless inside `src/`.
          */
         jshint: {
-            src: [
+            buildClientSrcJS: [
+                '<%= app_files.clientjs %>',
+                '<%= app_files.serverjs %>',
+            ],
+            buildServerSrcJS: [
                 '<%= app_files.clientjs %>',
                 '<%= app_files.serverjs %>',
             ],
@@ -282,7 +286,8 @@ var toExport = function(grunt: IGrunt) {
 //                '<%= app_files.jsunit %>'
             ],
             gruntfile: [
-                'gruntfile.js'
+                'build.config.js',
+                'gruntfile.js',
             ],
             options: {
                 curly: true,
@@ -374,7 +379,7 @@ var toExport = function(grunt: IGrunt) {
             compile: {
                 dir: '<%= compile_dir %>',
                 src: [
-                    '<%= concat.compile_js.dest %>',
+                    '<%= concat.compileClientJS.dest %>',
                     '<%= client_vendor_files.css %>',
 //                    '<%= recess.compile.dest %>'
                 ]
@@ -423,42 +428,42 @@ var toExport = function(grunt: IGrunt) {
 //                        declaration: true,
                     },
                 },
-                gruntmodules: {
-                    files: [
-                        {
-                            src: [
-                                'build.config.ts',
-                                'Gruntfile.ts',
-                            ],
-                            //dest: 'js',
-                            options: {
-                                //nolib: true,
-                                module: 'commonjs',
-                                target: 'es5', //or es3
-                                base_path: '',
-                                sourcemap: false,
-                                //fullsourcemappath: true,
-                                //declaration: true,
-                            },
-                        },
-                        //Need to post process package.js as package.json and remove last semicolumn.
-                        //{
-                        //    src: [
-                        //        'package.ts',
-                        //    ],
-                        //    dest: 'package.js',
-                        //    options: {
-                        //        //nolib: true,
-                        //        target: 'es5', //or es3
-                        //        base_path: '',
-                        //        comments: false,
-                        //        sourcemap: false,
-                        //        //fullsourcemappath: true,
-                        //        //declaration: true,
-                        //    },
-                        //},
-                    ],
-                },
+                //gruntmodules: {
+                //    files: [
+                //        {
+                //            src: [
+                //                'build.config.ts',
+                //                'Gruntfile.ts',
+                //            ],
+                //            //dest: 'js',
+                //            options: {
+                //                //nolib: true,
+                //                module: 'commonjs',
+                //                target: 'es5', //or es3
+                //                base_path: '',
+                //                sourcemap: false,
+                //                //fullsourcemappath: true,
+                //                //declaration: true,
+                //            },
+                //        },
+                //        //Need to post process package.js as package.json and remove last semicolumn.
+                //        //{
+                //        //    src: [
+                //        //        'package.ts',
+                //        //    ],
+                //        //    dest: 'package.js',
+                //        //    options: {
+                //        //        //nolib: true,
+                //        //        target: 'es5', //or es3
+                //        //        base_path: '',
+                //        //        comments: false,
+                //        //        sourcemap: false,
+                //        //        //fullsourcemappath: true,
+                //        //        //declaration: true,
+                //        //    },
+                //        //},
+                //    ],
+                //},
             },
 
         /**
@@ -504,7 +509,7 @@ var toExport = function(grunt: IGrunt) {
                     '<%= app_files.clientjs %>',
                     '<%= app_files.serverjs %>',
                 ],
-                tasks: ['jshint:src',/* 'karma:unit:run',*/ 'copy:build_clientjs', 'copy:build_serverjs' ]
+                tasks: ['jshint:src',/* 'karma:unit:run',*/ 'copy:buildClientSrcJS', 'copy:buildServerSrcJS' ]
             },
 
             /**
@@ -515,7 +520,7 @@ var toExport = function(grunt: IGrunt) {
                 files: [
                     'src/assets/**/*'
                 ],
-                tasks: [ 'copy:build_assets' ]
+                tasks: [ 'copy:buildClientAssets' ]
             },
 
             /**
@@ -587,17 +592,49 @@ var toExport = function(grunt: IGrunt) {
     /**
      * the `build` task gets your app ready to run for development and testing.
      */
+    grunt.registerTask('client', [
+        'clean',
+        'typescript:client',
+        'html2js',
+        'jshint:gruntfile',
+        'jshint:buildClientSrcJS',
+    //        'recess:build',
+        'copy:buildClientVendorJS',
+        'copy:buildClientAssets',
+        'copy:buildClientSrcJS',
+        'index:build',
+        //        'karmaconfig',
+        //        'karma:continuous',
+    ]);
+
+    /**
+     * the `build` task gets your app ready to run for development and testing.
+     */
+    grunt.registerTask('server', [
+        'clean',
+        'typescript:server',
+        'jshint:gruntfile',
+        'jshint:buildServerSrcJS',
+        'copy:buildServerVendorJS',
+        'copy:buildServerSrcJS',
+        'copy:buildServerSrcCS',
+    ]);
+
+    /**
+     * the `build` task gets your app ready to run for development and testing.
+     */
     grunt.registerTask( 'build', [
         'clean',
+        'typescript',
         'html2js',
         'jshint',
 //        'recess:build',
-        'copy:build_clientvendorjs',
-        'copy:build_assets',
-        'copy:build_clientjs',
-        'copy:build_servervendorjs',
-        'copy:build_serverjs',
-        'copy:build_servercs',
+        'copy:buildClientVendorJS',
+        'copy:buildClientAssets',
+        'copy:buildClientSrcJS',
+        'copy:buildServerVendorJS',
+        'copy:buildServerSrcJS',
+        'copy:buildServerSrcCS',
         'index:build',
 //        'karmaconfig',
 //        'karma:continuous',
@@ -609,7 +646,7 @@ var toExport = function(grunt: IGrunt) {
      */
     grunt.registerTask( 'compile', [
 //        'recess:compile',
-        'copy:compile_assets',
+        'copy:compileClientAssets',
         'ngmin',
         'concat',
         'uglify',
