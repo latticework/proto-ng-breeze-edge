@@ -145,6 +145,16 @@ var toExport = function (grunt) {
                     }
                 ]
             },
+            build_servercs: {
+                files: [
+                    {
+                        src: ['<%= app_files.servercs %>'],
+                        dest: '<%= build_dir %>/server/bin',
+                        expand: true,
+                        cwd: '<%= app_files.servercs_cwd %>'
+                    }
+                ]
+            },
             compile_assets: {
                 files: [
                     {
@@ -379,23 +389,26 @@ var toExport = function (grunt) {
                     module: 'commonjs',
                     target: 'es5',
                     base_path: '',
-                    sourcemap: true,
-                    fullsourcemappath: true
+                    sourcemap: false
                 }
             },
             gruntmodules: {
-                src: [
-                    'build.config.ts',
-                    'Gruntfile.ts'
-                ],
-                //                    dest: 'js',
-                options: {
-                    //                        nolib: true,
-                    module: 'commonjs',
-                    target: 'es5',
-                    base_path: '',
-                    sourcemap: false
-                }
+                files: [
+                    {
+                        src: [
+                            'build.config.ts',
+                            'Gruntfile.ts'
+                        ],
+                        //dest: 'js',
+                        options: {
+                            //nolib: true,
+                            module: 'commonjs',
+                            target: 'es5',
+                            base_path: '',
+                            sourcemap: false
+                        }
+                    }
+                ]
             }
         },
         /**
@@ -473,6 +486,12 @@ var toExport = function (grunt) {
 
     grunt.initConfig(grunt.util._.extend(taskconfig, userconfig));
 
+    grunt.registerTask('printConfig', 'print the Grunt config object.', function () {
+        // http://stackoverflow.com/questions/16196763/print-out-grunt-js-config-during-the-build
+        // http://stackoverflow.com/questions/4810841/json-pretty-print-using-javascript
+        grunt.log.writeln(JSON.stringify(grunt.config(), null, 2));
+    });
+
     /**
     * in order to make it safe to just compile or copy *only* what was changed,
     * we need to ensure we are starting from a clean, fresh build. so we rename
@@ -495,11 +514,12 @@ var toExport = function (grunt) {
         'clean',
         'html2js',
         'jshint',
+        'copy:build_clientvendorjs',
         'copy:build_assets',
         'copy:build_clientjs',
-        'copy:build_serverjs',
-        'copy:build_clientvendorjs',
         'copy:build_servervendorjs',
+        'copy:build_serverjs',
+        'copy:build_servercs',
         'index:build'
     ]);
 

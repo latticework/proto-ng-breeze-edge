@@ -4,7 +4,7 @@
     var edge = require('edge');
     var stringify = require('json-stringify-safe');
 
-    var assemblypath = __dirname + '../../../bin/proto_edge_cs_net45.dll';
+    var assemblypath = __dirname + '/bin/proto_edge_cs_net45.dll';
     var todoContexttype = 'proto_edge_cs_net45.TodoService';
 
 
