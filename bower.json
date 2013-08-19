@@ -9,8 +9,8 @@
     "test",
     "tests"
   ],
-  "devDependencies": {
-    "angular": "~1.0.7",
+  "dependencies": {
+    "angular": "~1.0.7"
     "metro-ui-css": "*"
   }
 }
