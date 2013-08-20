@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d3c4aea-f8c5-4d81-b15b-387c90e9bd96" name="Default" comment="Added index.html and app.ts">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.ts" afterPath="$PROJECT_DIR$/Gruntfile.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/typings/gruntjs/grunt-contrib-clean_Task.d.ts" afterPath="$PROJECT_DIR$/Scripts/typings/gruntjs/grunt-contrib-clean_Task.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/typings/gruntjs/gruntjs.d.ts" afterPath="$PROJECT_DIR$/Scripts/typings/gruntjs/gruntjs.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-route/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-route/angular-route.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-route/angular-route.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-route/angular-route.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular/angular.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-route/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/assets/forkongithub.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/app/todo/todolist/todolist.tpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/.bower.json" afterPath="$PROJECT_DIR$/bower_components/angular/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/angular.js" afterPath="$PROJECT_DIR$/bower_components/angular/angular.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/angular.min.js" afterPath="$PROJECT_DIR$/bower_components/angular/angular.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/bower.json" afterPath="$PROJECT_DIR$/bower_components/angular/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/main/home/home.tpl.html" afterPath="$PROJECT_DIR$/src/client/app/main/home/home.tpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/index.html" afterPath="$PROJECT_DIR$/src/client/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="proto-ng-breeze-edge.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,39 +40,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="grunt-contrib-clean_Task.d.ts" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scripts/typings/gruntjs/grunt-contrib-clean_Task.d.ts">
+      <file leaf-file-name="Gruntfile.ts" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gruntfile.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="97" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+            <state line="125" column="0" selection-start="4897" selection-end="4897" vertical-scroll-proportion="0.0" vertical-offset="2108" max-vertical-offset="12461">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gruntfile.ts" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gruntfile.ts">
+      <file leaf-file-name="gruntjs.d.ts" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Scripts/typings/gruntjs/gruntjs.d.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="0" selection-start="4080" selection-end="4080" vertical-scroll-proportion="0.0" vertical-offset="1391" max-vertical-offset="10778">
+            <state line="160" column="0" selection-start="4838" selection-end="4838" vertical-scroll-proportion="0.0" vertical-offset="2652" max-vertical-offset="7650">
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <marker date="1376496766743" expanded="true" signature="349:376" placeholder="..." />
+                <marker date="1376496766743" expanded="true" signature="2177:2218" placeholder="..." />
+                <marker date="1376496766743" expanded="true" signature="2287:2344" placeholder="..." />
+                <marker date="1376496766743" expanded="true" signature="2414:2455" placeholder="..." />
+                <marker date="1376496766743" expanded="true" signature="2705:2826" placeholder="..." />
+                <marker date="1376496766743" expanded="true" signature="3063:5114" placeholder="..." />
+                <marker date="1376496766743" expanded="true" signature="5116:5226" placeholder="//..." />
+                <marker date="1376496766743" expanded="true" signature="8013:8053" placeholder="..." />
+                <marker date="1376496766743" expanded="true" signature="8107:8204" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gruntjs.d.ts" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Scripts/typings/gruntjs/gruntjs.d.ts">
+      <file leaf-file-name="forkongithub.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/client/assets/forkongithub.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="0" selection-start="2969" selection-end="2969" vertical-scroll-proportion="0.68" vertical-offset="1666" max-vertical-offset="5882">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="grunt-contrib-clean_MultiTask.d.ts" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scripts/typings/gruntjs/grunt-contrib-clean_MultiTask.d.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+            <state line="19" column="0" selection-start="355" selection-end="355" vertical-scroll-proportion="0.09443099" vertical-offset="245" max-vertical-offset="1071">
               <folding />
             </state>
           </provider>
@@ -84,7 +96,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/app/main/about/about.tpl.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/build.config.js" />
@@ -100,14 +111,15 @@
         <option value="$PROJECT_DIR$/Gruntfile.ts" />
         <option value="$PROJECT_DIR$/Scripts/typings/gruntjs/grunt-contrib-clean_Task.d.ts" />
         <option value="$PROJECT_DIR$/Scripts/typings/gruntjs/gruntjs.d.ts" />
+        <option value="$PROJECT_DIR$/src/client/assets/forkongithub.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="699" />
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1678" />
+    <option name="height" value="1008" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -250,7 +262,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -279,7 +290,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Scripts" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -293,11 +304,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Scripts" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="typings" />
+              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -311,20 +322,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Scripts" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="typings" />
+              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="gruntjs" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -334,8 +346,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/server" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -411,13 +423,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="699" extended-state="6" />
-    <editor active="false" />
+    <frame x="1" y="1" width="1678" height="1008" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282353" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328341" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22991249" sideWeight="0.67176473" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22940817" sideWeight="0.67176473" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328341" sideWeight="0.5003018" order="9" side_tool="true" content_ui="tabs" />
@@ -447,9 +459,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22991249" sideWeight="0.67176473" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32794458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -514,9 +526,28 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/index.html">
+    <entry file="file://$PROJECT_DIR$/Gruntfile.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="6" selection-start="1954" selection-end="1954" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state line="110" column="0" selection-start="3875" selection-end="3875" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10727">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/typings/gruntjs/gruntjs.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="0" selection-start="2905" selection-end="2905" vertical-scroll-proportion="0.0" vertical-offset="1989" max-vertical-offset="5950">
+          <folding>
+            <marker date="1376496766743" expanded="true" signature="349:376" placeholder="..." />
+            <marker date="1376496766743" expanded="true" signature="2177:2218" placeholder="..." />
+            <marker date="1376496766743" expanded="true" signature="2287:2344" placeholder="..." />
+            <marker date="1376496766743" expanded="true" signature="2414:2455" placeholder="..." />
+            <marker date="1376496766743" expanded="true" signature="2705:2826" placeholder="..." />
+            <marker date="1376496766743" expanded="true" signature="3063:5114" placeholder="..." />
+            <marker date="1376496766743" expanded="true" signature="5116:5226" placeholder="//..." />
+            <marker date="1376496766743" expanded="true" signature="8013:8053" placeholder="..." />
+            <marker date="1376496766743" expanded="true" signature="8107:8204" placeholder="..." />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.config.js">
@@ -544,11 +575,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="6" selection-start="2150" selection-end="2150" vertical-scroll-proportion="0.7058824" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/edge/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="26" selection-start="357" selection-end="357" vertical-scroll-proportion="0.25987262" vertical-offset="102" max-vertical-offset="1122" />
@@ -574,32 +600,38 @@
         <state line="47" column="0" selection-start="1368" selection-end="1368" vertical-scroll-proportion="0.87218046" vertical-offset="103" max-vertical-offset="901" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/typings/gruntjs/grunt-contrib-clean_MultiTask.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="517">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/typings/gruntjs/grunt-contrib-clean_Task.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="97" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="0" selection-start="4080" selection-end="4080" vertical-scroll-proportion="0.0" vertical-offset="1391" max-vertical-offset="10778">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state line="125" column="0" selection-start="4897" selection-end="4897" vertical-scroll-proportion="0.0" vertical-offset="2108" max-vertical-offset="12461">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/typings/gruntjs/gruntjs.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="0" selection-start="2969" selection-end="2969" vertical-scroll-proportion="0.68" vertical-offset="1666" max-vertical-offset="5882">
+        <state line="160" column="0" selection-start="4838" selection-end="4838" vertical-scroll-proportion="0.0" vertical-offset="2652" max-vertical-offset="7650">
+          <folding>
+            <marker date="1376496766743" expanded="true" signature="349:376" placeholder="..." />
+            <marker date="1376496766743" expanded="true" signature="2177:2218" placeholder="..." />
+            <marker date="1376496766743" expanded="true" signature="2287:2344" placeholder="..." />
+            <marker date="1376496766743" expanded="true" signature="2414:2455" placeholder="..." />
+            <marker date="1376496766743" expanded="true" signature="2705:2826" placeholder="..." />
+            <marker date="1376496766743" expanded="true" signature="3063:5114" placeholder="..." />
+            <marker date="1376496766743" expanded="true" signature="5116:5226" placeholder="//..." />
+            <marker date="1376496766743" expanded="true" signature="8013:8053" placeholder="..." />
+            <marker date="1376496766743" expanded="true" signature="8107:8204" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/assets/latticework-logo.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/assets/forkongithub.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="355" selection-end="355" vertical-scroll-proportion="0.09443099" vertical-offset="245" max-vertical-offset="1071">
           <folding />
         </state>
       </provider>

@@ -10,7 +10,11 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.0.7"
-    "metro-ui-css": "*"
+    "angular": "~1.0.7",
+    "metro-ui-css": "*",
+    "angular-route": "*"
+  },
+  "resolutions": {
+    "angular": "1.2.0rc1"
   }
 }
