@@ -3,6 +3,7 @@
 /// <reference path="./Scripts/typings/gruntjs/grunt-contrib-clean.d.ts" />
 /// <reference path="./Scripts/typings/gruntjs/grunt-contrib-copy.d.ts" />
 /// <reference path="./Scripts/typings/gruntjs/grunt-contrib-concat.d.ts" />
+/// <reference path="./Scripts/typings/gruntjs/grunt-contrib-sass.d.ts" />
 /// <reference path="./IGruntConfig.d.ts" />
 /// <reference path="./Scripts/typings/node/node.d.ts" />
 // https://raw.github.com/joshdmiller/ng-boilerplate/v0.3.0-release/gruntfile.js
@@ -21,6 +22,7 @@ var toExport = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
@@ -249,6 +251,31 @@ var toExport = function (grunt) {
         //                }
         //            }
         //        },
+        sass: {
+            build: {
+                options: {
+                    lineNumbers: true
+                },
+                files: [
+                    {
+                        src: ['<%= app_files.scss %>'],
+                        dest: '<%= build_dir %>/src/client/assets/<%= pkg.name %>.css'
+                    }
+                ]
+            },
+            compile: {
+                options: {
+                    lineNumbers: true,
+                    style: "compressed"
+                },
+                files: [
+                    {
+                        src: ['<%= app_files.scss %>'],
+                        dest: '<%= build_dir %>/src/client/assets/<%= pkg.name %>.css'
+                    }
+                ]
+            }
+        },
         /**
         * `jshint` defines the rules of our linter as well as which files we
         * should check. this file, all javascript sources, and all our unit tests
@@ -467,6 +494,14 @@ var toExport = function (grunt) {
                     '<%= app_files.ctpl %>'
                 ],
                 tasks: ['html2js']
+            },
+            /**
+            * when the css files change, we need to compile and minify them.
+            * TODO: Minify css files.
+            */
+            sass: {
+                files: [],
+                tasks: ['']
             }
         }
     };
@@ -503,6 +538,7 @@ var toExport = function (grunt) {
         'html2js',
         'jshint:gruntfile',
         'jshint:buildClientSrcJS',
+        'sass:build',
         'copy:buildClientVendorJS',
         'copy:buildClientAssets',
         'copy:buildClientSrcJS',
@@ -530,6 +566,7 @@ var toExport = function (grunt) {
         'typescript',
         'html2js',
         'jshint',
+        'sass:build',
         'copy:buildClientVendorJS',
         'copy:buildClientAssets',
         'copy:buildClientSrcJS',

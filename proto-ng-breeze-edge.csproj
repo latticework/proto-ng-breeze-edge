@@ -130,11 +130,14 @@
     <Content Include="src\client\app\main\about\about.tpl.html" />
     <Content Include="src\client\app\main\home\home.js" />
     <Content Include="src\client\app\main\home\home.tpl.html" />
+    <Content Include="src\client\app\todo\todolist\todolist.tpl.html" />
+    <None Include="src\client\scss\forkongithub.scss" />
     <Content Include="src\client\assets\latticework-logo.jpg" />
     <Content Include="src\client\index.html" />
     <Content Include="src\server\routes.js" />
     <TypeScriptCompile Include="IGruntConfig.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\gruntjs\grunt-contrib-concat.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\gruntjs\grunt-contrib-sass.d.ts" />
     <TypeScriptCompile Include="src\server\server.ts" />
     <Content Include="src\server\server.js" />
     <Content Include="Web.config" />
@@ -149,7 +152,7 @@
     <Content Include="src\client\app\main\about\about.scss" />
     <Content Include="src\client\app\main\home\home.js.map" />
     <Content Include="src\client\app\main\home\home.scss" />
-    <Content Include="src\client\scss\main.scss" />
+    <None Include="src\client\scss\main.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -183,6 +186,7 @@
       <Name>proto_edge_cs_net45</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

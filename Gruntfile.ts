@@ -3,9 +3,9 @@
 /// <reference path="./Scripts/typings/gruntjs/grunt-contrib-clean.d.ts" />
 /// <reference path="./Scripts/typings/gruntjs/grunt-contrib-copy.d.ts" />
 /// <reference path="./Scripts/typings/gruntjs/grunt-contrib-concat.d.ts" />
+/// <reference path="./Scripts/typings/gruntjs/grunt-contrib-sass.d.ts" />
 /// <reference path="./IGruntConfig.d.ts" />
 /// <reference path="./Scripts/typings/node/node.d.ts" />
-
 
 // https://raw.github.com/joshdmiller/ng-boilerplate/v0.3.0-release/gruntfile.js
 var toExport = function(grunt: IGrunt) {
@@ -23,6 +23,7 @@ var toExport = function(grunt: IGrunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
 //    grunt.loadNpmTasks('grunt-conventional-changelog');
@@ -234,36 +235,62 @@ var toExport = function(grunt: IGrunt) {
             },
         },
 
-//        keep until we figure out scss builds.
-//        /**
-//         * `recess` handles our less compilation and uglification automatically.
-//         * only our `main.less` file is included in compilation; all other files
-//         * must be imported from this file.
-//         */
-//        recess: {
-//            build: {
-//                src: [ '<%= app_files.less %>' ],
-//                dest: '<%= build_dir %>/assets/<%= pkg.name %>.css',
-//                options: {
-//                    compile: true,
-//                    compress: false,
-//                    nounderscores: false,
-//                    noids: false,
-//                    zerounits: false
-//                }
-//            },
-//            compile: {
-//                src: [ '<%= recess.build.dest %>' ],
-//                dest: '<%= recess.build.dest %>',
-//                options: {
-//                    compile: true,
-//                    compress: true,
-//                    nounderscores: false,
-//                    noids: false,
-//                    zerounits: false
-//                }
-//            }
-//        },
+        //        keep until we figure out scss builds.
+        //        /**
+        //         * `recess` handles our less compilation and uglification automatically.
+        //         * only our `main.less` file is included in compilation; all other files
+        //         * must be imported from this file.
+        //         */
+        //        recess: {
+        //            build: {
+        //                src: [ '<%= app_files.less %>' ],
+        //                dest: '<%= build_dir %>/assets/<%= pkg.name %>.css',
+        //                options: {
+        //                    compile: true,
+        //                    compress: false,
+        //                    nounderscores: false,
+        //                    noids: false,
+        //                    zerounits: false
+        //                }
+        //            },
+        //            compile: {
+        //                src: [ '<%= recess.build.dest %>' ],
+        //                dest: '<%= recess.build.dest %>',
+        //                options: {
+        //                    compile: true,
+        //                    compress: true,
+        //                    nounderscores: false,
+        //                    noids: false,
+        //                    zerounits: false
+        //                }
+        //            }
+        //        },
+        sass: {
+            build: <IGruntContribSassFilesArrayConfig>{
+                options: {
+                    lineNumbers: true,
+                },
+                files: [
+                    {
+                        src: ['<%= app_files.scss %>'],
+                        dest: '<%= build_dir %>/src/client/assets/<%= pkg.name %>.css',
+                    },
+                ],
+            },
+            compile: <IGruntContribSassFilesArrayConfig>{
+                options: {
+                    lineNumbers: true,
+                    style: "compressed",
+                },
+                files: [
+                    {
+                        src: ['<%= app_files.scss %>'],
+                        dest: '<%= build_dir %>/src/client/assets/<%= pkg.name %>.css',
+                    },
+                ],
+            },
+        },
+
 
         /**
          * `jshint` defines the rules of our linter as well as which files we
@@ -494,7 +521,7 @@ var toExport = function(grunt: IGrunt) {
              */
             gruntfile: {
                 files: 'gruntfile.js',
-                tasks: [ 'jshint:gruntfile' ],
+                tasks: ['jshint:gruntfile'],
                 options: {
                     livereload: false
                 }
@@ -509,7 +536,7 @@ var toExport = function(grunt: IGrunt) {
                     '<%= app_files.clientjs %>',
                     '<%= app_files.serverjs %>',
                 ],
-                tasks: ['jshint:src',/* 'karma:unit:run',*/ 'copy:buildClientSrcJS', 'copy:buildServerSrcJS' ]
+                tasks: ['jshint:src',/* 'karma:unit:run',*/ 'copy:buildClientSrcJS', 'copy:buildServerSrcJS']
             },
 
             /**
@@ -520,15 +547,15 @@ var toExport = function(grunt: IGrunt) {
                 files: [
                     'src/assets/**/*'
                 ],
-                tasks: [ 'copy:buildClientAssets' ]
+                tasks: ['copy:buildClientAssets']
             },
 
             /**
              * when index.html changes, we need to compile it.
              */
             html: {
-                files: [ '<%= app_files.html %>' ],
-                tasks: [ 'index:build' ]
+                files: ['<%= app_files.html %>'],
+                tasks: ['index:build']
             },
 
             /**
@@ -539,17 +566,18 @@ var toExport = function(grunt: IGrunt) {
                     '<%= app_files.atpl %>',
                     '<%= app_files.ctpl %>'
                 ],
-                tasks: [ 'html2js' ]
+                tasks: ['html2js']
             },
 
-//            /**
-//             * when the css files change, we need to compile and minify them.
-//             */
-//            scss: {
-//                files: [ 'src/**/*.scss' ],
-//                tasks: [ 'recess:build' ]
-//            },
-
+            /**
+             * when the css files change, we need to compile and minify them.
+             * TODO: Minify css files.
+             */
+            sass: {
+                files: [
+                ],
+                tasks: [''],
+            }
 //            /**
 //             * when a javascript unit test file changes, we only want to lint it and
 //             * run the unit tests. we don't want to do any live reloading.
@@ -599,6 +627,7 @@ var toExport = function(grunt: IGrunt) {
         'jshint:gruntfile',
         'jshint:buildClientSrcJS',
     //        'recess:build',
+        'sass:build',
         'copy:buildClientVendorJS',
         'copy:buildClientAssets',
         'copy:buildClientSrcJS',
@@ -629,6 +658,7 @@ var toExport = function(grunt: IGrunt) {
         'html2js',
         'jshint',
 //        'recess:build',
+        'sass:build',
         'copy:buildClientVendorJS',
         'copy:buildClientAssets',
         'copy:buildClientSrcJS',
