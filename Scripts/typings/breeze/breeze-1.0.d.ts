@@ -20,7 +20,7 @@ declare module BreezeCore {
     }
 
     class Enum implements IEnum {
-        constructor(name: string, methodObj?: any);
+        constructor (name: string, methodObj?: any);
 
         addSymbol(propertiesObj?: any): EnumSymbol;
         contains(object: any): boolean;
@@ -39,7 +39,7 @@ declare module BreezeCore {
     }
 
     class Event {
-        constructor(name: string, publisher: any, defaultErrorCallback?: ErrorCallback);
+        constructor (name: string, publisher: any, defaultErrorCallback?: ErrorCallback);
 
         static enable(eventName: string, target: any): void;
         static enable(eventName: string, target: any, isEnabled: boolean): void;
@@ -48,7 +48,7 @@ declare module BreezeCore {
         static isEnabled(eventName: string, target: any): boolean;
         publish(data: any, publishAsync?: boolean, errorCallback?: ErrorCallback): void;
         publishAsync(data: any, errorCallback?: ErrorCallback): void;
-        subscribe(callback?: (data: any) => void): number;
+        subscribe(callback?: (data: any) => void ): number;
         unsubscribe(unsubKey: number): boolean;
     }
 }
@@ -122,14 +122,14 @@ declare module Breeze {
         isNullable: boolean;
         isPartOfKey: boolean;
         isUnmapped: boolean;
-
+        
         maxLength: number;
         name: string;
         nameOnServer: string;
         parentEntityType: EntityType;
         relatedNavigationProperty: NavigationProperty;
         validators: Validator[];
-        constructor(config: DataPropertyOptions);
+        constructor (config: DataPropertyOptions);
     }
 
     interface DataPropertyOptions {
@@ -161,8 +161,8 @@ declare module Breeze {
     }
 
     class DataTypeSymbol extends BreezeCore.EnumSymbol {
-        defaultValue: any;
-        isNumeric: boolean;
+         defaultValue: any;
+         isNumeric: boolean;
     }
     interface DataType extends BreezeCore.IEnum {
         Binary: DataTypeSymbol;
@@ -183,7 +183,7 @@ declare module Breeze {
         parseDateFromServer(date: any): Date;
 
     }
-    var DataType: DataType;
+    var DataType: DataType; 
 
     class EntityActionSymbol extends BreezeCore.EnumSymbol {
     }
@@ -249,22 +249,22 @@ declare module Breeze {
     }
 
     class PropertyChangedEvent extends BreezeCore.Event {
-        subscribe(callback?: (data: PropertyChangedEventArgs) => void): number;
+        subscribe(callback?: (data: PropertyChangedEventArgs) => void ): number;
     }
 
     class ValidationErrorsChangedEventArgs {
         entity: Entity;
-        added: ValidationError[];
-        removed: ValidationError[];
+        added: ValidationError[]; 
+        removed: ValidationError[]; 
     }
 
     class ValidationErrorsChangedEvent extends BreezeCore.Event {
-        subscribe(callback?: (data: ValidationErrorsChangedEventArgs) => void): number;
+        subscribe(callback?: (data: ValidationErrorsChangedEventArgs) => void ): number;
     }
 
     class EntityKey {
-        constructor(entityType: EntityType, keyValue: any);
-        constructor(entityType: EntityType, keyValues: any[]);
+        constructor (entityType: EntityType, keyValue: any);
+        constructor (entityType: EntityType, keyValues: any[]);
 
         equals(entityKey: EntityKey): boolean;
         static equals(k1: EntityKey, k2: EntityKey): boolean;
@@ -282,8 +282,8 @@ declare module Breeze {
         entityChanged: EntityChangedEvent;
         hasChangesChanged: BreezeCore.Event;
 
-        constructor(config?: EntityManagerOptions);
-        constructor(config?: string);
+        constructor (config?: EntityManagerOptions);
+        constructor (config?: string);
 
         addEntity(entity: Entity): Entity;
         attachEntity(entity: Entity, entityState?: EntityStateSymbol): Entity;
@@ -300,7 +300,7 @@ declare module Breeze {
         fetchEntityByKey(typeName: string, keyValue: any, checkLocalCacheFirst?: boolean): Entity;
         fetchEntityByKey(typeName: string, keyValues: any[], checkLocalCacheFirst?: boolean): Entity;
         fetchEntityByKey(entityKey: EntityKey): Entity;
-        fetchMetadata(callback?: (schema: any) => void, errorCallback?: BreezeCore.ErrorCallback): Promise;
+        fetchMetadata(callback?: (schema: any) => void , errorCallback?: BreezeCore.ErrorCallback): Promise;
         generateTempKeyValue(entity: Entity): any;
         getChanges(): Entity[];
         getChanges(entityTypeName: string): Entity[];
@@ -378,7 +378,7 @@ declare module Breeze {
     }
 
     class EntityChangedEvent extends BreezeCore.Event {
-        subscribe(callback?: (data: EntityChangedEventArgs) => void): number;
+        subscribe(callback?: (data: EntityChangedEventArgs) => void ): number;
     }
 
     class EntityQuery {
@@ -391,7 +391,7 @@ declare module Breeze {
         takeCount: number;
         wherePredicate: Predicate;
 
-        constructor(resourceName?: string);
+        constructor (resourceName?: string);
 
         execute(callback?: ExecuteQuerySuccessCallback, errorCallback?: ExecuteQueryErrorCallback): Promise;
         executeLocally(): Entity[];
@@ -416,7 +416,7 @@ declare module Breeze {
 
         using(obj: EntityManager): EntityQuery;
         using(obj: MergeStrategySymbol): EntityQuery;
-        using(obj: FetchStrategySymbol): EntityQuery;
+        using(obj: FetchStrategySymbol): EntityQuery; 
 
         where(predicate: Predicate): EntityQuery;
         where(property: string, operator: string, value: any): EntityQuery;
@@ -462,8 +462,8 @@ declare module Breeze {
         unmappedProperties: DataProperty[];
         validators: Validator[];
 
-        constructor(config: MetadataStore);
-        constructor(config: EntityTypeOptions);
+        constructor (config: MetadataStore);
+        constructor (config: EntityTypeOptions);
 
         addProperty(property: IProperty): void;
         addValidator(validator: Validator, property?: IProperty): void;
@@ -517,7 +517,7 @@ declare module Breeze {
         static caseInsensitiveSQL: LocalQueryComparisonOptions;
         static defaultInstance: LocalQueryComparisonOptions;
 
-        constructor(config: { name?: string; isCaseSensitive?: boolean; usesSql92CompliantStringComparison?: boolean; });
+        constructor (config: { name?: string; isCaseSensitive?: boolean; usesSql92CompliantStringComparison?: boolean; });
 
         setAsDefault(): void;
     }
@@ -533,12 +533,12 @@ declare module Breeze {
     class MetadataStore {
         namingConvention: NamingConvention;
 
-        constructor(config?: MetadataStoreOptions);
+        constructor (config?: MetadataStoreOptions);
         addDataService(dataService: DataService): void;
         addEntityType(structuralType: IStructuralType): void;
         exportMetadata(): string;
-        fetchMetadata(dataService: string, callback?: (data) => void, errorCallback?: BreezeCore.ErrorCallback): Promise;
-        fetchMetadata(dataService: DataService, callback?: (data) => void, errorCallback?: BreezeCore.ErrorCallback): Promise;
+        fetchMetadata(dataService: string, callback?: (data) => void , errorCallback?: BreezeCore.ErrorCallback): Promise;
+        fetchMetadata(dataService: DataService, callback?: (data) => void , errorCallback?: BreezeCore.ErrorCallback): Promise;
         getDataService(serviceName: string): DataService;
         getEntityType(entityTypeName: string, okIfNotFound?: boolean): IStructuralType;
         getEntityTypes(): IStructuralType[];
@@ -546,7 +546,7 @@ declare module Breeze {
         static importMetadata(exportedString: string): MetadataStore;
         importMetadata(exportedString: string): MetadataStore;
         isEmpty(): boolean;
-        registerEntityTypeCtor(entityTypeName: string, entityCtor: Function, initializationFn?: (entity: Entity) => void): void;
+        registerEntityTypeCtor(entityTypeName: string, entityCtor: Function, initializationFn?: (entity: Entity) =>void ): void;
         trackUnmappedType(entityCtor: Function, interceptor?: Function);
     }
 
@@ -560,7 +560,7 @@ declare module Breeze {
         static defaultInstance: NamingConvention;
         static none: NamingConvention;
 
-        constructor(config: NamingConventionOptions);
+        constructor (config: NamingConventionOptions);
 
         clientPropertyNameToServer(clientPropertyName: string): string;
         clientPropertyNameToServer(clientPropertyName: string, property: IProperty): string;
@@ -589,7 +589,7 @@ declare module Breeze {
         relatedDataProperties: DataProperty[];
         validators: Validator[];
 
-        constructor(config: NavigationPropertyOptions);
+        constructor (config: NavigationPropertyOptions);
     }
 
     interface NavigationPropertyOptions {
@@ -604,8 +604,8 @@ declare module Breeze {
     }
 
     class Predicate {
-        constructor(property: string, operator: string, value: any, valueIsLiteral?: boolean);
-        constructor(property: string, operator: FilterQueryOpSymbol, value: any, valueIsLiteral?: boolean);
+        constructor (property: string, operator: string, value: any, valueIsLiteral?: boolean);
+        constructor (property: string, operator: FilterQueryOpSymbol, value: any, valueIsLiteral?: boolean);
 
         and: PredicateMethod;
         static and: PredicateMethod;
@@ -643,12 +643,12 @@ declare module Breeze {
         fetchStrategy: FetchStrategySymbol;
         mergeStrategy: MergeStrategySymbol;
 
-        constructor(config?: QueryOptionsConfiguration);
+        constructor (config?: QueryOptionsConfiguration);
 
         setAsDefault(): void;
         using(config: QueryOptionsConfiguration): QueryOptions;
         using(config: MergeStrategySymbol): QueryOptions;
-        using(config: FetchStrategySymbol): QueryOptions;
+        using(config: FetchStrategySymbol): QueryOptions; 
     }
 
     interface QueryOptionsConfiguration {
@@ -660,7 +660,7 @@ declare module Breeze {
         allowConcurrentSaves: boolean;
         static defaultInstance: SaveOptions;
 
-        constructor(config?: { allowConcurrentSaves?: boolean; });
+        constructor (config?: { allowConcurrentSaves?: boolean; });
 
         setAsDefault(): SaveOptions;
     }
@@ -672,7 +672,7 @@ declare module Breeze {
         propertyName: string;
         validator: Validator;
 
-        constructor(validator: Validator, context: any, errorMessage: string);
+        constructor (validator: Validator, context: any, errorMessage: string);
     }
 
     class ValidationOptions {
@@ -682,7 +682,7 @@ declare module Breeze {
         validateOnQuery: boolean;
         validateOnSave: boolean;
 
-        constructor(config?: ValidationOptionsConfiguration);
+        constructor (config?: ValidationOptionsConfiguration);
 
         setAsDefault(): ValidationOptions;
         using(config: ValidationOptionsConfiguration): ValidationOptions;
@@ -698,7 +698,7 @@ declare module Breeze {
     class Validator {
         static messageTemplates: any;
 
-        constructor(name: string, validatorFn: ValidatorFunction, context?: any);
+        constructor (name: string, validatorFn: ValidatorFunction, context?: any);
 
         static bool(): Validator;
         static byte(): Validator;

@@ -49,6 +49,7 @@ var userConfig = {
     client_vendor_files: {
         js: [
             'bower_components/angular/angular.js',
+            'bower_components/angular-route/angular-route.js',
             'bower_components/metro-ui-css/javascript/*.js',
             'Scripts/breeze.debug.js',
             'Scripts/q.js'

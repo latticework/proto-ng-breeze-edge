@@ -131,7 +131,7 @@ var toExport = function(grunt: IGrunt) {
                 files: [
                     {
                         src: ['<%= client_vendor_files.js %>'],
-                        dest: '<%= build_dir %>/client/',
+                        dest: '<%= build_dir %>/client',
                         expand: true,
                         cwd: '.',
                     }
@@ -194,7 +194,7 @@ var toExport = function(grunt: IGrunt) {
                 src: [
                     '<%= client_vendor_files.js %>',
                     'module.prefix',
-                    '<%= build_dir %>/src/client/**/*.js',
+                    '<%= build_dir %>/client/**/*.js',
                     '<%= html2js.app.dest %>',
                     '<%= html2js.common.dest %>',
                     '<%= client_vendor_files.js %>',
@@ -235,36 +235,6 @@ var toExport = function(grunt: IGrunt) {
             },
         },
 
-        //        keep until we figure out scss builds.
-        //        /**
-        //         * `recess` handles our less compilation and uglification automatically.
-        //         * only our `main.less` file is included in compilation; all other files
-        //         * must be imported from this file.
-        //         */
-        //        recess: {
-        //            build: {
-        //                src: [ '<%= app_files.less %>' ],
-        //                dest: '<%= build_dir %>/assets/<%= pkg.name %>.css',
-        //                options: {
-        //                    compile: true,
-        //                    compress: false,
-        //                    nounderscores: false,
-        //                    noids: false,
-        //                    zerounits: false
-        //                }
-        //            },
-        //            compile: {
-        //                src: [ '<%= recess.build.dest %>' ],
-        //                dest: '<%= recess.build.dest %>',
-        //                options: {
-        //                    compile: true,
-        //                    compress: true,
-        //                    nounderscores: false,
-        //                    noids: false,
-        //                    zerounits: false
-        //                }
-        //            }
-        //        },
         sass: {
             build: <IGruntContribSassFilesArrayConfig>{
                 options: {
@@ -273,7 +243,7 @@ var toExport = function(grunt: IGrunt) {
                 files: [
                     {
                         src: ['<%= app_files.scss %>'],
-                        dest: '<%= build_dir %>/src/client/assets/<%= pkg.name %>.css',
+                        dest: '<%= build_dir %>/client/assets/<%= pkg.name %>.css',
                     },
                 ],
             },
@@ -285,7 +255,7 @@ var toExport = function(grunt: IGrunt) {
                 files: [
                     {
                         src: ['<%= app_files.scss %>'],
-                        dest: '<%= build_dir %>/src/client/assets/<%= pkg.name %>.css',
+                        dest: '<%= compile_dir %>/client/assets/<%= pkg.name %>.css',
                     },
                 ],
             },
@@ -343,7 +313,7 @@ var toExport = function(grunt: IGrunt) {
                     base: 'src/app'
                 },
                 src: [ '<%= app_files.atpl %>' ],
-                dest: '<%= build_dir %>/templates-app.js'
+                dest: '<%= build_dir %>/client/templates-app.js'
             },
 
             /**
@@ -354,7 +324,7 @@ var toExport = function(grunt: IGrunt) {
                     base: 'src/common'
                 },
                 src: [ '<%= app_files.ctpl %>' ],
-                dest: '<%= build_dir %>/templates-common.js'
+                dest: '<%= build_dir %>/client/templates-common.js'
             }
         },
 
@@ -363,7 +333,7 @@ var toExport = function(grunt: IGrunt) {
          */
         karma: {
             options: {
-                configfile: '<%= build_dir %>/karma-unit.js'
+                configfile: '<%= build_dir %>/client/karma-unit.js'
             },
             unit: {
                 runnerport: 9101,
@@ -390,11 +360,11 @@ var toExport = function(grunt: IGrunt) {
                 dir: '<%= build_dir %>',
                 src: [
                     '<%= client_vendor_files.js %>',
-                    '<%= build_dir %>/src/**/*.js',
+                    '<%= build_dir %>/client/app/**/*.js',
                     '<%= html2js.common.dest %>',
                     '<%= html2js.app.dest %>',
                     '<%= client_vendor_files.css %>',
-//                    '<%= recess.build.dest %>'
+                    '<%= sass.build.files[0].dest %>',
                 ]
             },
 
@@ -408,7 +378,7 @@ var toExport = function(grunt: IGrunt) {
                 src: [
                     '<%= concat.compileClientJS.dest %>',
                     '<%= client_vendor_files.css %>',
-//                    '<%= recess.compile.dest %>'
+                    '<%= sass.compile.files[0].dest %>',
                 ]
             }
         },
@@ -703,7 +673,7 @@ var toExport = function(grunt: IGrunt) {
      * the list into variables for the template to use and then runs the
      * compilation.
      */
-    var indexTaskFunction = function () {
+    grunt.registerMultiTask('index', 'Process index.html template', function () {
         var task = <IGruntRunningMultiTask>this;
 
         var dirre = new RegExp('^(' + grunt.config('build_dir') + '|' + grunt.config('compile_dir') + ')\/', 'g');
@@ -731,9 +701,7 @@ var toExport = function(grunt: IGrunt) {
                 });
             }
         });
-    }
-
-    grunt.registerMultiTask('index', 'Process index.html template', indexTaskFunction);
+    });
 
     ///**
     // * in order to avoid having to specify manually the files needed for karma to

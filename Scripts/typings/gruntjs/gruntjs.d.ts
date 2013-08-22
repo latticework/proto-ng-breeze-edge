@@ -61,7 +61,7 @@ interface ITaskFilesConfig<TOptions> extends ITaskConfig<TOptions> {
     };
 }
 
-interface ITaskFilesObject extends IGruntTaskFileMappingProperties  {
+interface ITaskFilesObject extends IGruntTaskFileMappingProperties {
     src: string[];
     dest?: string;
 }
@@ -70,7 +70,7 @@ interface ITaskFilesObject extends IGruntTaskFileMappingProperties  {
  * This form supports multiple src-dest file mappings per-target, while also allowing additional properties per mapping.
  */
 interface ITaskFilesArrayConfig<TOptions, TTaskFilesObject extends ITaskFilesObject>
-    extends ITaskConfig<TOptions> {
+extends ITaskConfig<TOptions> {
     /** An array of ITaskFilesObject or subtype that supports additional properties */
     files: TTaskFilesObject[];
 }
@@ -171,6 +171,7 @@ interface INpmPackageConfig {
     publishConfig?: any;
 }
 
+
 ////////////////
 /// To add plugins update the IGruntConfig using open ended interface syntax
 ////////////////
@@ -202,6 +203,7 @@ interface IGruntContribUglifyConfigOptions {
     preserveComments?: any; // boolean / string / function 
     banner?: string;
 }
+
 
 // Backwards compatability.
 interface IGruntUglifyConfig extends IGruntContribUglifyConfigOptions { }
@@ -324,6 +326,9 @@ interface IGruntTemplate {
 }
 
 
+
+
+
 ////////////////
 // Main Grunt object 
 // http://gruntjs.com/api/grunt
@@ -433,7 +438,7 @@ interface IGruntFileObject {
 }
 
 interface ILoDash {
-    extend : Function;
+    extend: Function;
 }
 
 interface IGruntUtilObject {
