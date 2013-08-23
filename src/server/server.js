@@ -1,3 +1,5 @@
+/*global module:false*/
+/// <reference path="../../Scripts/typings/node/node.d.ts" />
 (function () {
     "use strict";
     var express = require('express');

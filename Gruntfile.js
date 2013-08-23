@@ -382,7 +382,9 @@ var toExport = function (grunt) {
                     target: 'es5',
                     base_path: '',
                     sourcemap: true,
-                    fullsourcemappath: true
+                    fullsourcemappath: true,
+                    //                        declaration: true,
+                    comments: true
                 }
             },
             server: {
@@ -392,7 +394,10 @@ var toExport = function (grunt) {
                     module: 'commonjs',
                     target: 'es5',
                     base_path: '',
-                    sourcemap: false
+                    sourcemap: false,
+                    //                        fullsourcemappath: true,
+                    //                        declaration: true,
+                    comments: true
                 }
             }
         },

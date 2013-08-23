@@ -411,6 +411,7 @@ var toExport = function(grunt: IGrunt) {
                         sourcemap: true,
                         fullsourcemappath: true,
 //                        declaration: true,
+                        comments: true,
                     },
                 },
                 server: {
@@ -423,6 +424,7 @@ var toExport = function(grunt: IGrunt) {
                         sourcemap: false,
 //                        fullsourcemappath: true,
 //                        declaration: true,
+                        comments: true,
                     },
                 },
                 //gruntmodules: {
