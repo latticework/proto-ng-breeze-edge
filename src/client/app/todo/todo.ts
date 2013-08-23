@@ -1,6 +1,7 @@
-/// <reference path="..\..\..\..\Scripts\typings\angularjs\angular.d.ts" />
+/// <reference path=".\todoreferences.ts" />
 
 angular.module('app.todo', [
+    'ngRoute', // angular-route.js
     'app.todo.todolist',
     'app.todo.tododetails',
 ])

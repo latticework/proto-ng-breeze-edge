@@ -23,10 +23,10 @@ var userConfig = {
     app_files: {
         //        js: [ 'src/**/*.js', '!src/**/*.spec.js' ],
         //        jsunit: [ 'src/**/*.spec.js' ],
-        clientjs: ['client/**/*.js'],
-        clientjs_cwd: 'src',
-        serverjs: ['server/**/*.js'],
-        serverjs_cwd: 'src',
+        clientjs: ['*.js'],
+        clientjs_cwd: 'src/client',
+        serverjs: ['**/*.js'],
+        serverjs_cwd: 'src/server',
         servercs: ['**'],
         servercs_cwd: 'net45/proto-edge-cs-net45/bin/Debug',
 
@@ -55,6 +55,7 @@ var userConfig = {
         js: [
             'bower_components/angular/angular.js',
             'bower_components/angular-route/angular-route.js',
+            'bower_components/jquery/jquery.js',
             'bower_components/metro-ui-css/javascript/*.js',
             'Scripts/breeze.debug.js',
             'Scripts/q.js',

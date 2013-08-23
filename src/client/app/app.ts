@@ -1,22 +1,27 @@
-/// <reference path="..\..\..\Scripts\typings\angularjs\angular.d.ts" />
+/// <reference path=".\appreferences.ts" />
 
-angular.module('app', [
-    'templates-app',
-    'templates-common',
-    'app.main',
-    'ngRoute', // angular-route.js
-])
+module app {
+    'use strict';
 
-.config(function myAppConfig($stateProvider, $urlRouterProvider) {
-})
+    var app = angular.module('app', [
+        'ngRoute', // angular-route.js
+        'templates-app',
+        'templates-common',
+        'app.main',
+        'app.todo',
+    ])
+
+        .config(function myAppConfig($stateProvider, $urlRouterProvider) {
+        })
 
 
-//.run(function run(titleService) {
-//    titleService.setSuffix(' | ngBoilerplate');
-//})
+    //.run(function run(titleService) {
+    //    titleService.setSuffix(' | ngBoilerplate');
+    //})
 
 
-.controller('AppCtrl', function AppCtrl($scope, $location) {
-})
-;
+        .controller('AppCtrl', function AppCtrl($scope, $location) {
+        })
+    ;
+}
 

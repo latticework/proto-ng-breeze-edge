@@ -96,7 +96,6 @@
     <Content Include="Scripts\q.js" />
     <Content Include="Scripts\q.min.js" />
     <Content Include="src\client\app\main\about\about.tpl.html" />
-    <Content Include="src\client\app\main\home\home.js" />
     <Content Include="src\client\app\main\home\home.tpl.html" />
     <Content Include="src\client\app\todo\todolist\todolist.tpl.html" />
     <Content Include="src\client\app\todo\todolist\todolist.scss">
@@ -149,9 +148,14 @@
     <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\requirejs\require.d.ts" />
     <TypeScriptCompile Include="src\client\app\main\main.ts" />
+    <TypeScriptCompile Include="src\client\app\main\mainreferences.ts" />
+    <TypeScriptCompile Include="src\client\app\appreferences.ts" />
     <TypeScriptCompile Include="src\client\app\todo\todo.ts" />
     <TypeScriptCompile Include="src\client\app\todo\tododetails\tododetails.ts" />
     <TypeScriptCompile Include="src\client\app\todo\todolist\todolist.ts" />
+    <TypeScriptCompile Include="src\client\app\todo\todoreferences.ts" />
+    <TypeScriptCompile Include="src\client\model\modelreferences.ts" />
+    <TypeScriptCompile Include="src\client\model\TodoItem.ts" />
     <TypeScriptCompile Include="src\server\server.ts" />
     <Content Include="src\server\server.js" />
     <Content Include="Web.config" />
@@ -167,7 +171,6 @@
       <CompileStyle>Nested</CompileStyle>
       <DebugInfo>False</DebugInfo>
     </Content>
-    <Content Include="src\client\app\main\home\home.js.map" />
     <Content Include="src\client\app\main\home\home.scss">
       <Compile>False</Compile>
       <Minify>True</Minify>

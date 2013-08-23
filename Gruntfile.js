@@ -101,7 +101,7 @@ var toExport = function (grunt) {
                 files: [
                     {
                         src: ['**'],
-                        dest: '<%= build_dir %>/client/assets/',
+                        dest: '<%= build_dir %>/web/public/assets/',
                         expand: true,
                         cwd: 'src/client/assets'
                     }
@@ -111,7 +111,7 @@ var toExport = function (grunt) {
                 files: [
                     {
                         src: ['<%= app_files.clientjs %>'],
-                        dest: '<%= build_dir %>',
+                        dest: '<%= build_dir %>/web/public',
                         expand: true,
                         cwd: '<%= app_files.clientjs_cwd %>'
                     }
@@ -121,7 +121,7 @@ var toExport = function (grunt) {
                 files: [
                     {
                         src: ['<%= client_vendor_files.js %>'],
-                        dest: '<%= build_dir %>/client',
+                        dest: '<%= build_dir %>/web/public',
                         expand: true,
                         cwd: '.'
                     }
@@ -131,7 +131,7 @@ var toExport = function (grunt) {
                 files: [
                     {
                         src: ['<%= server_vendor_files.js %>'],
-                        dest: '<%= build_dir %>/server/',
+                        dest: '<%= build_dir %>/web',
                         expand: true,
                         cwd: '.'
                     }
@@ -141,7 +141,7 @@ var toExport = function (grunt) {
                 files: [
                     {
                         src: ['<%= app_files.serverjs %>'],
-                        dest: '<%= build_dir %>',
+                        dest: '<%= build_dir %>/web',
                         expand: true,
                         cwd: '<%= app_files.serverjs_cwd %>'
                     }
@@ -151,7 +151,7 @@ var toExport = function (grunt) {
                 files: [
                     {
                         src: ['<%= app_files.servercs %>'],
-                        dest: '<%= build_dir %>/server/bin',
+                        dest: '<%= build_dir %>/web/bin',
                         expand: true,
                         cwd: '<%= app_files.servercs_cwd %>'
                     }
@@ -161,9 +161,9 @@ var toExport = function (grunt) {
                 files: [
                     {
                         src: ['**'],
-                        dest: '<%= compile_dir %>/client/assets',
+                        dest: '<%= compile_dir %>/web/public/assets',
                         expand: true,
-                        cwd: '<%= build_dir %>/client/assets'
+                        cwd: '<%= build_dir %>/web/public/assets'
                     }
                 ]
             }
@@ -183,13 +183,13 @@ var toExport = function (grunt) {
                 src: [
                     '<%= client_vendor_files.js %>',
                     'module.prefix',
-                    '<%= build_dir %>/client/**/*.js',
+                    '<%= build_dir %>/web/public/**/*.js',
                     '<%= html2js.app.dest %>',
                     '<%= html2js.common.dest %>',
                     '<%= client_vendor_files.js %>',
                     'module.suffix'
                 ],
-                dest: '<%= compile_dir %>/client/assets/<%= pkg.name %>.js'
+                dest: '<%= compile_dir %>/web/public/assets/<%= pkg.name %>.js'
             }
         },
         /**
@@ -214,7 +214,8 @@ var toExport = function (grunt) {
         uglify: {
             compile: {
                 options: {
-                    banner: '<%= meta.banner %>'
+                    banner: '<%= meta.banner %>',
+                    sourceMap: '<%= concat.compileClientJS.dest %>.map'
                 },
                 files: {
                     '<%= concat.compileClientJS.dest %>': ['<%= concat.compileClientJS.dest %>']
@@ -229,7 +230,7 @@ var toExport = function (grunt) {
                 files: [
                     {
                         src: ['<%= app_files.scss %>'],
-                        dest: '<%= build_dir %>/client/assets/<%= pkg.name %>.css'
+                        dest: '<%= build_dir %>/web/public/assets/<%= pkg.name %>.css'
                     }
                 ]
             },
@@ -241,7 +242,7 @@ var toExport = function (grunt) {
                 files: [
                     {
                         src: ['<%= app_files.scss %>'],
-                        dest: '<%= compile_dir %>/client/assets/<%= pkg.name %>.css'
+                        dest: '<%= compile_dir %>/web/public/assets/<%= pkg.name %>.css'
                     }
                 ]
             }
@@ -256,11 +257,9 @@ var toExport = function (grunt) {
         */
         jshint: {
             buildClientSrcJS: [
-                '<%= app_files.clientjs %>',
-                '<%= app_files.serverjs %>'
+                '<%= app_files.clientjs %>'
             ],
             buildServerSrcJS: [
-                '<%= app_files.clientjs %>',
                 '<%= app_files.serverjs %>'
             ],
             test: [],
@@ -294,7 +293,7 @@ var toExport = function (grunt) {
                     base: 'src/app'
                 },
                 src: ['<%= app_files.atpl %>'],
-                dest: '<%= build_dir %>/client/templates-app.js'
+                dest: '<%= build_dir %>/web/public/templates-app.js'
             },
             /**
             * these are the templates from `src/common`.
@@ -304,7 +303,7 @@ var toExport = function (grunt) {
                     base: 'src/common'
                 },
                 src: ['<%= app_files.ctpl %>'],
-                dest: '<%= build_dir %>/client/templates-common.js'
+                dest: '<%= build_dir %>/web/public/templates-common.js'
             }
         },
         /**
@@ -312,7 +311,7 @@ var toExport = function (grunt) {
         */
         karma: {
             options: {
-                configfile: '<%= build_dir %>/client/karma-unit.js'
+                configfile: '<%= build_dir %>/web/public/karma-unit.js'
             },
             unit: {
                 runnerport: 9101,
@@ -337,9 +336,9 @@ var toExport = function (grunt) {
                 dir: '<%= build_dir %>',
                 src: [
                     '<%= client_vendor_files.js %>',
-                    '<%= build_dir %>/client/app/**/*.js',
                     '<%= html2js.common.dest %>',
                     '<%= html2js.app.dest %>',
+                    '<%= typescript.client.dest %>',
                     '<%= client_vendor_files.css %>',
                     '<%= sass.build.files[0].dest %>'
                 ]
@@ -377,9 +376,9 @@ var toExport = function (grunt) {
         typescript: {
             client: {
                 src: ['src/client/**/*.ts'],
-                //                    dest: 'js',
+                dest: '<%= build_dir %>/web/public/app.js',
                 options: {
-                    module: 'amd',
+                    //module: 'amd',
                     target: 'es5',
                     base_path: '',
                     sourcemap: true,
@@ -508,8 +507,6 @@ var toExport = function (grunt) {
         'clean',
         'typescript:client',
         'html2js',
-        'jshint:gruntfile',
-        'jshint:buildClientSrcJS',
         'sass:build',
         'copy:buildClientVendorJS',
         'copy:buildClientAssets',
@@ -523,8 +520,6 @@ var toExport = function (grunt) {
     grunt.registerTask('server', [
         'clean',
         'typescript:server',
-        'jshint:gruntfile',
-        'jshint:buildServerSrcJS',
         'copy:buildServerVendorJS',
         'copy:buildServerSrcJS',
         'copy:buildServerSrcCS'
@@ -537,7 +532,6 @@ var toExport = function (grunt) {
         'clean',
         'typescript',
         'html2js',
-        'jshint',
         'sass:build',
         'copy:buildClientVendorJS',
         'copy:buildClientAssets',
@@ -600,7 +594,7 @@ var toExport = function (grunt) {
             return file.replace(dirre, '');
         });
 
-        grunt.file.copy('src/client/index.html', task.data.dir + '/client/index.html', {
+        grunt.file.copy('src/client/index.html', task.data.dir + '/web/public/index.html', {
             process: function (contents, path) {
                 return grunt.template.process(contents, {
                     data: {

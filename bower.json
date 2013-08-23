@@ -12,7 +12,8 @@
   "dependencies": {
     "angular": "~1.0.7",
     "metro-ui-css": "*",
-    "angular-route": "*"
+    "angular-route": "*",
+    "jquery": "~2.0.3"
   },
   "resolutions": {
     "angular": "1.2.0rc1"
