@@ -678,7 +678,7 @@ var toExport = function(grunt: IGrunt) {
     grunt.registerMultiTask('index', 'Process index.html template', function () {
         var task = <IGruntRunningMultiTask>this;
 
-        var dirre = new RegExp('^(' + grunt.config('build_dir') + '|' + grunt.config('compile_dir') + ')\/', 'g');
+        var dirre = new RegExp('^(' + grunt.config('build_dir') + '/web/public|' + grunt.config('compile_dir') + '/web/public)\/', 'g');
 
         //for (var foo in this) {
         //    grunt.log.writeln(foo);

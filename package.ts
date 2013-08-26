@@ -32,7 +32,7 @@
         "grunt-typescript": "~0.2.1",
     },
     "scripts": {
-        "start": "node ./debug/server/server.js",
+        "start": "node ./debug/web/server.js",
         "test": "test"
     },
     "repository": {

@@ -9,7 +9,7 @@
 
     app.configure(function () {
         app.use(express.bodyParser());
-        app.use(express.static(__dirname + '/../client'));
+        app.use(express.static(__dirname + '/public'));
 
         app.get('/api/todo', routes.getallTodoes);        
         app.get('/api/todo/MetaData', routes.getMetadata);
