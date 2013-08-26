@@ -127,6 +127,16 @@ var toExport = function (grunt) {
                     }
                 ]
             },
+            buildClientVendorCss: {
+                files: [
+                    {
+                        src: ['<%= client_vendor_files.css %>'],
+                        dest: '<%= build_dir %>/web/public',
+                        expand: true,
+                        cwd: '.'
+                    }
+                ]
+            },
             buildServerVendorJS: {
                 files: [
                     {
@@ -290,7 +300,7 @@ var toExport = function (grunt) {
             */
             app: {
                 options: {
-                    base: 'src/app'
+                    base: 'src/client'
                 },
                 src: ['<%= app_files.atpl %>'],
                 dest: '<%= build_dir %>/web/public/templates-app.js'
@@ -300,7 +310,7 @@ var toExport = function (grunt) {
             */
             common: {
                 options: {
-                    base: 'src/common'
+                    base: 'src/client'
                 },
                 src: ['<%= app_files.ctpl %>'],
                 dest: '<%= build_dir %>/web/public/templates-common.js'
@@ -514,6 +524,7 @@ var toExport = function (grunt) {
         'html2js',
         'sass:build',
         'copy:buildClientVendorJS',
+        'copy:buildClientVendorCss',
         'copy:buildClientAssets',
         'copy:buildClientSrcJS',
         'index:build'
@@ -539,6 +550,7 @@ var toExport = function (grunt) {
         'html2js',
         'sass:build',
         'copy:buildClientVendorJS',
+        'copy:buildClientVendorCss',
         'copy:buildClientAssets',
         'copy:buildClientSrcJS',
         'copy:buildServerVendorJS',

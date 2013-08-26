@@ -51,9 +51,10 @@ var userConfig = {
             'bower_components/angular/angular.js',
             'bower_components/angular-route/angular-route.js',
             'bower_components/jquery/jquery.js',
+            'bower_components/jquery-mousewheel/jquery.mousewheel.js',
             'bower_components/metro-ui-css/javascript/*.js',
-            'Scripts/breeze.debug.js',
-            'Scripts/q.js'
+            'Scripts/q.js',
+            'Scripts/breeze.debug.js'
         ],
         css: [
             'bower_components/metro-ui-css/css/*.css'

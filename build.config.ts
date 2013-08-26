@@ -56,9 +56,10 @@ var userConfig = {
             'bower_components/angular/angular.js',
             'bower_components/angular-route/angular-route.js',
             'bower_components/jquery/jquery.js',
+            'bower_components/jquery-mousewheel/jquery.mousewheel.js',
             'bower_components/metro-ui-css/javascript/*.js',
-            'Scripts/breeze.debug.js',
             'Scripts/q.js',
+            'Scripts/breeze.debug.js',
             //            'vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js',
             //            'vendor/angular-ui-router/release/angular-ui-router.js',
             //            'vendor/angular-ui-utils/modules/route/route.js'

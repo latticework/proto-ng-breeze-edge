@@ -1,20 +1,18 @@
 /// <reference path=".\todoreferences.ts" />
 
-angular.module('app.todo', [
+angular.module('App.Todo', [
     'ngRoute', // angular-route.js
-    'app.todo.todolist',
-    'app.todo.tododetails',
 ])
 
-    .config(function myAppConfig($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider
+    .config(function myAppConfig($routeProvider) {
+        $routeProvider
             .when('/todo', {
                 controller: 'TodoTodoListCtrl',
-                templateUrl: '/app/todolist/todolist.tpl.html',
+                templateUrl: 'app/todo/todolist/todolist.tpl.html',
             })
             .when('/todo/:todoId', {
                 controller: 'TodoTodoDetailsCtrl',
-                templateUrl: '/app/tododetails/tododetails.tpl.html',
+                templateUrl: 'app/todo/tododetails/tododetails.tpl.html',
             });
     })
 

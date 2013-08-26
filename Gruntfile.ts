@@ -137,6 +137,16 @@ var toExport = function(grunt: IGrunt) {
                     }
                 ]
             },
+            buildClientVendorCss: <IGruntContribCopyFilesArrayConfig>{
+                files: [
+                    {
+                        src: ['<%= client_vendor_files.css %>'],
+                        dest: '<%= build_dir %>/web/public',
+                        expand: true,
+                        cwd: '.',
+                    }
+                ]
+            },
             buildServerVendorJS: <IGruntContribCopyFilesArrayConfig>{
                 files: [
                     {
@@ -309,7 +319,7 @@ var toExport = function(grunt: IGrunt) {
              */
             app: {
                 options: {
-                    base: 'src/app'
+                    base: 'src/client'
                 },
                 src: [ '<%= app_files.atpl %>' ],
                 dest: '<%= build_dir %>/web/public/templates-app.js'
@@ -320,7 +330,7 @@ var toExport = function(grunt: IGrunt) {
              */
             common: {
                 options: {
-                    base: 'src/common'
+                    base: 'src/client'
                 },
                 src: [ '<%= app_files.ctpl %>' ],
                 dest: '<%= build_dir %>/web/public/templates-common.js'
@@ -601,6 +611,7 @@ var toExport = function(grunt: IGrunt) {
     //        'recess:build',
         'sass:build',
         'copy:buildClientVendorJS',
+        'copy:buildClientVendorCss',
         'copy:buildClientAssets',
         'copy:buildClientSrcJS',
         'index:build',
@@ -632,6 +643,7 @@ var toExport = function(grunt: IGrunt) {
 //        'recess:build',
         'sass:build',
         'copy:buildClientVendorJS',
+        'copy:buildClientVendorCss',
         'copy:buildClientAssets',
         'copy:buildClientSrcJS',
         'copy:buildServerVendorJS',

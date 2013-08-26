@@ -6,10 +6,11 @@
 
         <meta charset="utf-8">
         <%
+        // See https://petelepage.com/blog/2013/02/viewport-target-densitydpi-support-is-being-deprecated/
         // See http://developer.android.com/guide/webapps/targeting.html %>
-        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-        <meta name="description" content="Prototype Singe Page Application (SPA) built using AngualrJS, BreezeJS, EdgeJS, and Typescript.">
+        <meta name=" description" content="Prototype Singe Page Application (SPA) built using AngualrJS, BreezeJS, EdgeJS, and Typescript.">
         <meta name="author" content="Latticework">
         <meta name="keywords" content="angular, angularjs, breeze, breezejs, edge, edgejs, example">
 
@@ -46,7 +47,7 @@
     <body><%
         // http://codepo8.github.io/css-fork-on-github-ribbon/ %>
         <span id="forkongithub"><a href="https://github.com/latticework/proto-ng-breeze-edge">Fork me on GitHub</a></span>
-        <div />
+        <div ng-view />
         <footer id="info">
             <p>Double-click to edit a todo</p>
             <p>by: <a href="https://github.com/latticework" class="latticework-logo">Latticework</a></p>

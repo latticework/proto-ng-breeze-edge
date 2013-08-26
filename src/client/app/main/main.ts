@@ -3,23 +3,21 @@
 module MainControllers {
 };
 
-angular.module('app.main', [
+angular.module('App.Main', [
     'ngRoute', // angular-route.js
-    'app.main.home',
-    'app.main.about',
 ])
 
-    .config(function myAppConfig($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider
+    .config(function myAppConfig($routeProvider) {
+        $routeProvider
             .when('/home', {
                 controller: 'MainHomeCtrl',
-                templateUrl: '/app/main/home.tpl.html',
+                templateUrl: 'app/main/home/home.tpl.html',
             })
             .when('/about', {
                 controller: 'MainAboutCtrl',
-                templateUrl: '/app/main/about.tpl.html',
+                templateUrl: 'app/main/about/about.tpl.html',
             })
-            .otherwise('/home');
+            .otherwise({ redirectTo: '/home' });
     })
 
 

@@ -3,15 +3,15 @@
 module app {
     'use strict';
 
-    var app = angular.module('app', [
+    var app = angular.module('App', [
         'ngRoute', // angular-route.js
         'templates-app',
         'templates-common',
-        'app.main',
-        'app.todo',
+        'App.Main',
+        'App.Todo',
     ])
 
-        .config(function myAppConfig($stateProvider, $urlRouterProvider) {
+        .config(function myAppConfig($routeProvider) {
         })
 
 
