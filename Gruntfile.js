@@ -4,6 +4,7 @@
 /// <reference path="./Scripts/typings/gruntjs/grunt-contrib-copy.d.ts" />
 /// <reference path="./Scripts/typings/gruntjs/grunt-contrib-concat.d.ts" />
 /// <reference path="./Scripts/typings/gruntjs/grunt-contrib-sass.d.ts" />
+/// <reference path="./Scripts/typings/gruntjs/grunt-typescript.d.ts" />
 /// <reference path="./IGruntConfig.d.ts" />
 /// <reference path="./Scripts/typings/node/node.d.ts" />
 // https://raw.github.com/joshdmiller/ng-boilerplate/v0.3.0-release/gruntfile.js
@@ -348,7 +349,7 @@ var toExport = function (grunt) {
                     '<%= client_vendor_files.js %>',
                     '<%= html2js.common.dest %>',
                     '<%= html2js.app.dest %>',
-                    '<%= typescript.client.dest %>',
+                    '<%= build_dir %>/web/public/app.js',
                     '<%= client_vendor_files.css %>',
                     '<%= sass.build.files[0].dest %>'
                 ]
@@ -386,14 +387,14 @@ var toExport = function (grunt) {
         typescript: {
             client: {
                 src: ['src/client/**/*.ts'],
-                dest: '<%= build_dir %>/web/public/app.js',
+                //                dest: '<%= build_dir %>/web/public/app.js',
+                dest: 'src/client/app.js',
+                //                    dest: './app.js',
                 options: {
-                    //module: 'amd',
                     target: 'es5',
-                    base_path: '',
+                    base_path: '<%= build_dir %>/web/public',
                     sourcemap: true,
                     fullsourcemappath: true,
-                    //                        declaration: true,
                     comments: true
                 }
             },

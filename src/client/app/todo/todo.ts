@@ -1,10 +1,13 @@
 /// <reference path=".\todoreferences.ts" />
 
+module TodoControllers {
+};
+
 angular.module('App.Todo', [
     'ngRoute', // angular-route.js
 ])
 
-    .config(function myAppConfig($routeProvider) {
+    .config(function myTodoConfig($routeProvider) {
         $routeProvider
             .when('/todo', {
                 controller: 'TodoTodoListCtrl',
@@ -17,7 +20,6 @@ angular.module('App.Todo', [
     })
 
 
-    .controller('TodoCtrl', function TodoCtrl($scope, $location) {
-    })
+    .controller(TodoControllers)
 ;
 

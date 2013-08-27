@@ -4,6 +4,7 @@
 /// <reference path="./Scripts/typings/gruntjs/grunt-contrib-copy.d.ts" />
 /// <reference path="./Scripts/typings/gruntjs/grunt-contrib-concat.d.ts" />
 /// <reference path="./Scripts/typings/gruntjs/grunt-contrib-sass.d.ts" />
+/// <reference path="./Scripts/typings/gruntjs/grunt-typescript.d.ts" />
 /// <reference path="./IGruntConfig.d.ts" />
 /// <reference path="./Scripts/typings/node/node.d.ts" />
 
@@ -371,7 +372,7 @@ var toExport = function(grunt: IGrunt) {
                     '<%= client_vendor_files.js %>',
                     '<%= html2js.common.dest %>',
                     '<%= html2js.app.dest %>',
-                    '<%= typescript.client.dest %>',
+                    '<%= build_dir %>/web/public/app.js',
 
                     '<%= client_vendor_files.css %>',
                     '<%= sass.build.files[0].dest %>',
@@ -409,71 +410,72 @@ var toExport = function(grunt: IGrunt) {
 //            }
 //        },
 
-            // typescript configuration for grunt.
-            typescript: {
-                client: {
-                    src: ['src/client/**/*.ts'],
-                    dest: '<%= build_dir %>/web/public/app.js',
-                    options: {
-                        //module: 'amd',
-                        target: 'es5',
-                        base_path: '',
-                        sourcemap: true,
-                        fullsourcemappath: true,
-//                        declaration: true,
-                        comments: true,
-                    },
+
+        // typescript configuration for grunt.
+        typescript: {
+            client: <IGruntTypescriptCompactConfig>{
+                src: ['src/client/**/*.ts'],
+//                dest: '<%= build_dir %>/web/public/app.js',
+                dest: 'src/client/app.js',
+//                    dest: './app.js',
+                options: {
+                    target: 'es5',
+                    base_path: '<%= build_dir %>/web/public',
+                    sourcemap: true,
+                    fullsourcemappath: true,
+                    comments: true,
                 },
-                server: {
-                    src: ['src/server/**/*.ts'],
+            },
+            server: <IGruntTypescriptCompactConfig>{
+                src: ['src/server/**/*.ts'],
 //                    dest: 'js',
-                    options: {
-                        module: 'commonjs',
-                        target: 'es5',
-                        base_path: '',
-                        sourcemap: false,
+                options: {
+                    module: 'commonjs',
+                    target: 'es5',
+                    base_path: '',
+                    sourcemap: false,
 //                        fullsourcemappath: true,
 //                        declaration: true,
-                        comments: true,
-                    },
+                    comments: true,
                 },
-                //gruntmodules: {
-                //    files: [
-                //        {
-                //            src: [
-                //                'build.config.ts',
-                //                'Gruntfile.ts',
-                //            ],
-                //            //dest: 'js',
-                //            options: {
-                //                //nolib: true,
-                //                module: 'commonjs',
-                //                target: 'es5', //or es3
-                //                base_path: '',
-                //                sourcemap: false,
-                //                //fullsourcemappath: true,
-                //                //declaration: true,
-                //            },
-                //        },
-                //        //Need to post process package.js as package.json and remove last semicolumn.
-                //        //{
-                //        //    src: [
-                //        //        'package.ts',
-                //        //    ],
-                //        //    dest: 'package.js',
-                //        //    options: {
-                //        //        //nolib: true,
-                //        //        target: 'es5', //or es3
-                //        //        base_path: '',
-                //        //        comments: false,
-                //        //        sourcemap: false,
-                //        //        //fullsourcemappath: true,
-                //        //        //declaration: true,
-                //        //    },
-                //        //},
-                //    ],
-                //},
             },
+            //gruntmodules: {
+            //    files: [
+            //        {
+            //            src: [
+            //                'build.config.ts',
+            //                'Gruntfile.ts',
+            //            ],
+            //            //dest: 'js',
+            //            options: {
+            //                //nolib: true,
+            //                module: 'commonjs',
+            //                target: 'es5', //or es3
+            //                base_path: '',
+            //                sourcemap: false,
+            //                //fullsourcemappath: true,
+            //                //declaration: true,
+            //            },
+            //        },
+            //        //Need to post process package.js as package.json and remove last semicolumn.
+            //        //{
+            //        //    src: [
+            //        //        'package.ts',
+            //        //    ],
+            //        //    dest: 'package.js',
+            //        //    options: {
+            //        //        //nolib: true,
+            //        //        target: 'es5', //or es3
+            //        //        base_path: '',
+            //        //        comments: false,
+            //        //        sourcemap: false,
+            //        //        //fullsourcemappath: true,
+            //        //        //declaration: true,
+            //        //    },
+            //        //},
+            //    ],
+            //},
+        },
 
         /**
          * and for rapid development, we have a watch set up that checks to see if

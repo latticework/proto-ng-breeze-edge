@@ -7,7 +7,7 @@ angular.module('App.Main', [
     'ngRoute', // angular-route.js
 ])
 
-    .config(function myAppConfig($routeProvider) {
+    .config(function myMainConfig($routeProvider) {
         $routeProvider
             .when('/home', {
                 controller: 'MainHomeCtrl',

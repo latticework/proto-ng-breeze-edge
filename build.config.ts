@@ -23,7 +23,11 @@ var userConfig = {
     app_files: {
         //        js: [ 'src/**/*.js', '!src/**/*.spec.js' ],
         //        jsunit: [ 'src/**/*.spec.js' ],
-        clientjs: ['*.js'],
+        clientjs: [
+            '**/*.ts',
+            '*.js',
+            '*.js.map',
+        ],
         clientjs_cwd: 'src/client',
         serverjs: ['**/*.js'],
         serverjs_cwd: 'src/server',

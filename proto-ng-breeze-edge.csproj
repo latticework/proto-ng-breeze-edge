@@ -143,6 +143,7 @@
     <TypeScriptCompile Include="Scripts\typings\express\express.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\gruntjs\grunt-contrib-concat.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\gruntjs\grunt-contrib-sass.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\gruntjs\grunt-typescript.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\gruntjs\gruntjs.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
