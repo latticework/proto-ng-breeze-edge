@@ -1,18 +1,3 @@
-/// <reference path=".\appreferences.ts" />
-var app;
-(function (app) {
-    'use strict';
-
-    var app = angular.module('App', [
-        'ngRoute',
-        'templates-app',
-        'templates-common',
-        'App.Main',
-        'App.Todo'
-    ]).config(function myAppConfig($routeProvider) {
-    }).controller('AppCtrl', function AppCtrl($scope, $location) {
-    });
-})(app || (app = {}));
 /// <reference path="..\mainreferences.ts" />
 var MainControllers;
 (function (MainControllers) {
@@ -32,8 +17,10 @@ var MainControllers;
 (function (MainControllers) {
     var MainHomeCtrl = (function () {
         function MainHomeCtrl() {
+            this.greeting = "Hello HCJ World!";
         }
         MainHomeCtrl.prototype.contructor = function ($scope) {
+            this.greeting = "Goodbye HCJ World!";
             $scope.vm = this;
         };
         return MainHomeCtrl;
@@ -54,33 +41,6 @@ angular.module('App.Main', [
         templateUrl: 'app/main/about/about.tpl.html'
     }).otherwise({ redirectTo: '/home' });
 }).controller(MainControllers);
-;
-
-angular.module('App.Todo', [
-    'ngRoute'
-]).config(function myTodoConfig($routeProvider) {
-    $routeProvider.when('/todo', {
-        controller: 'TodoTodoListCtrl',
-        templateUrl: 'app/todo/todolist/todolist.tpl.html'
-    }).when('/todo/:todoId', {
-        controller: 'TodoTodoDetailsCtrl',
-        templateUrl: 'app/todo/tododetails/tododetails.tpl.html'
-    });
-}).controller(TodoControllers);
-/// <reference path="..\todoreferences.ts" />
-var TodoControllers;
-(function (TodoControllers) {
-    var TodoTodoDetailsCtrl = (function () {
-        function TodoTodoDetailsCtrl() {
-        }
-        TodoTodoDetailsCtrl.prototype.contructor = function ($scope) {
-            $scope.vm = this;
-        };
-        return TodoTodoDetailsCtrl;
-    })();
-    TodoControllers.TodoTodoDetailsCtrl = TodoTodoDetailsCtrl;
-})(TodoControllers || (TodoControllers = {}));
-;
 /// <reference path="..\todoreferences.ts" />
 var TodoControllers;
 (function (TodoControllers) {
@@ -95,6 +55,48 @@ var TodoControllers;
     TodoControllers.TodoTodoListCtrl = TodoTodoListCtrl;
 })(TodoControllers || (TodoControllers = {}));
 ;
+/// <reference path="..\todoreferences.ts" />
+var TodoControllers;
+(function (TodoControllers) {
+    var TodoTodoDetailsCtrl = (function () {
+        function TodoTodoDetailsCtrl() {
+        }
+        TodoTodoDetailsCtrl.prototype.contructor = function ($scope) {
+            $scope.vm = this;
+        };
+        return TodoTodoDetailsCtrl;
+    })();
+    TodoControllers.TodoTodoDetailsCtrl = TodoTodoDetailsCtrl;
+})(TodoControllers || (TodoControllers = {}));
+;
+;
+
+angular.module('App.Todo', [
+    'ngRoute'
+]).config(function myTodoConfig($routeProvider) {
+    $routeProvider.when('/todo', {
+        controller: 'TodoTodoListCtrl',
+        templateUrl: 'app/todo/todolist/todolist.tpl.html'
+    }).when('/todo/:todoId', {
+        controller: 'TodoTodoDetailsCtrl',
+        templateUrl: 'app/todo/tododetails/tododetails.tpl.html'
+    });
+}).controller(TodoControllers);
+/// <reference path=".\appreferences.ts" />
+var app;
+(function (app) {
+    'use strict';
+
+    var app = angular.module('App', [
+        'ngRoute',
+        'templates-app',
+        'templates-common',
+        'App.Main',
+        'App.Todo'
+    ]).config(function myAppConfig($routeProvider) {
+    }).controller('AppCtrl', function AppCtrl($scope, $location) {
+    });
+})(app || (app = {}));
 /// <reference path='./modelreferences.ts' />
 var Model;
 (function (Model) {
