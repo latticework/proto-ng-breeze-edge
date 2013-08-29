@@ -2,7 +2,7 @@
 
 module TodoControllers {
     export class TodoTodoDetailsCtrl {
-        contructor($scope) {
+        constructor($scope) {
             $scope.vm = this;
         }
     }

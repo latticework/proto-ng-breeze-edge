@@ -2,7 +2,7 @@
 
 module MainControllers {
     export class MainAboutCtrl {
-        contructor($scope) {
+        constructor($scope) {
             $scope.vm = this;
         }
     }

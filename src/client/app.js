@@ -2,11 +2,9 @@
 var MainControllers;
 (function (MainControllers) {
     var MainAboutCtrl = (function () {
-        function MainAboutCtrl() {
-        }
-        MainAboutCtrl.prototype.contructor = function ($scope) {
+        function MainAboutCtrl($scope) {
             $scope.vm = this;
-        };
+        }
         return MainAboutCtrl;
     })();
     MainControllers.MainAboutCtrl = MainAboutCtrl;
@@ -16,13 +14,11 @@ var MainControllers;
 var MainControllers;
 (function (MainControllers) {
     var MainHomeCtrl = (function () {
-        function MainHomeCtrl() {
+        function MainHomeCtrl($scope) {
             this.greeting = "Hello HCJ World!";
-        }
-        MainHomeCtrl.prototype.contructor = function ($scope) {
             this.greeting = "Goodbye HCJ World!";
             $scope.vm = this;
-        };
+        }
         return MainHomeCtrl;
     })();
     MainControllers.MainHomeCtrl = MainHomeCtrl;
@@ -59,11 +55,9 @@ var TodoControllers;
 var TodoControllers;
 (function (TodoControllers) {
     var TodoTodoDetailsCtrl = (function () {
-        function TodoTodoDetailsCtrl() {
-        }
-        TodoTodoDetailsCtrl.prototype.contructor = function ($scope) {
+        function TodoTodoDetailsCtrl($scope) {
             $scope.vm = this;
-        };
+        }
         return TodoTodoDetailsCtrl;
     })();
     TodoControllers.TodoTodoDetailsCtrl = TodoTodoDetailsCtrl;

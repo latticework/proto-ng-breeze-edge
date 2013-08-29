@@ -3,7 +3,7 @@
 module MainControllers {
     export class MainHomeCtrl {
         greeting: string = "Hello HCJ World!";
-        contructor($scope) {
+        constructor($scope) {
             this.greeting = "Goodbye HCJ World!";
             $scope.vm = this;
         }
