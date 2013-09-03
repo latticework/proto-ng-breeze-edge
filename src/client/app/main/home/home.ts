@@ -7,5 +7,8 @@ module MainControllers {
             this.greeting = "Goodbye HCJ World!";
             $scope.vm = this;
         }
+        OnButtonClicked() {
+            console.log("Button Clicked");
+        }
     }
 };

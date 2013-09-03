@@ -19,6 +19,9 @@ var MainControllers;
             this.greeting = "Goodbye HCJ World!";
             $scope.vm = this;
         }
+        MainHomeCtrl.prototype.OnButtonClicked = function () {
+            console.log("Button Clicked");
+        };
         return MainHomeCtrl;
     })();
     MainControllers.MainHomeCtrl = MainHomeCtrl;

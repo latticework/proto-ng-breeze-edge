@@ -1,7 +1,18 @@
 <section id="home">
-    <strong>{{vm.greeting}}</strong>
-    <ul>
-        <li><a href="#/about">About</a></li>
-        <li><a href="#/todo">ToDo</a></li>
-    </ul>
+    <div class="page" fg-color-white>
+        <div class="page-header">
+            <div class="page-header-content">
+                <h1>{{vm.greeting}}</h1>
+            </div>
+        </div>
+        <div class="page-region body">
+            <ul><li>A list item.</li></ul>
+            <div class="page-region-content">
+                <a class="button" href="#/about">About</a><br>
+                <a class="button" href="#/todo">ToDo</a>
+                <a class="button">Test</a>
+                <button class="default" ng-click="vm.OnButtonClicked()" >A Button</button>
+            </div>
+        </div>
+    </div>
 </section>

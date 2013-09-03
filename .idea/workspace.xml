@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d3c4aea-f8c5-4d81-b15b-387c90e9bd96" name="Default" comment="Added index.html and app.ts">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/main/about/about.ts" afterPath="$PROJECT_DIR$/src/client/app/main/about/about.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app.js.map" afterPath="$PROJECT_DIR$/src/client/app.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app.js" afterPath="$PROJECT_DIR$/src/client/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/main/home/home.tpl.html" afterPath="$PROJECT_DIR$/src/client/app/main/home/home.tpl.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/main/home/home.ts" afterPath="$PROJECT_DIR$/src/client/app/main/home/home.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/app/todo/tododetails/tododetails.ts" afterPath="$PROJECT_DIR$/src/client/app/todo/tododetails/tododetails.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="proto-ng-breeze-edge.iws" />
@@ -31,7 +32,7 @@
       <file leaf-file-name="home.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/app/main/home/home.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="24" selection-start="24" selection-end="103" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="352">
+            <state line="10" column="42" selection-start="341" selection-end="341" vertical-scroll-proportion="-4.4" vertical-offset="0" max-vertical-offset="418">
               <folding />
             </state>
           </provider>
@@ -46,10 +47,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tododetails.ts" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="tododetails.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/app/todo/tododetails/tododetails.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="19" selection-start="130" selection-end="130" vertical-scroll-proportion="0.16356878" vertical-offset="0" max-vertical-offset="538">
+            <state line="4" column="19" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="308">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.tpl.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/client/app/main/home/home.tpl.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="32" selection-start="284" selection-end="284" vertical-scroll-proportion="0.34714004" vertical-offset="0" max-vertical-offset="507">
               <folding />
             </state>
           </provider>
@@ -74,7 +84,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/node_modules/.gitignore" />
         <option value="$PROJECT_DIR$/debug/index.html" />
         <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/server/server.js" />
@@ -87,9 +96,10 @@
         <option value="$PROJECT_DIR$/src/client/assets/forkongithub.css" />
         <option value="$PROJECT_DIR$/src/client/index.html" />
         <option value="$PROJECT_DIR$/bower_components/angular-route/angular-route.js" />
-        <option value="$PROJECT_DIR$/src/client/app/main/home/home.ts" />
         <option value="$PROJECT_DIR$/src/client/app/main/about/about.ts" />
         <option value="$PROJECT_DIR$/src/client/app/todo/tododetails/tododetails.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/main/home/home.ts" />
+        <option value="$PROJECT_DIR$/src/client/app/main/home/home.tpl.html" />
       </list>
     </option>
   </component>
@@ -457,6 +467,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proto-ng-breeze-edge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proto-ng-breeze-edge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="bower_components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -640,11 +680,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Scripts/typings/node/node.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1301" selection-end="1301" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="165" column="13" selection-start="5155" selection-end="5155" vertical-scroll-proportion="0.020506635" vertical-offset="0" max-vertical-offset="0" />
@@ -709,13 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/app/main/home/home.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="24" selection-start="24" selection-end="103" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="352">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/app/main/about/about.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="9" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="308">
@@ -725,7 +753,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/app/todo/tododetails/tododetails.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="19" selection-start="130" selection-end="130" vertical-scroll-proportion="0.16356878" vertical-offset="0" max-vertical-offset="538">
+        <state line="4" column="19" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="308">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/main/home/home.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="42" selection-start="341" selection-end="341" vertical-scroll-proportion="-4.4" vertical-offset="0" max-vertical-offset="418">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/app/main/home/home.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="32" selection-start="284" selection-end="284" vertical-scroll-proportion="0.34714004" vertical-offset="0" max-vertical-offset="507">
           <folding />
         </state>
       </provider>
