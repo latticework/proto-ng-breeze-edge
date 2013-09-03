@@ -22,11 +22,5 @@ angular.module('App.Main', [
 
 
     .controller(MainControllers)
-    //.controller('MainHomeCtrl', function MainHomeCtrl($scope) {
-    //    $scope.vm = { greeting: "Hello Angular World!", };
-    //})
-    //.controller('MainAboutCtrl', function MainAboutCtrl($scope) {
-    //    $scope.vm = { greeting: "Goodbye Angular World!", };
-    //})
 ;
 

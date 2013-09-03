@@ -61,7 +61,8 @@ var userConfig = {
             'Scripts/breeze.debug.js'
         ],
         css: [
-            'bower_components/metro-ui-css/css/*.css'
+            'bower_components/metro-ui-css/css/modern.css',
+            'bower_components/metro-ui-css/css/modern-responsive.css'
         ]
     },
     server_vendor_files: {
