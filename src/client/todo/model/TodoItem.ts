@@ -1,6 +1,6 @@
-/// <reference path='./modelreferences.ts' />
+/// <reference path='./todomodelreferences.ts' />
 
-module Model {
+module Todo.Model {
     'use strict';
 
     export class TodoItem {

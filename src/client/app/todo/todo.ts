@@ -20,6 +20,7 @@ angular.module('App.Todo', [
     })
 
 
+    .service('todoService', Todo.Services.TodoService)
     .controller(TodoControllers)
 ;
 

@@ -1,4 +1,4 @@
-/// <reference path="..\mainreferences.ts" />
+/// <reference path="../mainreferences.ts" />
 
 module MainControllers {
     export class MainAboutCtrl {
