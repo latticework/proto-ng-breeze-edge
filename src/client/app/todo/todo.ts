@@ -1,10 +1,8 @@
 /// <reference path=".\todoreferences.ts" />
 
-module TodoControllers {
-};
-
 angular.module('App.Todo', [
     'ngRoute', // angular-route.js
+    'Todo',
 ])
 
     .config(function myTodoConfig($routeProvider) {
@@ -19,8 +17,8 @@ angular.module('App.Todo', [
             });
     })
 
+    .directive(TodoDirectives)
 
-    .service('todoService', Todo.Services.TodoService)
     .controller(TodoControllers)
 ;
 

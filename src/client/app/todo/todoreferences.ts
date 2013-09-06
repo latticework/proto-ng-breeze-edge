@@ -2,6 +2,8 @@
 
 /// <reference path="../../todo/todoreferences.ts" />
 
+/// <reference path="./directives/TodoBlur.ts" />
+
 /// <reference path="./todolist/todolist.ts" />
 /// <reference path="./tododetails/tododetails.ts" />
 

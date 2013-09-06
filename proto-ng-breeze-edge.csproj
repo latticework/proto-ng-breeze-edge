@@ -151,6 +151,9 @@
     <TypeScriptCompile Include="src\client\app\main\main.ts" />
     <TypeScriptCompile Include="src\client\app\main\mainreferences.ts" />
     <TypeScriptCompile Include="src\client\app\appreferences.ts" />
+    <TypeScriptCompile Include="src\client\app\todo\directives\TodoBlur.ts" />
+    <TypeScriptCompile Include="src\client\app\todo\directives\TodoEscape.ts" />
+    <TypeScriptCompile Include="src\client\app\todo\directives\TodoFocus.ts" />
     <TypeScriptCompile Include="src\client\app\todo\todo.ts" />
     <TypeScriptCompile Include="src\client\app\todo\tododetails\tododetails.ts" />
     <TypeScriptCompile Include="src\client\app\todo\todolist\todolist.ts" />
@@ -159,6 +162,7 @@
     <TypeScriptCompile Include="src\client\todo\model\TodoItem.ts" />
     <TypeScriptCompile Include="src\client\todo\services\todoservicesreferences.ts" />
     <TypeScriptCompile Include="src\client\todo\services\TodoService.ts" />
+    <TypeScriptCompile Include="src\client\todo\TodoModule.ts" />
     <TypeScriptCompile Include="src\client\todo\todoreferences.ts" />
     <TypeScriptCompile Include="src\server\server.ts" />
     <Content Include="src\server\server.js" />
