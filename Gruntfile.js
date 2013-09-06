@@ -108,6 +108,16 @@ var toExport = function (grunt) {
                     }
                 ]
             },
+            buildClientVendorAssets: {
+                files: [
+                    {
+                        src: ['<%= client_vendor_files.assets %>'],
+                        dest: '<%= build_dir %>/web/public/assets/',
+                        expand: true,
+                        cwd: '.'
+                    }
+                ]
+            },
             buildClientSrcJS: {
                 files: [
                     {
@@ -526,6 +536,7 @@ var toExport = function (grunt) {
         'sass:build',
         'copy:buildClientVendorJS',
         'copy:buildClientVendorCss',
+        'copy:buildClientVendorAssets',
         'copy:buildClientAssets',
         'copy:buildClientSrcJS',
         'index:build'
@@ -552,6 +563,7 @@ var toExport = function (grunt) {
         'sass:build',
         'copy:buildClientVendorJS',
         'copy:buildClientVendorCss',
+        'copy:buildClientVendorAssets',
         'copy:buildClientAssets',
         'copy:buildClientSrcJS',
         'copy:buildServerVendorJS',

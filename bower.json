@@ -14,7 +14,8 @@
     "angular-route": "*",
     "jquery": "~2.0.3",
     "jquery-mousewheel": "~3.1.3",
-    "metro-ui-css": "*"
+    "metro-ui-css": "*",
+    "todomvc-common": "~0.1.8"
   },
   "resolutions": {
     "angular": "1.2.0rc1"
